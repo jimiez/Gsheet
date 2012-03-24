@@ -1,0 +1,97 @@
+body
+{
+    font-size: 12px;
+    font-family:verdana,sans-Serif;
+}
+
+table
+{
+    font-size: 12px;
+    font-family:verdana,sans-Serif;
+    border-bottom-width: 1;
+    border-style: solid;
+
+}
+
+h1
+{
+    font-size: 24px;
+    font-style: bold;
+    font-variant: small-caps;
+    color:#336666;
+}
+
+h2
+{
+    font-size: 16px;
+    color:#336666;
+}
+
+b
+{
+    font-size: 14px;
+    color:#336666;
+}
+
+
+input.linkbutton
+{
+    font-size:10px;
+    text-decoration:underline;
+    text-align:left;
+    color:#FF0000;
+    background-color:#d9e5e8;
+    border-style:none;
+}
+
+option.bolded
+{
+    font-weight:bold;
+}
+
+option.green
+{
+    color:#007700;
+}
+
+option.red
+{
+    color:#990000;
+}
+
+
+input.minibutton
+{
+    font-size:8px;
+    font-family:monospace;
+    color:#444444;
+    font-weight: bold;
+    background-color:#EEEEEE;
+    border-style:ridge;
+    border-color:#999999;
+    border-width:2px;
+}
+
+input.underscore { 
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+} 
+
+input.boxy { 
+    border-style: solid;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 1px;
+} 
+
+input.borderless {
+    border-width: 0px;
+}
