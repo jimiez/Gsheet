@@ -6,10 +6,11 @@ class Sheet {
     private $cdata; // hahmon perusomnaisuudet taulukossa
     private $attributes; // taulukko eduille
     private $skills;
+    private $items;
     private $quirks;
 
     public function __construct() {
-        $this->editable = true;
+        $this->editable = false;
         // kaikki menee luultavasti vielä omaan funkkariinsa
         $this->cdata = array();
         $this->cdata['owner'] = "someone";
@@ -29,7 +30,11 @@ class Sheet {
         $this->cdata['ht'] = 10;
         $this->cdata['unusedPoints'] = 100;
         $this->attributes = array();
+        $this->skills = array();
+        $this->items = array();
         $this->readAttributes();
+        $this->readSkills();
+        $this->readItems();
     }
 
     public function getValue($entry) {
@@ -37,8 +42,12 @@ class Sheet {
         echo "value=\"$value\"";
     }
 
+    public function getValuePure($entry) {
+        return $this->cdata[$entry];
+    }
+
     public function getAttributes($type) {
-        
+
         $attributeList = array();
 
         if ($type == "adv") {
@@ -68,7 +77,7 @@ class Sheet {
         }
     }
 
-    public function drawButtons($name) {
+    function drawButtons($name) {
         $namefield = $name . "Field";
         $nameButton = $name . "Button";
         if ($this->editable) {
@@ -81,13 +90,38 @@ class Sheet {
 
         $advantage = new Attribute("Place holder", true, 10);
         $advantage2 = new Attribute("Yet another", true, 15);
-        $disadvantage = new Attribute("Bad breath", false, -10);
-        $disadvantage2 = new Attribute("Stinky fist", false, -20);
+        $disadvantage = new Attribute("Holder of places", false, -10);
+        $disadvantage2 = new Attribute("Something something", false, -20);
 
         $this->attributes[] = $advantage;
         $this->attributes[] = $advantage2;
         $this->attributes[] = $disadvantage;
         $this->attributes[] = $disadvantage2;
+    }
+
+    private function readSkills() {
+
+        $skill = new Skill("Test", "M", "Very hard", "12.5");
+        $skill2 = new Skill("Another Test", "P", "Hard", "5");
+
+        $this->skills[] = $skill;
+        $this->skills[] = $skill2;
+    }
+
+    public function getSkills() {
+        return $this->skills;
+    }
+
+    public function readItems() {
+        $item = new Item("Keppi", "Misc", "5", "15");
+        $item2 = new Item("Leuku", "Weapon", "2", "4");
+
+        $this->items[] = $item;
+        $this->items[] = $item2;
+    }
+    
+    public function getItems() {
+        return $this->items;
     }
 
 }
@@ -155,6 +189,39 @@ class Skill {
             return $this->points;
         }
     }
+
+}
+
+class Item {
+
+    private $name;
+    private $type;
+    private $weigth;
+    private $value;
+
+    public function __construct($name, $type, $weight, $value) {
+        $this->name = $name;
+        $this->type = $type;
+        $this->weigth = $weight;
+        $this->value = $value;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function getWeight() {
+        return $this->weigth;
+    }
+
+    public function getValue() {
+        return $this->value;
+    }
+
 }
 
 ?>

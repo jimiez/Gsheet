@@ -4,6 +4,7 @@ function updateAll() {
 }
 
 function increaseValue(field) {
+
     document.baseform[field].value++;
 }
 
