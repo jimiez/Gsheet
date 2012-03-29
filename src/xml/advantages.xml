@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<advantages>
+    
+    <advantage>
+        <name></name>
+        <points></points>
+        <description></description>
+    </advantage>
+    
+    <advantage>
+        <name>Absolute Direction</name>
+        <points>5</points>
+        <description>You always know which way is north, and you can always 
+            retrace a path you have followed within the past month, no matter
+            how faint or confusing it may be. This ability does not work in
+            environments such as interstellar space, the limbo of the astral
+            plane, etc., but it does work underground, underwater, and on other
+            planets. Also gives a +3 bonus on your Navigator skill. 
+        </description>
+    </advantage>
+    
+    <advantage>
+        <name>Absolute Timing</name>
+        <points>5</points>
+        <description>You have an accurate mental clock. Unless you have been 
+            knocked unconscious, hypnotized, or otherwise interfered with, you 
+            always know what time it is, down to the second. You can also 
+            measure any elapsed time with equal accuracy. Sleep does not 
+            interfere with this (and you can wake up at a predetermined time if 
+            you choose). Changes of time zone also have no effect. Time travel 
+            will confuse you until you find out what the "new" time is. 
+        </description>
+    </advantage>
+ 
+    <advantage>
+        <name>Acute Hearing</name>
+        <points>2 points/level</points>
+        <description>You get a bonus on your Hearing roll (see p.  92) whenever you 
+            must roll to hear something, or when the GM rolls against IQ to see if 
+            you noticed a sound. Cost: 2 points for every +1 bonus to your roll.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Acute Taste and Smell</name>
+        <points>2 points/level</points>
+        <description>You get a bonus on any Taste or Smell roll (see p. 92). For
+            instance, the GM might roll to see if you noticed the taste or smell of
+            poison in your drink. Cost: 2 points for every +1 bonus to your roll.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Acute Vision</name>
+        <points>2 points/level</points>
+        <description>You get a bonus on any Vision roll  - that is, when you roll to 
+            look for something, or whenever the GM rolls against IQ to see if 
+            you noticed something. Cost: 2 points for every +1 bonus to your 
+            roll.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Alertness</name>
+        <points>5 points/level</points>
+        <description>A general bonus you get on  any Sense roll, or when the GM 
+            rolls against your IQ to see if you notice something. This advantage 
+            can  be combined with any or all of the acute senses. Cost: 5 points 
+            for each +1 bonus to your roll.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Ambidexterity</name>
+        <points>10</points>
+        <description>You can use both hands with equal skill. You do not suffer the -
+            4 DX penalty for using an "offhand" (see  Handedness,  p. 13), and 
+            can fight (or act) with either hand, or (in an All-Out Attack) with 
+            both hands at once. Should some accident befall one of your arms or 
+            hands, assume it is the left one. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Animal Empathy</name>
+        <points>5</points>
+        <description>You understand animals and like them, and they like you. You 
+            get a +2 on any reaction roll by a wild animal, and a +4 on any 
+            reaction from a tame animal. You also get a +4 bonus on any "ani -
+            mal" skill roll (Animal Handling, Riding, Vet, etc.). However, you 
+            may never kill an animal without a very good reason,  and you 
+            should try to prevent others from doing so. Note that killing for food 
+            is perfectly  acceptable,  and in a hunt ing situation you will get a  +3 bonus 
+            to find game. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Charisma</name>
+        <points>5 points/level</points>
+        <description>This is the natural ability to impress and lead others. Anyone 
+            can acquire a semblance of charisma by good looks, good manners 
+            and intelligence  - but real charisma works independently of these 
+            things, and you either have it or you don't. It affects any reaction 
+            roll made by any intelligent creature. Cost: 5 points for each +1 
+            bonus.
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Clerical Investment</name>
+        <points>5 or more points, GM's discretion</points>
+        <description>You have been ordained as a minister of some religion. A cleric 
+            has a number of powers and privileges that a layman lacks, including 
+            a +1 reaction bonus from co-religionists and those who respect his 
+            faith. He or she will be addressed by a title  - Father, Sister, 
+            Reverend, Shaman  - and can perform  such ceremonies as 
+            Confirmation, Marriage and Exorcism. 
+            Remember that not all clerics are nuns or rabbis. Aka'Ar, high 
+            priest of the unholy Cult of Set, is a vested priest as well, and the 
+            blessings and marriages he performs will be just as meaningful to 
+            his own flock as are those of a vicar to his parish. And, if Set so 
+            wills, Aka'Ar will be able to perform exorcisms as potent as those 
+            of a Christian minister, if not more so. Aka'Ar will have a better 
+            working knowledge of demons . . .  
+            The GM should determine whether clerics, in his campaign, can 
+            call upon active aid from Beyond. If so, and if clerics are  known to 
+            be able to get such aid, Clerical Investment will be worth 10 points or 
+            more. If Investment is merely (as far as the players know) a 
+            "social" advantage, it costs 5 points.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Combat Reflexes</name>
+        <points>15</points>
+        <description>You have extraordinary reactions and are very rarely surprised 
+            for more than a moment. You get a +1 to any Active Defense in 
+            combat. You also get a +1 on any Fast-Draw skill, and +2 to any 
+            Fright Check (p. 93). And you never "freeze" (see p. 122). 
+            Furthermore, your  side  gets +1 on initiative rolls to avoid a sur-
+            prise attack, or +2 if you are the leader. You, personally, get a +6 on 
+            any IQ roll to wake up or to recover from surprise or a mental "stun." 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Common Sense</name>
+        <points>10</points>
+        <description>Any time you start to do something that the GM feels is STUPID, 
+            he rolls against your IQ. A successful roll means he must warn you, 
+            "Hadn't you better think about that?" This advantage allows an 
+            impulsive player to take the part of a thoughtful character. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Danger Sense</name>
+        <points>15</points>
+        <description>You can't depend on it, but sometimes you get this prickly feeling
+            right at the back of your neck, and you know something's wrong
+            ...  If you have Danger Sense, the GM rolls once against your IQ
+            secretly, in any situation involving an ambush, impending disaster, or
+            similar hazard. A successful roll means you get a warning that
+            something's wrong. A roll of 3 or 4 means you get a little detail as to
+            the nature of the danger. 
+            Note: In a campaign that uses psi powers, this can be an ESP
+            ability! See Psionics, Chapter 20. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Double-Jointed</name>
+        <points>5</points>
+        <description>Your body is unusually flexible. You have a +3 on any Climbing 
+            roll, on any roll to escape from ropes, handcuffs or other restraints, or 
+            on any Mechanic roll (to reach into an engine, of course!). 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Eidetic Memory</name>
+        <points>30/60 points</points>
+        <description>You remember everything you see or hear. This talent comes in 
+            two levels. 
+            At the first level, you remember the general sense of everything 
+            you concentrate on. Thus, all points you put into "regular" mental 
+            skills count double (there is no bonus for psi skills). You get a +1 on 
+            magic spells. Also: whenever you need to remember a detail of 
+            something you have been told, the GM rolls against your IQ. A suc-
+            cessful roll means he must give you the information! Cost: 30 points. 
+            The second level is true "photographic memory." You remember 
+            everything that has ever happened to you! All points you put into 
+            "regular" mental skills count  quadruple.  You get a +2 bonus  on 
+            magic spells. Furthermore, any time you (as the  player)  forget a 
+            detail your character has seen or heard, the GM or other players 
+            must remind you - truthfully! Cost: 60 points. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Empathy</name>
+        <points>15</points>
+        <description>You have a "feeling" for people. When you first meet someone, or 
+            when you are reunited after an absence, you may request the GM  to 
+            roll against your IQ. He will then tell you what you "feel" about that 
+            person. (Note that a failed roll means the GM may lie to you.) This 
+            talent, when it works, is excellent for spotting imposters, ghostly 
+            possession, etc., and determining the true loyalties of NPCs. You 
+            can also use i t to determine whether someone is  lying . . . not what 
+            the truth really is, but just whether they are being honest with you. 
+            Note: In a campaign that uses psi powers, this can be a Psi ability! 
+            See Psionics, Chapter 20. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>High Pain Threshold</name>
+        <points>10</points>
+        <description>You a re as susceptible to injury as anyone else, but you don't feel 
+            it as much. If you are hurt in combat, you are not stunned and do not 
+            have the normal DX penalty on your next turn (exception: a  head 
+            blow or critical hit will still stun you). If you are tortured physically, 
+            you are at a +3 to resist. The GM may let you roll at  Will +3 to 
+            ignore pain in other situations. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>You a re as susceptible to injury as anyone else, but you don't feel 
+            it as much. If you are hurt in combat, you are not stunned and do not 
+            have the normal DX penalty on your next turn (exception: a  head 
+            blow or critical hit will still stun you). If you are tortured physically, 
+            you are at a +3 to resist. The GM may let you roll at  Will +3 to 
+            ignore pain in other situations. 
+        </name>
+        <points>10</points>
+        <description>Your body naturally resists all disease organisms. You will never 
+            catch any infection or disease "naturally." If you are forcibly injected 
+            with a disease organism, your body will throw it off immediately. 
+            Virus and fungus invasions are also considered "disease," though 
+            larger parasites (e.g., a tapeworm) are not. You may not  take this 
+            advantage unless you also start with a HT of 12 or better. However, 
+            the immunity will remain, even if HT is reduced below 12.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Intuition</name>
+        <points>15</points>
+        <description>You usually guess right. When you are faced with a number of 
+            alternatives, and no logical way to choose between them, you can 
+            use your intuition as follows: The GM adds your IQ to the number 
+            of "right" choices, subtracts the number of possible "wrong" 
+            choices, and rolls against the resulting number. A successful roll 
+            means he steers you to a good choice; a roll of 3 or 4 means he 
+            tells you the  best  choice. A failed roll means you are given no 
+            information. A critical failure means he steers you toward a bad 
+            choice . . . your intuition failed you. The GM can modify this system 
+            as he sees fit for other situations in which intuition might logi cally 
+            help.  
+            Only one roll per question is allowed. Note also: The GM cannot 
+            let this advantage be used to short-circuit adventures - by let ting the 
+            intuitive detective walk into a room, slap the cuffs on the  guilty 
+            party, and close the case. At the most, intuition would point the 
+            detective in the direction of a good clue. GMs who  don't think 
+            they can control this advantage should not allow it at all.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Language Talent</name>
+        <points>2 points/level</points>
+        <description>You pick up languages quickly. This talent  is  cumulative with 
+            others; if you have Eidetic Memory and Language Talent, you will 
+            probably be speaking 20 languages before long. Whenever you 
+            learn any language, add your level of Language Talent to your IQ. 
+            Example: Your IQ is 10; your Language Talent is 2. You learn lan-
+            guages as though your IQ were 12! You get the same bonus on 
+            Linguistics skill. See  Language Skills, p. 54. Cost: 2 points for each + 
+            1 bonus.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Legal Enforcement Powers</name>
+        <points>5, 10 or 15 points</points>
+        <description>You are an officer of the law, with all the accompanying rights, 
+            powers and restr ictions. In some times and places, this amounts to a 
+            license to kill; in others, it's little more than the right to carry a 
+            badge and write parking tickets. 
+            The point cost is determined by the rights and privileges of the 
+            character's branch of law enforcement. Generally, a policeman with 
+            local jurisdiction, the ability to arrest suspected criminals, the right to 
+            perform searches with an appropriate warrant, and  possibly  the 
+            right to carry a concealed weapon, has 5 points' worth of Legal 
+            Enforcement Powers.  Examples would be a Victorian bobby or a 
+            modern policeman. 
+            Someone with national or international jurisdiction, or not obligated 
+            to respect the civil rights of others,  or  free to engage in covert 
+            investigations,  or  able to kill with relative impunity, must pay 10 
+            points for his powers. Examples would be a modern FBI agent or a 
+            medieval Royal Guardsman. 
+            An officer with three or more of the above abilities has 15 points of 
+            Legal Enforcement Powers. An example might be a top agent of  the 
+            CIA, KGB, or MI -5. 
+            Legal Enforcement Powers usually go hand-in-hand with an 
+            appropriate Duty disadvantage, and with a Reputation which may be 
+            an advantage, a disadvantage, or both. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Lightning Calculator</name>
+        <points>5</points>
+        <description>You have the ability to do math in your head, instantly. If you 
+            have this talent, then you (the  player) may use a calculator at any 
+            time, to figure anything you want - even if your character is fleeing 
+            for his life at the time! Alternatively, for simple math problems, the 
+            GM may just say the character knows the answer. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Literacy</name>
+        <points>0 or 10 points</points>
+        <description>Although in real life this is a skill, it is treated as an advantage 
+            for reasons which are explained on p. 17. In general, you are 
+            assumed to be literate if your world is mostly literate, and illiterate if 
+            your world is mostly illiterate (TL4 and below). Being literate in  a 
+            world where most people cannot read is an advantage worth 10 
+            points. Being illiterate in a world where most people can read is a 
+            disadvantage, worth -10 points. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Longevity</name>
+        <points>5</points>
+        <description>Your lifespan is naturally very long. You will fail aging rolls 
+            (see p. 83) only on a natural 17 or 18. A character with this advantage 
+            gets no points by taking Age as a disadvantage! 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Luck</name>
+        <points>15 or 30 points</points>
+        <description>Some people are just born lucky. Once per every hour of  play, 
+            you may make up to three rolls for some one thing, and then take 
+            the best one! If the GM is rolling (e.g., to see whether a certain 
+            NPC arrives, or to see if you notice something), you tell him you 
+            are using your luck, and he must roll three times and give you the 
+            best result. You can use this advantage after the dice are rolled the 
+            first time to get two more attempts. Cost: 15 points. 
+            Extraordinary Luck works the same way, but it is usable every 
+            30 minutes, instead of every hour. Cost: 30 points. 
+            Your luck only applies on rolls for your character to try to do 
+            something, OR on outside events that affect you or your whole 
+            party, OR when you are being attacked (in which case you may 
+            Bake the attacker roll three times and take the worst roll!). 
+            Luck cannot be shared. If Strong Sam is trying to kick open a door, 
+            Lucky Lou can't stand behind him and transfer his luck. He'll 
+            have to kick that door himself. 
+            Once you use your Luck, you must wait an hour (or 30 minutes 
+            for Extraordinary Luck) before using it again. You cannot use Luck at 
+            11:58, and then again at 12:01. Note also that Luck cannot be saved 
+            up. You cannot play for hours without using Luck and then  use it 
+            several times in a row! 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Magical Aptitude (Magery)</name>
+        <points>5 points for first level, 10 points/level afterward</points>
+        <description>You have a bonus to learn any magic spell. Of course, if you are 
+            from a non-magical culture you will not start with any spells, but 
+            you can still learn them more easily if you ever find an opportunity. 
+            And when you enter a magical world, those who can detect your 
+            aura (p. 162) will recognize you as a potentially powerful, though 
+            untrained, magic-user. They may want to teach you - or kill you. 
+            When you learn any spell, you learn it as though your IQ were 
+            equal to (IQ + aptitude).  Example:  You have an IQ of 14 and a  
+            Magical Aptitude of 3. You learn spells as though your IQ was 17! 
+            In addition, the GM will roll vs. your (IQ + aptitude) when you 
+            first see any magic object, and again when you first  touch  it. If the 
+            roll succeeds, you will know intuitively that it is magical. A roll of 3 
+            or 4 will also tell you whether the magic is helpful or dangerous, and 
+            about how strong it is.  Example:  If you have IQ 13 and 3 levels  of 
+            aptitude, you will recognize a magic item on a 16 or less. If the  GM 
+            misses the roll, he will simply tell you nothing. Note that use of this 
+            advantage becomes tricky for a character from a non-magical 
+            background - like 20th-century Earth. Such a character will still have 
+            the ability to sense magic, though until he gains experience with 
+            magic the GM should not say, "That idol is magical," but "That idol 
+            looks very strange to you, very sinister. You sense there is something 
+            special about it." Characters without Magical Aptitude don't get  any 
+            roll to sense magical objects. 
+            Cost: 15 points for the first level of Magery; 10 points for each 
+            subsequent level up to a maximum of 3 levels. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Magic Resistance</name>
+        <points>2 points/level</points>
+        <description>You are less likely to be affected by magic of most kinds. Note 
+            that this advantage  cannot  be combined with Magical Aptitude. 
+            You cannot be both magically apt and magically resistant. Indeed,  if 
+            you have Magic Resistance, you can't cast spells at all (though  you 
+            can still use magic weapons). Also, you cannot "turn it off to  let 
+            friendly spells be cast on you. 
+            Magic Resistance, and its precise level, can be recognized by 
+            any mage who looks at your aura, or by anyone who casts a spell 
+            against you. The level of your Magic Resistance is subtracted from 
+            the caster's skill with the spell. If you have a Magic Resistance of  3, 
+            and the caster has skill 15,  his effective skill is 12. Magic 
+            Resistance also adds to resistance against elixirs (see  GURPS 
+            Magic, pp. 98-100). 
+            Your Magic Resistance also adds to your ordinary resistance 
+            against spells that can be resisted. 
+            Your Magic Resistance thus protects you from having a spell 
+            thrown directly on you. It does not defend you against (a) missile 
+            spells; (b) attacks by magical weapons; (c) information-gathering
+            spells in which the spell is not thrown directly on you, like Aura. 
+            Magic Resistance has no effect on psionic attacks. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Mathematical Ability</name>
+        <points>10</points>
+        <description>This gives you a +3 on any math or computer skill except Computer 
+            Operation, and a +2 to any Engineering skill at Tech Level 6+.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Military Rank</name>
+        <points>5 points/level of rank</points>
+        <description>Just as Status (p. 16) reflects your position in society, Military 
+            Rank (also called "grade") reflects your position in a military or 
+            paramilitary organization. Each rank has authority over those of 
+            lower ranks - regardless of personal ability. Cost: 5 points per rank, up 
+            to Rank 8. 
+            Titles of ranks vary between organizations. Typical examples:  
+            Rank 8: Corps-level command or higher (Lieutenant General,  
+            General or Admiral) 
+            Rank 7: Division-level command (Brigadier or Major General) Rank 
+            6: Brigade/group/regimental command (Colonel) or Captain 
+            of a capital ship 
+            Rank 5: Battalion command (Lieutenant Colonel) Rank 4: Company 
+            command (Captain or Major) Rank 3: Platoon command (Lieutenant or 
+            Warrant Officer) Rank 2: Non-commissioned officer (NCO) 
+            associated with platoon, 
+            company, or battalion commands (Sergeant 1st Class, First 
+            Sergeant or Sergeant-Major) 
+            Rank 1: Squad/platoon NCO (Sergeant or Staff Sergeant) Rank 0: 
+            Enlisted man (Private, Airman or Ordinary Seaman) 
+            In good professional armies, field-grade officers (Rank 5 or 6) 
+            must have a Leadership skill of at least 12; general officers (Rank 
+            7+) must have a Leadership skill of at least 13. This prerequisite 
+            can be satisfied by its default of ST-5. Incompetence in the higher 
+            ranks is not tolerated under any circumstances. (But in many less-
+            professional or politically-dominated forces, incompetent officers 
+            are common.)  
+            It is strongly recommended that no PC be allowed to start the 
+            game with a Military Rank above 5, since high rank is normally 
+            bestowed only on leaders of proven ability.  
+            Military Rank, unlike social status, costs no money to maintain. 
+            But insubordination, extreme cowardice, or stupidity can cause a 
+            permanent or temporary loss in rank, depending upon your superior's 
+            reaction (as played by the GM). 
+            Brevet ranks are given by superior officers (usually of Rank 6 or 
+            higher) to  temporarily  increase your rank for a predetermined 
+            amount of time  - until the end of a battle, campaign, or the like. To 
+            keep a brevet rank, you must meet the requirements of that rank as 
+            well as pay the point cost  (see p. 81). 
+            In some armies, rank may be purchased for money. In such a 
+            case, a PC who is Wealthy or better gets Rank 3 automatically if 
+            desired. Higher levels still cost character points as well as cash. A 
+            Wealth level of Average or less doubles the point cost to start with  a 
+            Military Rank from 1 to 6. Once a character has been created, rank 
+            can be bought for the normal  point  cost, if the  cash  cost for the 
+            campaign is met.  
+            In many lands, Military Rank carries some automatic Social 
+            Status, which need not be paid for separately and has no cash cost 
+            to maintain. The "default" here is one level of Status for every 3 of 
+            Rank, rounding to the closest number. Where this varies, it will be 
+            mentioned in society descriptions. 
+            Military Rank is almost always accompanied by a significant 
+            Duty (see p. 39). 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Musical Ability</name>
+        <points>1 point/level</points>
+        <description>You have a natural talent with music and musical instruments. 
+            Your level of musical ability is a bonus when you study Singing or a 
+            musical instrument. That is, when you learn a musical ski ll, learn it as 
+            though your IQ were equal to (IQ + Musical Ability). This bonus 
+            also adds to HT for the Singing skill. Cost: 1 point for each  + 1 
+            bonus.  
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Night Vision</name>
+        <points>10</points>
+        <description>Your eyes adapt rapidly to the darkness. You cannot see in total 
+            dark  - but if y ou have  any  light at all, you can see fairly well. 
+            Whenever the GM exacts a penalty because of darkness,  except for 
+            total darkness, this penalty does not apply to you. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Peripheral Vision</name>
+        <points>15</points>
+        <description>You have an unusually wide field of vision. Whenever some-
+            thing dangerous or interesting happens "behind your back," the GM 
+            rolls against your IQ. A successful roll means you saw it, or saw 
+            enough to alert you in case of an attack. 
+            If you are playing with a game map, you can attack into your 
+            right and left hexes as well as front hexes. (Note that with a one-
+            handed weapon, an attack to the left is clumsy and is still consid-
+            ered a "wild swing" - see p. 105.) 
+            If you are attacked from the right or left hex, you defend without 
+            penalty. Your active defense is at only  -2  against attacks from the rear. 
+            You still cannot attack a foe directly behind you (without a wild 
+            swing).  
+            Furthermore, you have a wider "arc of vision" for ranged 
+            attacks. The figure below shows the arc of vision for a normal char-
+            acter (white) and for someone with Peripheral Vision (gray plus 
+            white). 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Psionic Resistance</name>
+        <points>2 points/level</points>
+        <description>Psionic Resistance interferes with  all  uses of psionic powers 
+            against you, friendly or hostile, against or  by  the subject. It can 
+            never be turned off! 
+            If you have Psionic Res istance, the level of your resistance is 
+            subtracted from the effective skill of any psionic attempt where you 
+            are the subject  - even psychokinesis and clairvoyance. It is also 
+            subtracted from your effective skill with any psi ability. Therefore if 
+            you have a high Psionic Resistance, it will be hard for you to 
+            develop any significant abilities of your own. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Rapid Healing</name>
+        <points>5</points>
+        <description>This advantage is only available if your basic HT is 10 or above. 
+            You recover rapidly from all kinds of wounds. Whenever you roll to 
+            recover lost HT,  or  when you roll to see if you can get over a 
+            crippling injury, add 5 to your effective HT. This ability does not 
+            help you get over being stunned, etc. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Reputation</name>
+        <points>Variable</points>
+        <description>A good reputation counts as an advantage. See p. 17.</description>
+    </advantage>
+        
+    <advantage>
+        <name>Status</name>
+        <points>Variable</points>
+        <description>High social status is an advantage. See p. 18. </description>
+    </advantage>
+        
+    <advantage>
+        <name>Strong Will</name>
+        <points>4 points/level</points>
+        <description>You have much more "willpower" than the average person. 
+            Your level of Will is added to your IQ when you make a Will Roll 
+            for any reason, including any attempt to affect you  by Diplomacy, 
+            Fast-Talk, Sex Appeal, Interrogation (with or without torture), 
+            Hypnotism, or psionic or magical attempts to take over your mind. 
+            Strong Will adds to your resistance when you want to resist a magic 
+            spell (p. 150). However, this advantage does not help against combat 
+            shock, and so on. In questionable cases, the GM's ruling is law. 
+            Example: You have 3 levels of Strong Will. An enemy spy is 
+            trying to seduce you. The GM rolls a Contest of Skills: the spy's 
+            Sex Appeal vs. your IQ. But you have a +3 in the contest, because of 
+            your willpower. 
+            Cost: 4 points per +1 bonus. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Toughness</name>
+        <points>10/25 points</points>
+        <description>Your skin and flesh are tougher than the average human's. Your 
+            body itself has a Damage Resistance score. This DR is treated just 
+            like the DR from armor: you subtract it from the damage done by 
+            any blow,  before  you multiply the damage done by a cutting or 
+            impaling weapon. Toughness does not make you any harder to hit - 
+            it just lets you survive more injury.  
+            Toughness does not let your  skin "turn" weapons. They still 
+            break the skin - they may even draw blood. But you're not hurt.
+            However, if a poisoned weapon breaks your skin, the poison will do 
+            ts normal damage. Note also that your  eyes  are not tough! A hit 
+            here will do normal damage. 
+            Cost: 10 points for DR 1, or 25 points for DR 2. Higher bodily 
+            DRs are not possible to a "natural" human. But some creatures have 
+            natural Toughness, or even natural armor that can stop weapons. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Unusual Background</name>
+        <points>10 or more points</points>
+        <description>This is a "catch-all" advantage that can be used whenever it is 
+            needed. For instance, if your parents were traveling merchants, you 
+            could reasonably claim to have two or three "native" languages. 
+            But that is clearly an unusual background, which costs points. 
+            Similarly, if you have access to  skills not available to the people 
+            around you, that is Unusual. In general, any time a player comes up 
+            with a "character story" that would reasonably give him some special 
+            benefit, the GM should  allow this, but require Unusual 
+            Background to cover it.  
+            The GM may charge extra points if he rules the background is 
+            very  unusual. "Raised by aliens" or "trained from birth by a myste-
+            rious ninja cult" might be considered "very unusual" in most game-
+            worlds. Psi-users, supers or wizards are Very Unusual if they 
+            appear in a game world where their special talents are unique. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Voice</name>
+        <points>10</points>
+        <description>You have a naturally clear, resonant and attractive voice. You 
+            get a permanent +2 bonus on all the following  skills: Bard, 
+            Diplomacy, Performance, Politician, Savoir-Faire, Sex Appeal and 
+            Singing. You also get a +2 on any reaction roll made by someone 
+            who can hear your voice. 
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Wealth</name>
+        <points>Variable </points>
+        <description>Wealth can be a truly wonderful advantage. See p. 16 for the 
+            point cost for different levels of wealth. Remember that wealth is 
+            relative, and determined by the game world you start in. The pre-
+            cise meaning of each level will be defined, for each game world, in 
+            that world's book.
+        </description>
+    </advantage>
+        
+    <advantage>
+        <name>Ally</name>
+        <points>Variable</points>
+        <description>  
+            Many fictional heroes have partners  - loyal comrades, faithful 
+            sidekicks or life-long friends - who accomp any them on adventures. 
+            These partners are Allies. Having an Ally is an advantage. 
+            In one sense, the other PCs who adventure with you are allies. 
+            But they can be unreliable allies indeed. Often they are chance 
+            acquaintances, first encountered at a roadside tavern only hours 
+            ago. They have their own hidden goals, ethics and motives, which 
+            may or may not coincide with your own. 
+            An NPC Ally, on the other hand, is wholly reliable. Perhaps you 
+            fought side-by-side in an extended campaign, trained under the 
+            same master, or grew up in the same village. The two of you trust 
+            each other implicitly. You travel together, fight back-to-back, share 
+            rations in hard times, trade watches through the night.  
+            The point cost for an Ally is determined by his point value and 
+            frequency of appearance.
+            An Ally built on 76 to 100 points costs 5 points. 
+            An Ally built on 101 to 150 points costs 10 points. 
+            An Ally built on 151 to 200 points costs 15 points, etc. 
+            An Ally built on over 50 points more than his PC is actually a 
+            Patron (p. 24). 
+            An Ally having special abilities  - magic powers in a non-magical 
+            world, equipment far beyond the world's TL - costs an extra 5 to 10 
+            points, at the GM's discretion. 
+        </description>
+    </advantage>
+</advantages>

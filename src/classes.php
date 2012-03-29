@@ -10,7 +10,7 @@ class Sheet {
     private $quirks;
 
     public function __construct() {
-        $this->editable = false;
+        $this->editable = true;
         // kaikki menee luultavasti vielä omaan funkkariinsa
         $this->cdata = array();
         $this->cdata['owner'] = "someone";
@@ -86,6 +86,15 @@ class Sheet {
         }
     }
 
+    function drawSkillButtons($skill) {
+        $skillfield = $skill . "Field";
+        $skillButton = $skill . "Button";
+        if ($this->editable) {
+            echo "<input type=\"button\" name=\"$skillButton\" value=\"+\" size=12 class=minibutton onClick=\"increaseSkill('$skillfield')\">";
+            echo "<input type=\"button\" name=\"$skillButton\" value=\"-\" size=12 class=minibutton onClick=\"decreaseSkill('$skillfield')\">";
+        }
+    }
+
     private function readAttributes() {
 
         $advantage = new Attribute("Place holder", true, 10);
@@ -113,17 +122,16 @@ class Sheet {
     }
 
     public function readItems() {
-        $item = new Item("Keppi", "Misc", "5", "15");
-        $item2 = new Item("Leuku", "Weapon", "2", "4");
+        $item = new Item("Keppi", "5", "15");
+        $item2 = new Item("Leuku", "2", "4");
 
         $this->items[] = $item;
         $this->items[] = $item2;
     }
-    
+
     public function getItems() {
         return $this->items;
     }
-
 }
 
 class Attribute {
@@ -195,13 +203,11 @@ class Skill {
 class Item {
 
     private $name;
-    private $type;
     private $weigth;
     private $value;
 
-    public function __construct($name, $type, $weight, $value) {
+    public function __construct($name, $weight, $value) {
         $this->name = $name;
-        $this->type = $type;
         $this->weigth = $weight;
         $this->value = $value;
     }

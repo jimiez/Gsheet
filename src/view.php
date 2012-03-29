@@ -174,6 +174,32 @@ $sheet = new Sheet();
             </table>
 
             <table>
+                <th colspan="3">Active defences</th>
+                <tr>
+                    <td>
+                        Dodge
+                    </td>
+                    <td>
+                        Parry
+                    </td>
+                    <td>
+                        Block
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="dodgeField" type="text" class="boxy" size="2" readonly="readonly">
+                    </td>
+                    <td>
+                        <input name="parryField" type="text" class="boxy" size="2" <?php $sheet->readOnly() ?>>
+                    </td>
+                    <td>
+                        <input name="blockField" type="text" class="boxy" size="2" <?php $sheet->readOnly() ?>>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
                 <th>
                     Movement
                 </th>
@@ -292,6 +318,7 @@ $sheet = new Sheet();
                     $totalSkill += $skill->getPoints();
                 }
                 ?>
+
             </table>
 
             <table>
@@ -315,7 +342,6 @@ $sheet = new Sheet();
                     echo "<td><input type='text' size=1 class='underscore' value='" . $item->getWeight() . "'";
                     $sheet->readOnly();
                     echo "</td></tr>";
-                    
                 }
                 ?>
             </table> 

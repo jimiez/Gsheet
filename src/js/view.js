@@ -1,14 +1,22 @@
 function updateAll() {
     updateSpeed();
     updateDamage();
+    updateDodge();
 }
 
 function increaseValue(field) {
-
     document.baseform[field].value++;
 }
 
 function decreaseValue(field) {
+    document.baseform[field].value--;
+}
+
+function increaseSkill(field) {
+    document.baseform[field].value++;
+}
+
+function decreaseSkill(field) {
     document.baseform[field].value--;
 }
 
@@ -18,6 +26,11 @@ function updateSpeed() {
     var c = (a+b)/4;
     document.baseform.basicSpeedField.value = c;
     document.baseform.moveField.value = Math.floor(c)
+}
+
+function updateDodge() {
+    var move = parseInt(document.baseform.moveField.value);
+    document.baseform.dodgeField.value = move;
 }
 
 function updateDamage() {
@@ -69,4 +82,10 @@ function updateDamage() {
     var ind = parseInt(document.baseform.stField.value);
     document.baseform.dmgThrustField.value = thrust[ind];
     document.baseform.dmgSlashField.value = slash[ind];
+}
+
+function calculateSkills() {
+    
+    
+    
 }
