@@ -1,74 +1,34 @@
 <?php
 
+class Character {
+
+    private $charStats;
+
+    public function __construct($id) {
+        include("connect.php");
+
+        $myquery = $db->prepare('SELECT * FROM Characters WHERE Char_id=?');
+        $myquery->bindValue(1, $id);
+        $myquery->execute();
+        $this->charStats = $myquery->fetchObject();
+    }
+
+    public function getStat($stat) {
+        return $this->charStats->$stat;
+    }
+
+    public function setStat($stat, $value) {
+        $this->charStats->$stat = $value;
+    }
+
+}
+
 class Sheet {
 
-    private $editable; // onko lukija omistaja?
-    private $cdata; // hahmon perusomnaisuudet taulukossa
-    private $attributes; // taulukko eduille
-    private $skills;
-    private $items;
-    private $quirks;
+    private $editable; // onko lukija omistaja
 
-    public function __construct() {
-        $this->editable = true;
-        // kaikki menee luultavasti vielä omaan funkkariinsa
-        $this->cdata = array();
-        $this->cdata['owner'] = "someone";
-        $this->cdata['name'] = "testihahmo";
-        $this->cdata['appearance'] = "asd asd";
-        $this->cdata['campaign'] = null;
-        $this->cdata['age'] = 12;
-        $this->cdata['height'] = "180 cm";
-        $this->cdata['weight'] = "70 kg";
-        $this->cdata['race'] = "Human";
-        $this->cdata['description'] = "Urhea seikkailija";
-        $this->cdata['hitsTaken'] = 0;
-        $this->cdata['fatigue'] = 0;
-        $this->cdata['st'] = 10;
-        $this->cdata['dx'] = 10;
-        $this->cdata['iq'] = 10;
-        $this->cdata['ht'] = 10;
-        $this->cdata['unusedPoints'] = 100;
-        $this->attributes = array();
-        $this->skills = array();
-        $this->items = array();
-        $this->readAttributes();
-        $this->readSkills();
-        $this->readItems();
-    }
-
-    public function getValue($entry) {
-        $value = $this->cdata[$entry];
-        echo "value=\"$value\"";
-    }
-
-    public function getValuePure($entry) {
-        return $this->cdata[$entry];
-    }
-
-    public function getAttributes($type) {
-
-        $attributeList = array();
-
-        if ($type == "adv") {
-            foreach ($this->attributes as $attr) {
-                if ($attr->isAdvantage()) {
-                    $attributeList[] = $attr;
-                }
-            }
-        } else {
-            foreach ($this->attributes as $attr) {
-                if ($attr->isAdvantage() == false) {
-                    $attributeList[] = $attr;
-                }
-            }
-        }
-
-        return $attributeList;
-    }
-
-    public function setValue($entry, $value) {
-        $this->cdata[$entry] = $value;
+    public function __construct($editable) {
+        $this->editable = $editable;
     }
 
     public function readOnly() {
@@ -95,43 +55,21 @@ class Sheet {
         }
     }
 
-    private function readAttributes() {
+    function drawItemSelection($selected) {
 
-        $advantage = new Attribute("Place holder", true, 10);
-        $advantage2 = new Attribute("Yet another", true, 15);
-        $disadvantage = new Attribute("Holder of places", false, -10);
-        $disadvantage2 = new Attribute("Something something", false, -20);
+        echo "<select name='itemType'>";
 
-        $this->attributes[] = $advantage;
-        $this->attributes[] = $advantage2;
-        $this->attributes[] = $disadvantage;
-        $this->attributes[] = $disadvantage2;
+        echo "<option></option>";
+        if ($selected == "weapon") {
+            echo "<option selected=selected>Weapon</option>";
+        } else {
+            echo "<option>Weapon</option>";
+        }
+        echo "<option>Protection</option>";
+        echo "<option>Misc</option>";
+        echo "</select>";
     }
 
-    private function readSkills() {
-
-        $skill = new Skill("Test", "M", "Very hard", "12.5");
-        $skill2 = new Skill("Another Test", "P", "Hard", "5");
-
-        $this->skills[] = $skill;
-        $this->skills[] = $skill2;
-    }
-
-    public function getSkills() {
-        return $this->skills;
-    }
-
-    public function readItems() {
-        $item = new Item("Keppi", "5", "15");
-        $item2 = new Item("Leuku", "2", "4");
-
-        $this->items[] = $item;
-        $this->items[] = $item2;
-    }
-
-    public function getItems() {
-        return $this->items;
-    }
 }
 
 class Attribute {

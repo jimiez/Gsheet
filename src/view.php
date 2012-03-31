@@ -1,28 +1,42 @@
 <?php
-include 'classes.php';
+include('classes.php');
+include('connect.php');
+session_start();
 
-function drawItemSelection($selected) {
-
-    echo "<select name='itemType'>";
-
-    echo "<option></option>";
-    if ($selected == "weapon") {
-        echo "<option selected=selected>Weapon</option>";
-    } else {
-        echo "<option>Weapon</option>";
-    }
-    echo "<option>Protection</option>";
-    echo "<option>Misc</option>";
-    echo "</select>";
+if (isset($_SESSION['isLogged'])) {
+    $loggedUser = $_SESSION['loggedUser'];
+} else {
+    $loggedUser = null;
 }
 
-$sheet = new Sheet();
+if (isset($_GET['id'])) {
+    $char = $_GET['id'];
+} else {
+    $char = -1;
+}
+
+$myquery = $db->prepare('SELECT COUNT(*) AS n FROM Characters WHERE char_id = ?');
+$myquery->bindValue(1, $char);
+$myquery->execute();
+$result = $myquery->fetchObject();
+
+if ($result->n < 1) {
+    echo "No character found!";
+    die();
+} else {
+    $character = new Character($char);
+    if ($character->getStat("CharOwner") == $loggedUser) {
+        $sheet = new Sheet(true);
+    } else {
+        $sheet = new Sheet(false);
+    }
+}
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gsheet - <?php echo $sheet->getValuePure('name') ?></title>
+        <title>Gsheet - <?php echo $character->getStat('CharName') ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <SCRIPT src="js/view.js"></SCRIPT>
@@ -41,11 +55,7 @@ $sheet = new Sheet();
                         Name
                     </td>
                     <td>
-                        <input name="nameField" type="text" class="underscore" size="35" 
-                        <?php
-                        $sheet->readOnly();
-                        $sheet->getValue('name');
-                        ?>>
+                        <input name="nameField" type="text" class="underscore" size="35" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharName') ?>'>
                     </td>
                 </tr>
                 <tr>
@@ -53,27 +63,18 @@ $sheet = new Sheet();
                         Appearance
                     </td>
                     <td>
-                        <input name="appearanceField" type="text" class="underscore" size="35" 
-                        <?php
-                        $sheet->readOnly();
-                        $sheet->getValue('appearance')
-                        ?>>
-                    </td></tr>
+                        <input name="appearanceField" type="text" class="underscore" size="35" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharDesc') ?>'>
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         Description
                     </td>
                     <td>
-                        <input type="text" name="storyField" size='35' class="underscore" 
-                        <?php
-                        $sheet->readOnly();
-                        $sheet->getValue('description')
-                        ?>>
+                        <input type="text" name="storyField" size='35' class="underscore" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharNotes') ?>'>
                     </td>
                 </tr>
             </table>
-
-
 
             <table>
                 <th>
@@ -84,7 +85,7 @@ $sheet = new Sheet();
                         <h2>ST</h2>
                     </td>
                     <td>
-                        <input name="stField" type="text" class="boxy" size="2" <?php $sheet->getValue('st') ?> readonly="readonly">
+                        <input name="stField" type="text" class="boxy" size="2" value='<?php echo $character->getStat('ST') ?>' readonly="readonly">
                     </td>
                     <?php
                     $sheet->drawButtons("st");
@@ -95,7 +96,7 @@ $sheet = new Sheet();
                         <h2>DX</h2>
                     </td>
                     <td>
-                        <input name="dxField" type="text" class="boxy" size="2" <?php $sheet->getValue('dx') ?> readonly="readonly">
+                        <input name="dxField" type="text" class="boxy" size="2" value='<?php echo $character->getStat('DX') ?>' readonly="readonly">
                     </td>
                     <?php
                     $sheet->drawButtons("dx");
@@ -106,7 +107,7 @@ $sheet = new Sheet();
                         <h2>IQ</h2>
                     </td>
                     <td>
-                        <input name="iqField" type="text" class="boxy" size="2" <?php $sheet->getValue('iq') ?> readonly="readonly">
+                        <input name="iqField" type="text" class="boxy" size="2" value='<?php echo $character->getStat('IQ') ?>' readonly="readonly">
                     </td>
                     <?php
                     $sheet->drawButtons("iq");
@@ -117,7 +118,7 @@ $sheet = new Sheet();
                         <h2>HT</h2> 
                     </td>
                     <td>
-                        <input name="htField" type="text" class="boxy" size="2" <?php $sheet->getValue('ht') ?>  readonly="readonly">
+                        <input name="htField" type="text" class="boxy" size="2" value='<?php echo $character->getStat('HT') ?>'  readonly="readonly">
                     </td>
                     <?php
                     $sheet->drawButtons("ht");
@@ -154,7 +155,7 @@ $sheet = new Sheet();
                         Hits taken
                     </td>
                     <td>
-                        <input type="text" size=2 name="hitsTakenField" <?php $sheet->getValue('hitsTaken') ?> readonly="readonly">
+                        <input type="text" size=2 name="hitsTakenField" value='<?php echo $character->getStat('HitsTaken') ?>' readonly="readonly">
                         <?php
                         $sheet->drawButtons("hitsTaken");
                         ?>
@@ -165,9 +166,9 @@ $sheet = new Sheet();
                         Fatigue
                     </td>
                     <td>
-                        <input type="text" name="fatigueField" <?php $sheet->getValue('fatigue') ?> size="2" readonly="readonly">
+                        <input type="text" name="fatigueField" value='<?php echo $character->getStat('Fatigue') ?>' size="2" readonly="readonly">
                         <?php
-                        $sheet->drawButtons("fatigue");
+                        $sheet->drawButtons("hitsTaken");
                         ?>
                     </td>
                 </tr>
@@ -238,17 +239,17 @@ $sheet = new Sheet();
                     Pts
                 </th>
 
-                <?php
-                $totalAdvantage = 0;
+                <?php /*
+                  $totalAdvantage = 0;
 
-                foreach ($sheet->getAttributes("adv") as $advantage) {
-                    echo "<tr><td>";
-                    echo $advantage->getName();
-                    echo "</td><td>";
-                    echo $advantage->getPoints();
-                    echo "</td></tr>";
-                    $totalAdvantage += $advantage->getPoints();
-                }
+                  foreach ($sheet->getAttributes("adv") as $advantage) {
+                  echo "<tr><td>";
+                  echo $advantage->getName();
+                  echo "</td><td>";
+                  echo $advantage->getPoints();
+                  echo "</td></tr>";
+                  $totalAdvantage += $advantage->getPoints();
+                  } */
                 ?>
                 <tr>
                     <td>
@@ -267,15 +268,15 @@ $sheet = new Sheet();
 
                 <?php
                 $totalDisadvantage = 0;
-
-                foreach ($sheet->getAttributes("dis") as $disadvantage) {
-                    echo "<tr><td>";
-                    echo $disadvantage->getName();
-                    echo "</td><td>";
-                    echo $disadvantage->getPoints();
-                    echo "</td></tr>";
-                    $totalDisadvantage += $disadvantage->getPoints();
-                }
+                /*
+                  foreach ($sheet->getAttributes("dis") as $disadvantage) {
+                  echo "<tr><td>";
+                  echo $disadvantage->getName();
+                  echo "</td><td>";
+                  echo $disadvantage->getPoints();
+                  echo "</td></tr>";
+                  $totalDisadvantage += $disadvantage->getPoints();
+                  } */
                 ?>
                 <tr>
                     <td>
@@ -300,23 +301,27 @@ $sheet = new Sheet();
                 <th>
                     Check
                 </th>
+
                 <?php
-                $totalSkill = 0;
-                $i = 0;
-                foreach ($sheet->getSkills() as $skill) {
-                    echo "<tr><td>";
-                    echo "<input type=text value='" . $skill->getName() . "' size=20 readonly='readonly' class='underscore'>";
-                    echo "</td><td>";
-                    echo "<input type=text value='" . $skill->getType() . "' size=1 readonly='readonly' class='underscore' name='skill" . $i . "type'>";
-                    echo "</td><td>";
-                    echo "<input type=text value='" . $skill->getDifficulty() . "' size=5 readonly='readonly' class='underscore' name='skill" . $i . "diff'>";
-                    echo "</td><td>";
-                    echo "<input type=text value='" . $skill->getPoints() . "' size=1 readonly='readonly' class='underscore' name='skill" . $i . "pts'>";
-                    echo "</td><td>";
-                    echo "<input type='text' value='0' size='1' class='underscore'name='skill" . $i . "result'>";
-                    $i++;
-                    $totalSkill += $skill->getPoints();
-                }
+                /*
+                  $totalSkill = 0;
+                  $i = 0;
+                  foreach ($sheet->getSkills() as $skill) {
+                  echo "<tr><td>";
+                  echo "<input type=text value='" . $skill->getName() . "' size=20 readonly='readonly' class='underscore'>";
+                  echo "</td><td>";
+                  echo "<input type=text value='" . $skill->getType() . "' size=1 readonly='readonly' class='underscore' name='skill" . $i . "type'>";
+                  echo "</td><td>";
+                  echo "<input type=text value='" . $skill->getDifficulty() . "' size=5 readonly='readonly' class='underscore' name='skill" . $i . "diff'>";
+                  echo "</td><td>";
+                  echo "<input type=text value='" . $skill->getPoints() . "' size=1 readonly='readonly' class='underscore' name='skill" . $i . "pts'>";
+                  echo "</td><td>";
+                  echo "<input type='text' value='0' size='1' class='underscore'name='skill" . $i . "result'>";
+                  $i++;
+                  $totalSkill += $skill->getPoints();
+                  }
+
+                 */
                 ?>
 
             </table>
@@ -331,22 +336,22 @@ $sheet = new Sheet();
                 <th>
                     Weigth
                 </th>
+
                 <?php
-                foreach ($sheet->getItems() as $item) {
-                    echo "<tr><td><input type='text' size=30 class='underscore' value='" . $item->getName() . "'";
-                    $sheet->readOnly();
-                    echo "</td>";
-                    echo "<td><input type='text' size=1 class='underscore' value='" . $item->getValue() . "'";
-                    $sheet->readOnly();
-                    echo "</td>";
-                    echo "<td><input type='text' size=1 class='underscore' value='" . $item->getWeight() . "'";
-                    $sheet->readOnly();
-                    echo "</td></tr>";
-                }
+                /*
+                  foreach ($sheet->getItems() as $item) {
+                  echo "<tr><td><input type='text' size=30 class='underscore' value='" . $item->getName() . "'";
+                  $sheet->readOnly();
+                  echo "</td>";
+                  echo "<td><input type='text' size=1 class='underscore' value='" . $item->getValue() . "'";
+                  $sheet->readOnly();
+                  echo "</td>";
+                  echo "<td><input type='text' size=1 class='underscore' value='" . $item->getWeight() . "'";
+                  $sheet->readOnly();
+                  echo "</td></tr>";
+                  } */
                 ?>
             </table> 
-
-
         </form>
     </body>
 </html>

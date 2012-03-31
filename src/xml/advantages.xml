@@ -2,12 +2,6 @@
 <advantages>
     
     <advantage>
-        <name></name>
-        <points></points>
-        <description></description>
-    </advantage>
-    
-    <advantage>
         <name>Absolute Direction</name>
         <points>5</points>
         <description>You always know which way is north, and you can always 
@@ -227,13 +221,7 @@
     </advantage>
         
     <advantage>
-        <name>You a re as susceptible to injury as anyone else, but you don't feel 
-            it as much. If you are hurt in combat, you are not stunned and do not 
-            have the normal DX penalty on your next turn (exception: a  head 
-            blow or critical hit will still stun you). If you are tortured physically, 
-            you are at a +3 to resist. The GM may let you roll at  Will +3 to 
-            ignore pain in other situations. 
-        </name>
+        <name>Immunity to disease</name>
         <points>10</points>
         <description>Your body naturally resists all disease organisms. You will never 
             catch any infection or disease "naturally." If you are forcibly injected 

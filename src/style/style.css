@@ -101,3 +101,17 @@ input.boxy {
 input.borderless {
     border-width: 0px;
 }
+
+
+
+input.nicebutton
+{
+   font-size:12px;
+   font-family:Arial,sans-serif;
+   font-weight:bold;
+   color:#444444;
+   background-color:#EEEEEE;
+   border-style:solid;
+   border-color:#999999;
+   border-width:3px;
+}
