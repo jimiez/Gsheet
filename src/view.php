@@ -63,7 +63,7 @@ if ($result->n < 1) {
                         Appearance
                     </td>
                     <td>
-                        <input name="appearanceField" type="text" class="underscore" size="35" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharDesc') ?>'>
+                        <input name="descriptionField" type="text" class="underscore" size="35" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharDesc') ?>'>
                     </td>
                 </tr>
                 <tr>
@@ -71,11 +71,44 @@ if ($result->n < 1) {
                         Description
                     </td>
                     <td>
-                        <input type="text" name="storyField" size='35' class="underscore" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharNotes') ?>'>
+                        <input type="text" name="notesField" size='35' class="underscore" <?php $sheet->readOnly() ?> value='<?php echo $character->getStat('CharNotes') ?>'>
+                    </td>
+                </tr>
+                <tr>
+                    
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        Campaign
+                    </td>
+                    <td>
+                        <select name="campaignField" <?php $sheet->disabledSelect() ?>>
+                            <option></option>
+                            <?php
+                            $myquery = $db->prepare('SELECT Campaign_id, CampName FROM Campaigns');
+                            $myquery->execute();
+                            while ($result = $myquery->fetchObject()) {
+                                if ($result->Campaign_id == $character->getStat('Campaign')) {
+                                echo "<option value='$result->Campaign_id' SELECTED='Yes'>$result->CampName</option>";    
+                                } else {
+                                echo "<option value='$result->Campaign_id'>$result->CampName</option>";
+                                }
+                            }
+                            ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Unused points
+                    </td>
+                    <td>
+                        <input type="text" size="3" name="unusedPointsField" class="underscore" value="<?php echo $character->getStat('UnusedPoints') ?>" <?php $sheet->readOnly() ?>>
                     </td>
                 </tr>
             </table>
-
+            
             <table>
                 <th>
                     Basic attributes
@@ -168,7 +201,7 @@ if ($result->n < 1) {
                     <td>
                         <input type="text" name="fatigueField" value='<?php echo $character->getStat('Fatigue') ?>' size="2" readonly="readonly">
                         <?php
-                        $sheet->drawButtons("hitsTaken");
+                        $sheet->drawButtons("fatigue");
                         ?>
                     </td>
                 </tr>
@@ -353,6 +386,7 @@ if ($result->n < 1) {
                 ?>
             </table> 
             <input type="submit" name="saveForm">
+            <input type="hidden" name="charID" value="<?php echo $character->getStat('Char_id') ?>">
         </form>
     </body>
 </html>

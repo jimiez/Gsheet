@@ -12,13 +12,11 @@ class Character {
         $myquery->bindValue(1, $id);
         $myquery->execute();
         $this->charStats = $myquery->fetchObject();
-        
+
         $myquery = $db->prepare('SELECT * FROM AttributeList WHERE CharAttr_id=?');
         $myquery->bindValue(1, $id);
         $myquery->execute();
         $result = $myquery->fetchObject();
-        
-        
     }
 
     public function getStat($stat) {
@@ -28,7 +26,7 @@ class Character {
     public function setStat($stat, $value) {
         $this->charStats->$stat = $value;
     }
-    
+
     public function getAdvantages() {
         return $this->charAdvantages;
     }
@@ -46,6 +44,12 @@ class Sheet {
     public function readOnly() {
         if (!$this->editable) {
             echo "readonly=\"readonly\"";
+        }
+    }
+
+    public function disabledSelect() {
+        if (!$this->editable) {
+            echo "disabled='yes'";
         }
     }
 

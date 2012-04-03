@@ -18,6 +18,14 @@ if (isset($_POST['submitChar'])) {
     $myquery->bindValue(2, $_SESSION['loggedUser']);
     $myquery->execute();
 }
+
+if (isset($_POST['submitCamp'])) {
+    $myquery = $db->prepare('INSERT INTO Campaigns (CampOwner, CampName, CampDesc) values (?, ?, ?)');
+    $myquery->bindValue(1, $_SESSION['loggedUser']);
+    $myquery->bindValue(2, $_POST['campName']);
+    $myquery->bindValue(3, $_POST['campDesc']);
+    $myquery->execute();
+}
 ?>
 
 <html>
@@ -40,7 +48,6 @@ if (isset($_POST['submitChar'])) {
                 while ($result = $myquery->fetchObject()) {
                     echo "<option value='$result->Char_id'>$result->CharName</option>";
                 }
-                
                 ?>
             </select>
             <input type="submit" class="nicebutton">
@@ -52,11 +59,24 @@ if (isset($_POST['submitChar'])) {
             <input type="text" name="charName" size="20"><br>
             <input type="submit" value="Create!" name="submitChar" class="nicebutton">
         </form>
+        <br>
+        <b>Create a new campaign</b>
+        <br>
+        <br>
 
+        <form name="newCampaign" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
+            <p>Name of the campaign</p>
+            <input type="text" name="campName" size="20"><br>
+            <p>Description of the campaign</p>
+            <textarea name="campDesc" rows="5" cols="20">Description of the campaign here</textarea><br>
+            <input type="submit" value="Create!" name="submitCamp" class="nicebutton">
+        </form>
 
+        <br><br>
         <form method='post' name='logout' action=<?php $_SERVER['PHP_SELF'] ?>>
             <input type="submit" name="logOut" value="Log out" class=nicebutton>
         </form>
+
     </body>
 
 </html>
