@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
     $char = -1;
 }
 
-$myquery = $db->prepare('SELECT COUNT(*) AS n FROM Characters WHERE char_id = ?');
+$myquery = $db->prepare('SELECT COUNT(*) AS n FROM Characters WHERE Char_id = ?');
 $myquery->bindValue(1, $char);
 $myquery->execute();
 $result = $myquery->fetchObject();
@@ -44,7 +44,7 @@ if ($result->n < 1) {
 
     <body onLoad="updateAll()">
 
-        <form name="baseform" onClick="updateAll()" action="save.php">
+        <form name="baseform" onClick="updateAll()" method="post" action="save.php">
 
             <table>
                 <th>
@@ -352,6 +352,7 @@ if ($result->n < 1) {
                   } */
                 ?>
             </table> 
+            <input type="submit" name="saveForm">
         </form>
     </body>
 </html>

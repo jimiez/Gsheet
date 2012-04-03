@@ -18,7 +18,6 @@ if (isset($_POST['submitChar'])) {
     $myquery->bindValue(2, $_SESSION['loggedUser']);
     $myquery->execute();
 }
-
 ?>
 
 <html>
@@ -31,9 +30,24 @@ if (isset($_POST['submitChar'])) {
         <h1>Gsheet</h1>
         <p>Welcome to Gsheet!</p>
         <br>
+        Select a charcter:
+        <form name="charSelect" method="get" action="view.php">
+            <select name="id">
+                <?php
+                $myquery = $db->prepare('SELECT Char_id, CharName FROM Characters WHERE CharOwner= ?');
+                $myquery->bindValue(1, $_SESSION['loggedUser']);
+                $myquery->execute();
+                while ($result = $myquery->fetchObject()) {
+                    echo "<option value='$result->Char_id'>$result->CharName</option>";
+                }
+                
+                ?>
+            </select>
+            <input type="submit" class="nicebutton">
+        </form>
         <B>Create a new character</b>
         <form method="post" name="newChar" action="<?php $_SERVER['PHP_SELF'] ?>">
-            
+
             <p>Name of the character</p>
             <input type="text" name="charName" size="20"><br>
             <input type="submit" value="Create!" name="submitChar" class="nicebutton">
