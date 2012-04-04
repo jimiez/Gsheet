@@ -1,7 +1,104 @@
+#wrap {
+
+    width: 800px;
+    height: available;
+    text-align: left;
+}
+
+#header {
+    text-align: center;
+    padding:20px 0px;
+    background:#01243B;
+}
+
+#bigheader {
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 14px;
+    font-variant: small-caps;
+    color:#F2F39E;
+}
+
+#nav {
+
+    width: 150;
+    height: max-content;
+    width: 25%;
+    float:left;
+    height: 80%;
+    background:#9DA7B2;
+}
+#main {
+    float:left;
+    width: 75%;
+    height: 80%;
+    background:C5C5C5;
+}
+
+h2 {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:#336666;
+}
+
+a:link {
+    color: #01243B; text-decoration: none;
+}
+
+a:active {
+    color: #01243B; text-decoration: none;
+}
+a:visited {
+    color: #01243B; text-decoration: none; 
+}
+a:hover {
+    color: #ff0000; text-decoration: none;
+}
+
+#main p {
+    margin: 10px;
+}
+
+#main b {
+    margin: 15px;
+}
+
+#main form {
+    margin: 15px;
+}
+
+#footer {
+    clear:both;
+    padding: 10px;
+    height: 30px;
+    background:#01243B;
+}
+#footer p {
+    margin: 5px;
+    color:#F2F39E;
+}
+
+#versioninfo {
+    float: left;
+}
+
+#authorinfo {
+    float: right;
+}
+
+selection {
+    width: 150px;
+    min-width: 170px;
+    max-width: 170px;
+    width : 170px
+}
+
 body
 {
     font-size: 12px;
     font-family:verdana,sans-Serif;
+    background:#ddd;
 }
 
 table
@@ -10,7 +107,6 @@ table
     font-family:verdana,sans-Serif;
     border-bottom-width: 1;
     border-style: solid;
-
 }
 
 h1
@@ -18,12 +114,6 @@ h1
     font-size: 24px;
     font-style: bold;
     font-variant: small-caps;
-    color:#336666;
-}
-
-h2
-{
-    font-size: 16px;
     color:#336666;
 }
 
@@ -35,7 +125,7 @@ b
 
 th
 {
-text-align: left;
+    text-align: left;
 
 }
 
@@ -102,16 +192,25 @@ input.borderless {
     border-width: 0px;
 }
 
+ul {
+    padding-top: 18px;
+    padding-bottom: 4px;
+}
 
+li {
+    alignment-baseline: before-edge;
+    padding-bottom: 8px;
+
+}
 
 input.nicebutton
 {
-   font-size:12px;
-   font-family:Arial,sans-serif;
-   font-weight:bold;
-   color:#444444;
-   background-color:#EEEEEE;
-   border-style:solid;
-   border-color:#999999;
-   border-width:3px;
+    font-size:12px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    color:#444444;
+    background-color:#EEEEEE;
+    border-style:solid;
+    border-color:#999999;
+    border-width:3px;
 }

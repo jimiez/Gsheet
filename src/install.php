@@ -1,5 +1,4 @@
 <html>
-
     <head>
         <title>
             Gsheet installation
@@ -39,7 +38,8 @@ EOF;
                 $query = $db->prepare($myquery);
                 $query->execute();
                 echo "Admin account created with the username $adminUser. <br>";
-                echo "Gsheet is now ready for use!";
+                echo "Gsheet is now ready for use!<br>";
+                echo "<a href='login.php'>Log in to begin!</a>";
                 die();
             }
         }
@@ -85,8 +85,6 @@ EOF;
         }
 
         function createTables() {
-
-            // Luo tietokantataulut
 
             include ('connect.php');
 

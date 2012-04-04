@@ -6,18 +6,7 @@ if ($_SESSION['isLogged'] != "true") {
     Die();
 }
 
-if (isset($_POST['logOut'])) {
-    logOut();
-}
-
 include('connect.php');
-
-if (isset($_POST['submitChar'])) {
-    $myquery = $db->prepare('INSERT INTO Characters (CharName, CharOwner) values (?, ?)');
-    $myquery->bindValue(1, $_POST['charName']);
-    $myquery->bindValue(2, $_SESSION['loggedUser']);
-    $myquery->execute();
-}
 
 if (isset($_POST['submitCamp'])) {
     $myquery = $db->prepare('INSERT INTO Campaigns (CampOwner, CampName, CampDesc) values (?, ?, ?)');
@@ -26,57 +15,81 @@ if (isset($_POST['submitCamp'])) {
     $myquery->bindValue(3, $_POST['campDesc']);
     $myquery->execute();
 }
+
+if (isset($_POST['hiddenDelete'])) {
+    $myquery = $db->prepare('DELETE FROM Characters WHERE CharName = ?');
+    $myquery->bindValue(1, $_POST['deletee']);
+    $myquery->execute();
+}
 ?>
 
 <html>
     <head>
-        <title>Gsheet - main page</title>
-        <script src="index.js"></script>
+        <title>Gsheet - Characaters</title>
+        <script src="js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="style/style.css">
     </head>
     <body>
-        <h1>Gsheet</h1>
-        <p>Welcome to Gsheet!</p>
-        <br>
-        Select a charcter:
-        <form name="charSelect" method="get" action="view.php">
-            <select name="id">
-                <?php
-                $myquery = $db->prepare('SELECT Char_id, CharName FROM Characters WHERE CharOwner= ?');
-                $myquery->bindValue(1, $_SESSION['loggedUser']);
-                $myquery->execute();
-                while ($result = $myquery->fetchObject()) {
-                    echo "<option value='$result->Char_id'>$result->CharName</option>";
-                }
-                ?>
-            </select>
-            <input type="submit" class="nicebutton">
-        </form>
-        <B>Create a new character</b>
-        <form method="post" name="newChar" action="<?php $_SERVER['PHP_SELF'] ?>">
+    <center>
+        <div id="wrap">
+            <div id="header"><div id="bigheader">Gsheet</div></div>
+            <div id="nav">
+                <ul>
+                    <li><a href="index.php">Characters</a></li>
+                    <li><a href="campaigns.php">Campaigns</a></li>
+                    <li><a href="#">User settings</a></li>
+                    <li><a href="#">Log out [<?php echo $_SESSION['loggedUser'] ?>]</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <h2>Characters</h2>
+                <br>
+                <b>View characters</b>
+                <form name="charSelect" method="get" action="view.php">
+                    <select name="id">
+                        <?php
+                        $myquery = $db->prepare('SELECT Char_id, CharName FROM Characters WHERE CharOwner= ?');
+                        $myquery->bindValue(1, $_SESSION['loggedUser']);
+                        $myquery->execute();
+                        while ($result = $myquery->fetchObject()) {
+                            echo "<option value='$result->Char_id'>$result->CharName</option>\n";
+                        }
+                        ?>
+                    </select>
+                    <input type="submit" class="nicebutton" value="View">
+                </form>
+                <br>
+                <B>Create a new character</b>
+                <form method="post" name="newChar" action="<?php $_SERVER['PHP_SELF'] ?>">
 
-            <p>Name of the character</p>
-            <input type="text" name="charName" size="20"><br>
-            <input type="submit" value="Create!" name="submitChar" class="nicebutton">
-        </form>
-        <br>
-        <b>Create a new campaign</b>
-        <br>
-        <br>
+                    Name of the character
+                    <input type="text" name="charName" size="20"><br>
+                    <input type="submit" value="Create!" name="submitChar" class="nicebutton">
+                </form>
 
-        <form name="newCampaign" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
-            <p>Name of the campaign</p>
-            <input type="text" name="campName" size="20"><br>
-            <p>Description of the campaign</p>
-            <textarea name="campDesc" rows="5" cols="20">Description of the campaign here</textarea><br>
-            <input type="submit" value="Create!" name="submitCamp" class="nicebutton">
-        </form>
+                <B>Delete a character</b>
 
-        <br><br>
-        <form method='post' name='logout' action=<?php $_SERVER['PHP_SELF'] ?>>
-            <input type="submit" name="logOut" value="Log out" class=nicebutton>
-        </form>
-
-    </body>
+                <form name="charDelete" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
+                    <select name="deletee">
+                        <?php
+                        $myquery = $db->prepare('SELECT Char_id, CharName FROM Characters WHERE CharOwner= ?');
+                        $myquery->bindValue(1, $_SESSION['loggedUser']);
+                        $myquery->execute();
+                        while ($result = $myquery->fetchObject()) {
+                            echo "<option value='$result->CharName'>$result->CharName</option>\n";
+                        }
+                        ?>
+                    </select>
+                    <input type="hidden" name="hiddenDelete">
+                    <input type="button" name="charDeleteButton" value="Delete" class="nicebutton" onClick="confirmDelete()">
+                </form>
+            </div>
+            <div id="footer">
+                <div id="versioninfo"><p>Gsheet ver. 0.1</p></div>
+                <div id="authorinfo"><p>JP Myllykangas, 2012</p></div>
+            </div>
+        </div>
+    </center>
+</body>
 
 </html>
