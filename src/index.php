@@ -8,11 +8,10 @@ if ($_SESSION['isLogged'] != "true") {
 
 include('connect.php');
 
-if (isset($_POST['submitCamp'])) {
-    $myquery = $db->prepare('INSERT INTO Campaigns (CampOwner, CampName, CampDesc) values (?, ?, ?)');
-    $myquery->bindValue(1, $_SESSION['loggedUser']);
-    $myquery->bindValue(2, $_POST['campName']);
-    $myquery->bindValue(3, $_POST['campDesc']);
+if (isset($_POST['submitChar'])) {
+    $myquery = $db->prepare('INSERT INTO Characters (CharName, CharOwner) values (?, ?)');
+    $myquery->bindValue(1, $_POST['charName']);
+    $myquery->bindValue(2, $_SESSION['loggedUser']);
     $myquery->execute();
 }
 

@@ -3,6 +3,7 @@
 class Character {
 
     private $charStats;
+    private $ActiveDef;
     private $charAdvantages;
 
     public function __construct($id) {
@@ -13,14 +14,23 @@ class Character {
         $myquery->execute();
         $this->charStats = $myquery->fetchObject();
 
-        $myquery = $db->prepare('SELECT * FROM AttributeList WHERE CharAttr_id=?');
-        $myquery->bindValue(1, $id);
-        $myquery->execute();
-        $result = $myquery->fetchObject();
+        $this->ActiveDef = explode("|", $this->charStats->ActiveDefense);
+
+
+//        $myquery = $db->prepare('SELECT * FROM AttributeList WHERE CharAttr_id=?');
+//        $myquery->bindValue(1, $id);
+//        $myquery->execute();
+//        $result = $myquery->fetchObject();
     }
 
     public function getStat($stat) {
-        return $this->charStats->$stat;
+        if ($stat == 'parry') {
+            return $this->ActiveDef[0];
+        } else if ($stat == 'block') {
+            return $this->ActiveDef[1];
+        } else {
+            return $this->charStats->$stat;
+        }
     }
 
     public function setStat($stat, $value) {

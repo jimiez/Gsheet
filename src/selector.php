@@ -13,9 +13,8 @@ $_GET['type'] = "Advantage";
 
             $(document).ready(function(){
                 $('#selected').change(function(){
-                    getQuery($(this).val());   
-                
-                }); 
+                    getQuery($(this).val());                   
+                });
             
             });
             function getQuery(str){
@@ -47,10 +46,9 @@ $_GET['type'] = "Advantage";
                 <b><div id="name"></div></b><br>
                 <p><div id="points"></div><br>
                 <div id="desc"></div></p>
+            <label for="finalPoints">Points:</label>
+            <input name="finalPoints" id="finalPoints" size="10">
             </div>
         </div>
-
-
-
     </body>
 </html>

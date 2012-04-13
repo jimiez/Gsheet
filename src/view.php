@@ -225,10 +225,10 @@ if ($result->n < 1) {
                         <input name="dodgeField" type="text" class="boxy" size="2" readonly="readonly">
                     </td>
                     <td>
-                        <input name="parryField" type="text" class="boxy" size="2" <?php $sheet->readOnly() ?>>
+                        <input name="parryField" type="text" value='<?php echo $character->getStat('parry') ?>' class="boxy" size="2" <?php $sheet->readOnly() ?>>
                     </td>
                     <td>
-                        <input name="blockField" type="text" class="boxy" size="2" <?php $sheet->readOnly() ?>>
+                        <input name="blockField" type="text" value='<?php echo $character->getStat('block') ?>' class="boxy" size="2" <?php $sheet->readOnly() ?>>
                     </td>
                 </tr>
             </table>
