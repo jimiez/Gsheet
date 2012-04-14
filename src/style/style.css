@@ -32,16 +32,17 @@
     float:left;
     width: 75%;
     height: 80%;
-    background:C5C5C5;
+    background:#C5C5C5;
 }
 
-#campMenu {
+#leftFloat {
     float: left;
-    padding: 5px;
+    margin: 10px;
 }
 
-#campView {
-    float: left;
+
+#lineBreak {
+    clear: both;
 }
 
 h2 {

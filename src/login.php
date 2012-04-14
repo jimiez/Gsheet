@@ -7,7 +7,7 @@ include('connect.php');
 
 if (isset($_POST['submitLogin'])) {
     $user = $_POST['userName'];
-    
+
     $myquery = $db->prepare('SELECT COUNT(*) AS n FROM Users WHERE Username=?');
     $myquery->bindValue(1, $user);
     $myquery->execute();
@@ -17,7 +17,7 @@ if (isset($_POST['submitLogin'])) {
     if ($result->n < 1) {
         $message = $fail;
     } else {
-        $myquery = $db->prepare('SELECT password FROM Users WHERE Username=?');
+        $myquery = $db->prepare('SELECT userclass, password FROM Users WHERE Username=?');
         $myquery->bindValue(1, $_POST['userName']);
         $myquery->execute();
         $result = $myquery->fetchObject();
@@ -26,14 +26,17 @@ if (isset($_POST['submitLogin'])) {
             $message = "Login successful";
             $_SESSION['isLogged'] = "true";
             $_SESSION['loggedUser'] = $user;
+            if ($result->userclass == 1) {
+                $_SESSION['userIsAdmin'] = "true";
+            } else {
+                $_SESSION['userIsAdmin'] = "false";
+            }
             header("Location: index.php");
-   
         } else {
             $message = $fail;
         }
     }
 }
-
 ?>
 
 <html>
@@ -45,9 +48,9 @@ if (isset($_POST['submitLogin'])) {
         <h1>
             Gsheet
         </h1>
-        <?php
-        echo "$message <br><br>";
-        ?>
+<?php
+echo "$message <br><br>";
+?>
 
         <form name="login" method="post" action="">
             <table>

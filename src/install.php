@@ -118,8 +118,10 @@ EOF;
     DX INTEGER NOT NULL DEFAULT '10', 
     IQ INTEGER NOT NULL DEFAULT '10',
     HT INTEGER NOT NULL DEFAULT '10',
-    ActiveDefense VARCHAR(10),
-    PassiveDefense VARCHAR(10),
+    ActiveDefense VARCHAR(10) DEFAULT '0|0,
+    PassiveDefensePD VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
+    PassiveDefenseDR VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
+    Quirks TEXT,
     CharNotes TEXT,
     UnusedPoints INTEGER DEFAULT '100',
     PRIMARY KEY (Char_id),
@@ -150,7 +152,7 @@ EOF;
     ItemType VARCHAR(20),
     ItemWeight INTEGER,
     ItemValue INTEGER,
-    PRIMARY KEY (CharItem_id),
+    PRIMARY KEY (CharItem_id, ItemName),
     FOREIGN KEY (CharItem_id) references Characters(Char_id)
     ) ENGINE=InnoDB;
     
@@ -158,7 +160,7 @@ EOF;
     CharSkill_id INTEGER NOT NULL,
     Skill_name VARCHAR(50) NOT NULL,
     SkillPoints INTEGER NOT NULL,
-    PRIMARY KEY (CharSkill_id),
+    PRIMARY KEY (CharSkill_id, Skill_name),
     FOREIGN KEY (CharSkill_id) references Characters(Char_id),
     FOREIGN KEY (Skill_name) references Skills (SkillName)
     ) ENGINE=InnoDB;
@@ -169,15 +171,16 @@ EOF;
     DamageType VARCHAR(5),
     DamageAmount VARCHAR(5),
     WeaponNotes VARCHAR(50),
-    PRIMARY KEY (CharWeapon_id),
+    PRIMARY KEY (CharWeapon_id, WeaponName),
     FOREIGN KEY (CharWeapon_id) references Characters(Char_id)
     ) ENGINE=InnoDB;
     
     CREATE TABLE AttributeList (
     CharAttr_id INTEGER NOT NULL,
     Attr_name VARCHAR(50) NOT NULL,
+    Attr_type VARCHAR(1) NOT NULL,
     Attr_points INTEGER NOT NULL,
-    PRIMARY KEY (CharAttr_id),
+    PRIMARY KEY (CharAttr_id, Attr_name),
     FOREIGN KEY (CharAttr_id) references Characters(Char_id),
     FOREIGN KEY (Attr_name) references Attributes(AttrName)
     ) ENGINE=InnoDB";

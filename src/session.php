@@ -2,6 +2,15 @@
 
 session_start();
 
+if (isset($_GET['logout'])) {
+    logOut();
+}
+
+if ($_SESSION['isLogged'] != "true") {
+    header("Location: login.php");
+    Die();
+}
+
 // Expires the session after 30 minutes
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {

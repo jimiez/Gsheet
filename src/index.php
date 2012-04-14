@@ -1,11 +1,5 @@
 <?php
 include('session.php');
-
-if ($_SESSION['isLogged'] != "true") {
-    header("Location: login.php");
-    Die();
-}
-
 include('connect.php');
 
 if (isset($_POST['submitChar'])) {
@@ -33,12 +27,10 @@ if (isset($_POST['hiddenDelete'])) {
         <div id="wrap">
             <div id="header"><div id="bigheader">Gsheet</div></div>
             <div id="nav">
-                <ul>
-                    <li><a href="index.php">Characters</a></li>
-                    <li><a href="campaigns.php">Campaigns</a></li>
-                    <li><a href="#">User settings</a></li>
-                    <li><a href="#">Log out [<?php echo $_SESSION['loggedUser'] ?>]</a></li>
-                </ul>
+               <?php
+               include('nav.php');
+               ?>
+               
             </div>
             <div id="main">
                 <h2>Characters</h2>
