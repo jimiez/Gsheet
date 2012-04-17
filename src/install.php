@@ -118,7 +118,7 @@ EOF;
     DX INTEGER NOT NULL DEFAULT '10', 
     IQ INTEGER NOT NULL DEFAULT '10',
     HT INTEGER NOT NULL DEFAULT '10',
-    ActiveDefense VARCHAR(10) DEFAULT '0|0,
+    ActiveDefense VARCHAR(10) DEFAULT '0|0',
     PassiveDefensePD VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
     PassiveDefenseDR VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
     Quirks TEXT,
@@ -178,7 +178,6 @@ EOF;
     CREATE TABLE AttributeList (
     CharAttr_id INTEGER NOT NULL,
     Attr_name VARCHAR(50) NOT NULL,
-    Attr_type VARCHAR(1) NOT NULL,
     Attr_points INTEGER NOT NULL,
     PRIMARY KEY (CharAttr_id, Attr_name),
     FOREIGN KEY (CharAttr_id) references Characters(Char_id),

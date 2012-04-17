@@ -89,3 +89,17 @@ function calculateSkills() {
     
     
 }
+
+function openSelector(targetField){
+    var w = window.open('selector.php','selector','width=610,height=550,scrollbars=0');
+    w.targetField = targetField;
+    w.focus();
+    return false;
+}
+          
+function setTargetField(targetField, value){
+    if (targetField){
+        targetField.value = value;
+    }
+    window.focus();
+}

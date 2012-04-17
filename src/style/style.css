@@ -115,8 +115,14 @@ table
 {
     font-size: 12px;
     font-family:verdana,sans-Serif;
-    border-bottom-width: 1;
+    border-width: 0px;
     border-style: solid;
+}
+
+td
+{
+    vertical-align: top;
+    
 }
 
 h1
@@ -138,7 +144,6 @@ th
     text-align: left;
 
 }
-
 
 input.linkbutton
 {
@@ -179,6 +184,7 @@ input.minibutton
 }
 
 input.underscore { 
+    background: #ddd;
     border-top-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;

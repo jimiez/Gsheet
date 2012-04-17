@@ -3,11 +3,16 @@
 class Character {
 
     private $charStats;
-    private $ActiveDef;
     private $charAdvantages;
+    private $charDisadvantages;
+    private $ActiveDef;
+    private $PassiveDefPD;
+    private $PassiveDefDR;
 
     public function __construct($id) {
         include("connect.php");
+
+        // Read basic stuff from the DB
 
         $myquery = $db->prepare('SELECT * FROM Characters WHERE Char_id=?');
         $myquery->bindValue(1, $id);
@@ -15,21 +20,25 @@ class Character {
         $this->charStats = $myquery->fetchObject();
 
         $this->ActiveDef = explode("|", $this->charStats->ActiveDefense);
+        $this->PassiveDefPD = explode("|", $this->charStats->PassiveDefensePD);
+        $this->PassiveDefDR = explode("|", $this->charStats->PassiveDefenseDR);
 
-
-//        $myquery = $db->prepare('SELECT * FROM AttributeList WHERE CharAttr_id=?');
-//        $myquery->bindValue(1, $id);
-//        $myquery->execute();
-//        $result = $myquery->fetchObject();
+        // Read advantages from the DB
+        
+        $this->readAttributes();
     }
 
     public function getStat($stat) {
-        if ($stat == 'parry') {
-            return $this->ActiveDef[0];
-        } else if ($stat == 'block') {
-            return $this->ActiveDef[1];
+        return $this->charStats->$stat;
+    }
+
+    public function getDef($type) {
+        if ($type == ' active') {
+            return $this->ActiveDef;
+        } else if ($type == 'passivePD') {
+            return $this->PassiveDefPD;
         } else {
-            return $this->charStats->$stat;
+            return $this->PassiveDefDR;
         }
     }
 
@@ -37,8 +46,31 @@ class Character {
         $this->charStats->$stat = $value;
     }
 
-    public function getAdvantages() {
-        return $this->charAdvantages;
+    public function readAttributes() {
+        include('connect.php');
+
+        $query = "SELECT al.Attr_name, al.Attr_points, a.AttrType 
+            FROM attributelist AS al, attributes AS a 
+            WHERE al.Attr_Name = a.AttrName 
+            AND al.CharAttr_id = ?";
+        $myquery = $db->prepare($query);
+        $myquery->bindValue(1, $this->charStats->Char_id);
+        $myquery->execute();
+        while ($result = $myquery->fetchObject()) {
+            if ($result->AttrType == 'A') {
+                $this->charAdvantages[] = new Attribute($result->Attr_name, true, $result->Attr_points);
+            } else {
+                $this->charDisadvantages[] = new Attribute($result->Attr_name, false, $result->Attr_points);
+            }
+        }
+    }
+
+    public function getAttributes($type) {
+        if ($type == "adv") {
+            return $this->charAdvantages;
+        } else {
+            return $this->charDisadvantages;
+        }
     }
 
 }
@@ -106,10 +138,8 @@ class Attribute {
 
     public function __construct($name, $isAdvantage, $points) {
         // luetaan kannasta konstruktoinnin yhteydessä vai sheet - luokan metodissa?
-
         $this->name = $name;
         $this->isAdvantage = $isAdvantage;
-
         $this->points = $points;
     }
 
