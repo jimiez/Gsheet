@@ -90,8 +90,8 @@ function calculateSkills() {
     
 }
 
-function openSelector(targetField){
-    var w = window.open('selector.php','selector','width=610,height=550,scrollbars=0');
+function openSelector(targetField, type){
+    var w = window.open("selector.php?type=" + type , "Selector", "scrollbars=auto,toolbar=no,menubar=no,status=no, width=640, height=400");
     w.targetField = targetField;
     w.focus();
     return false;

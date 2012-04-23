@@ -48,7 +48,7 @@ if (isset($_POST['submitCamp'])) {
                     </select>
                     <input type="submit" class="nicebutton" value="View">
                 </form>
-                <br>
+                <hr>
                 <b>Create a new campaign</b>
                 <form name="newCampaign" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
                     <p>Name of the campaign</p>

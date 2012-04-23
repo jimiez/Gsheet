@@ -49,7 +49,9 @@ if (isset($_POST['hiddenDelete'])) {
                     </select>
                     <input type="submit" class="nicebutton" value="View">
                 </form>
-                <br>
+               
+                <hr>
+              
                 <B>Create a new character</b>
                 <form method="post" name="newChar" action="<?php $_SERVER['PHP_SELF'] ?>">
 
@@ -57,7 +59,9 @@ if (isset($_POST['hiddenDelete'])) {
                     <input type="text" name="charName" size="20"><br>
                     <input type="submit" value="Create!" name="submitChar" class="nicebutton">
                 </form>
-
+                
+                <hr>
+                
                 <B>Delete a character</b>
 
                 <form name="charDelete" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">

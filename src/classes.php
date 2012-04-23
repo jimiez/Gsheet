@@ -5,6 +5,7 @@ class Character {
     private $charStats;
     private $charAdvantages;
     private $charDisadvantages;
+    private $quirks;
     private $ActiveDef;
     private $PassiveDefPD;
     private $PassiveDefDR;
@@ -18,10 +19,11 @@ class Character {
         $myquery->bindValue(1, $id);
         $myquery->execute();
         $this->charStats = $myquery->fetchObject();
-
+        $this->quirks = explode("|", $this->charStats->Quirks);
         $this->ActiveDef = explode("|", $this->charStats->ActiveDefense);
         $this->PassiveDefPD = explode("|", $this->charStats->PassiveDefensePD);
         $this->PassiveDefDR = explode("|", $this->charStats->PassiveDefenseDR);
+        
 
         // Read advantages from the DB
         
@@ -42,8 +44,8 @@ class Character {
         }
     }
 
-    public function setStat($stat, $value) {
-        $this->charStats->$stat = $value;
+    public function getQuirks() {
+        return $this->quirks;
     }
 
     public function readAttributes() {
@@ -113,20 +115,15 @@ class Sheet {
         }
     }
 
-    function drawItemSelection($selected) {
-
-        echo "<select name='itemType'>";
-
-        echo "<option></option>";
-        if ($selected == "weapon") {
-            echo "<option selected=selected>Weapon</option>";
-        } else {
-            echo "<option>Weapon</option>";
-        }
-        echo "<option>Protection</option>";
-        echo "<option>Misc</option>";
-        echo "</select>";
+    function writeIfOwner($string) {
+        if ($this->editable) {
+            echo $string;
+        } 
     }
+    
+    
+    
+    
 
 }
 

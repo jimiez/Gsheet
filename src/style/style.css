@@ -52,6 +52,12 @@ h2 {
     color:#336666;
 }
 
+hr {
+    width: 75%;
+    margin-top: 25px; 
+    margin-bottom: 25px;
+}
+
 a:link {
     color: #01243B; text-decoration: none;
 }
@@ -97,6 +103,11 @@ a:hover {
     float: right;
 }
 
+#rightAlign 
+{
+    float: right;
+}
+
 selection {
     width: 150px;
     min-width: 170px;
@@ -122,7 +133,17 @@ table
 td
 {
     vertical-align: top;
-    
+}
+
+td.middle
+{
+    vertical-align: middle;
+}
+
+td.centered
+{
+    text-align: center;
+    text-align: justify;
 }
 
 h1

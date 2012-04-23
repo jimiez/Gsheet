@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<disadvantages>
+ 
+ <disadvantage>
+ <name>Odious Personal Habits</name>
+ <points> -5,-10, -15 points</points>
+ <description>
+You behave, some or all of the time, in a fashion repugnant to  others. The worse your behavior, the more bonus points. You may specify the behavior when the character is first created, and work the bonus out with the GM. Some samples: Body odor, constant scratching or tuneless humming might be worth -5 points apiece. 
+
+Constant bad puns or spitting on the floor would be worth -10 points apiece. -15-point habits are possible, but are left to the imagination of those depraved enough to want them. 
+ 
+For each -5 points your habit is worth, subtract 1 from all reaction rolls made by someone in a position to notice your problem. 
+
+Example: Ragnar Foulbreath, who has halitosis worth -10 character points, suffers an automatic -2 on reaction from anyone who comes face-to-face with him. 
+ 
+Note that certain sorts of disgusting behavior will not bother non-humans. A person with a constant drool will irritate other humans, but a Martian would not even notice, and a troll might think it was cute. The reaction penalty for an odious personal habit is for members of your own race; it is up to the GM to handle differing reactions from other races. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Poverty</name>
+ <points>Variable </points>
+ <description>
+You were born poor, relative to the norm of your culture, or lost your money somehow. You start with only a fraction of the money normal for a beginning character, and your income is limited. The various degrees of poverty are discussed under Wealth (p. 16). 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Primitive </name>
+ <points>-5 points per tech level</points>
+ <description>
+You are from a culture with a lower TL than that of the campaign. You have no knowledge (or default skill) relating to equipment above your own tech level. You can start only with skills or equipment from your local culture. (To play a character of a primitive race without this disadvantage, assume he is from an area near "civilization.") 
+
+The value of this disadvantage is 5 points for each TL by which your native TL is less than that of the campaign. If the ruling race or culture looks down on your people, that is a separate Social Stigma disadvantage. 
+
+You may not acquire Mental skills relating to high-tech equipment until you buy off this disadvantage. Physical skills (driving, weaponry, etc.) may be acquired at no penalty if you find a teacher. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Reputation (bad)</name>
+ <points>Variable</points>
+ <description>(see p. 17)</description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Social Stigma</name>
+ <points>-5, -10, -15, -20 points</points>
+ <description>
+You are of a race, class or sex that your culture considers inferior. The "stigma" must be obvious to anyone who sees you; otherwise, it is merely a bad reputation (p. 17). The point bonus depends on the reaction penalty: 
+
+Second-class citizen (e.g., a woman in 19th-century America, or  members of some religions): -5 points. -1 on all reaction rolls except from others of your own kind. 
+
+Valuable property (e.g., a woman in 18th-century America or  16th-century Japan): -10 points. GMs and players may work out the details for each case - it usually takes the form of limited freedom and/or lack of intellectual respect. 
+
+Minority group (at GM's discretion): -10 points. -2 on all reaction rolls made by anyone except your own kind, but +2 on rolls made by your own kind. 
+
+Outsider, outlaw, or barbarian (e.g., a 19th-century American Indian in white man's territory, a Goth in Imperial Rome, or an Untouchable in India): -15 points. (Note that there is no bonus for a "barbarian" created and played within his own culture, for there he is not a barbarian at all. This requires judgment on the part of the GM.) You also get -3 on all reaction rolls, but +3 from your own kind when met outside your home culture. 
+
+In all cases, a character who takes a Social Stigma disadvantage  must be bound by it. For example, a medieval Japanese lady must  pay for her 10-point bonus by giving up her freedom of movement  in many cases, and must defer to older male relatives when they are present. And a black slave in the 19th century will be allowed to learn very little, can own almost no property, and will have little freedom of any kind unless he manages to escape north. (If he does escape, he will have traded off his Social stigma disadvantage for a powerful Enemy!) 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Age</name>
+ <points>-3 points per year over 50</points>
+ <description>
+Your character is over 50 years old when created. Thus, you will have to roll a number of times (see Age and Aging, p. 83) for possible loss of attribute points due to old age. Note that creating a very old character will be self-defeating: a character created 70 years old would get 60 bonus points (!!) but would have to roll 20 times for each of his attributes, chancing loss of points each time, and would already be near the end of his life. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Albinism</name>
+ <points>-10 points</points>
+ <description>
+You have no natural body pigment; your hair and skin are pink-white, and your eyes are pink. An albino may seem attractive or  ugly, but "average" appearance is impossible when choosing  Physical Appearance. An albino will always be remembered, and  can never blend into a crowd. Albinos must avoid direct sun, as  they have no resistance to sunburn; you will take 1 point of damage for every 30 minutes of ordinary direct sunlight you are exposed to, or every 15 minutes of hot summer or desert sun. You are also at -2 for every Vision roll, or ranged weapon attack, made in direct sunlight. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Bad Sight</name>
+ <points>-10/-25 points</points>
+ <description>
+You may be either nearsighted or farsighted - your choice. If you are nearsighted, you cannot read small print, etc.. more than a foot away, or road signs, etc., at more than about 10 yards. When using a hand weapon, you are at -2 to your skill rolls. When using a thrown or missile weapon, use the modifier appropriate to double the actual distance to the target. 
+
+If you are farsighted, you cannot read a book except with great  difficulty (triple the normal time), and you are at -3 DX on any  close manual labor. 
+
+Any character at TL5 or higher can acquire glasses which will  compensate totally for bad sight while they are worn; in the 20th century, contact lenses are available. Remember that accidents or head blows may knock glasses off, enemies may take them, etc. 
+
+For anyone starting at a tech level in which vision can be corrected, Bad Sight is worth only -10 points. For a character from a time in which vision cannot be corrected, Bad Sight is worth -25 points. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Blindness</name>
+ <points>-50 points</points>
+ <description>
+You cannot see at all. As partial compensation, you may start  with Acute Hearing and/or Acute Taste and Smell at only half cost. Furthermore, you suffer no extra penalties of any kind when operating in the dark! In unfamiliar territory, you must travel slowly and carefully or be led by a companion or guide animal. Many actions and abilities - too many to list - are impossible to the blind; GMs should use common sense. 
+
+A blind character is at -6 on any combat skill. He can use hand  weapons, but cannot aim a blow at any particular part of a foe's  body, and cannot fire a missile weapon (except randomly, or at  something so close he can hear it). This all assumes that the character is accustomed to blindness. Someone who suddenly loses his eyesight will fight at a -10, as though in the dark. In civilized countries, a blind person will receive a +1 on reaction rolls. 
+
+As an option, the GM may ask the player of a blind character to  wear a blindfold during play; this will give some slight appreciation of the problems facing the blind, and of the many things a person can accomplish without sight! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Color Blindness</name>
+ <points>-10 points</points>
+ <description>
+You cannot see any colors at all (this is total color-blindness). In everyday life, this is merely a nuisance. In any situation requiring color identification (gem buying, livery identification, or pushing the red button to start the motor), the GM should give you appropriate difficulties. 
+
+Certain skills will always be harder for you. In particular, you  are at a -1 penalty for any Driving, Piloting, Chemistry, Merchant or Tracking roll. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Deafness</name>
+ <points>-20 points</points>
+ <description>
+You can hear nothing. Any information you receive must be communicated in writing (if you are literate) or through sign language. You also have a -3 penalty to IQ when learning any language but your own. However, you get a +3 on any Gesture or Sign Language (p. 55) or Lip Reading (p. 66) skill roll. 
+
+As an option, the player of a deaf character may wear earplug to force the other players to write notes or use sign language. This is not too practical (good earplugs are hard to find) but can be interesting. Note that the GM may talk to the player whenever he wants. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Dwarfism</name>
+ <points>-15 points</points>
+ <description>
+You are a genetic dwarf - abnormally small for your species.  Determine your height normally (p. 15) and then reduce it to 60% of that. You may not have an "average" Physical Appearance - you will either be thought "cute and charming" or noticeably unppealing. 
+ 
+Anyone attacking you with a thrown or missile weapon will be at a -1 - you are a hard target! In combat, you are automatically 2 feet below a normal-sized human foe. Certain things are impossible to a dwarf because of size; others are much easier. The 'GM must use his imagination! 
+
+Dwarfism is a condition found in all species. A genetic dwarf is  not the same as a member of the race called Dwarves (though it is possible to be a dwarf Dwarf. . .). 
+
+A dwarfs strength and health are determined normally; many  dwarfs are strong for their size. However, dwarfs have a -1 to their Move, and jump as though their ST were 4 less.
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Epilepsy</name>
+ <points>-30 points</points>
+ <description>
+You are subject to seizures, during which your limbs tremble  uncontrollably and you cannot speak or think clearly. (This represents a severe form of the ailment.) Whenever you are in a very stressful situation (especially if your life or the life of a friend is threatened), you must roll 3 dice against your basic HT. A failed roll will bring on a seizure lasting for 1d minutes. Needless to say, you can do nothing while the seizure goes on, and you take 1 die of fatigue damage as well. If you have any sort of phobia, exposure to the object of fear is 
+automatically a stressful situation; roll vs. HT once every 10 minutes. 
+
+By concentrating, you may attempt to induce a seizure through  autohypnosis. This requires one minute and a successful IQ roll. A seizure in a high-mana (magical) area will produce visions, which may at the GM's option be true or even prophetic. 
+
+Primitives, not understanding "fits," are sometimes awed by  them, and may think your seizure shows a communication from the  gods. Make a reaction roll at +1. Very good results indicate worship! Poor results will cause the savages to flee - never to attack. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Eunuch</name>
+ <points>-5 points</points>
+ <description>
+You (male characters only) have lost your manhood, either  through accident or hostile action. You are immune to seduction,  and cannot seduce others. Anyone aware of your condition will  have a -1 on reaction rolls. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Fat</name>
+ <points>-10/-20 points</points>
+ <description>
+You are unusually obese for your race. (A character may also be just Overweight; this is listed separately, below.) 
+ 
+For -10 points, determine weight normally from ST (p. 15) and  then increase it by 50%. This gives -1 on all reaction rolls; HT  may not be greater than 15. For -20 points, determine weight  normally and double it; this gives -2 on all reaction rolls; HT may not be greater than 13. In either case, the extra weight counts as extra encumbrance (see p. 76), which you cannot get rid of. (Exception: fat encumbrance does not count against you when swimming.) 
+ 
+Normal clothes and armor will not fit you. You will also be at -3 to Disguise, or to Shadowing if you are trying to follow someone in a crowd. 
+ 
+As a rule, fat people have many small problems, which the GM  should interpret creatively. However, there are a few small advantages. For instance, fat people get +5 to their Swimming roll, and are very hard to dislodge if they choose to pin you down by sitting on you ... If you are fat, you also get +2 to your ST when you make (or resist) any Slam attack. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Gigantism</name>
+ <points>-10 points</points>
+ <description>
+You are a genetic giant - abnormally large for your species.  Determine your height normally (p. 15), and then increase it by  20%; if you are still less than 7 feet tall (for humans), icrease your height to that minimum. Minimum size for giants in other races is left up to the GM. Weight is in proportion to height, as listed on the tables. Strength and health are unaffected. You suffer a -2 on reaction rolls except in potential combat situations, where you receive a + 1  from either potential allies or enemies. You are considered to be a foot above normal-sized foes, automatically. 
+ 
+Since giants live in an undersized world, they have many small  problems . . . clothes, chairs, etc., simply don't fit them. However, this is not an especially disastrous disadvantage. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Hard of Hearing</name>
+ <points>-10 points</points>
+ <description>
+You are not deaf, but you have some hearing loss. You are at -4 to IQ on any Hearing roll (so your roll is IQ-4, rather than IQ). You are at -4 to your language skill roll for any situation where you must understand someone (if you are the one talking, this disadvantage doesn't affect you). 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Hemophilia</name>
+ <points>-30 points</points>
+ <description>
+You are a "bleeder." Even a small wound, unless well bandaged, will not heal - and you may bleed to death. Any untreated wound will bleed at a rate equal to its original damage every minute. For instance, an untreated 3-point hit will do another 3 hits of damage after the first minute, and so on until staunched. A hemophiliac may not have a basic HT over 10. 
+
+First Aid will be satisfactory to treat most wounds. However,  any impaling wound to the torso will cause slow internal bleeding. Such a wound will do damage as above until it receives First Aid. It will continue to do damage equal to its original damage once per day until properly treated. Only a Surgeon, or magical/psychic healing, can cure this injury or restore the HT lost to internal bleeding. If proper treatment is not available you die. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Lame</name>
+ <points>-15,-25, or -35 points</points>
+ <description>
+You have some degree of impaired mobility. The point bonus depends on the damage, as follows: 
+ 
+Crippled leg: You have one bad leg; your Move and Dodge are  reduced by 3. You suffer a -3 penalty to use any physical skill that requires walking or running. This definitely includes all handweapon skills and all martial arts (missile weapon ability is unimpaired). -15 points. 
+
+One leg: You have lost a leg. You are at a -6 penalty to use any  physical skill that requires the use of your legs. You cannot run: using crutches or a peg leg. you have a maximum Move of 2. (Otherwise, you cannot walk at all.) If you have access to TL6 (20th-century) prosthetics. you can reduce the effect to that of a crippled leg. but you must buy off the point difference in some way. (TL8+ technology could replace the leg. possibly with one that was better than the original, but then it's no longer a disadvantage.) -25 points. 
+
+Legless or paraplegic: You are confined to a wheelchair or  wheeled platform. If you power it with your own hands, its Speed is 1/4 your ST. rounded down. Alternately, you may be carried piggy back or on a stretcher. The GM should assess all reasonable penalties for this handicap. Examples: you cannot pass through narrow doors, navigate staircases or steep curbs, travel except in specially-equipped vehicles, fight effectively (except with guns or crossbow), etc. If you have to fight with a sword, etc.. you will be at a -6. -35 points. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Low Pain Threshold</name>
+ <points>-10 points</points>
+ <description>
+You are very sensitive to pain of all kinds. Double the "shock  effect" of any injury - e.g.. if you take 3 points of damage. DX is at -6 on your next turn. You always roll at -4 to resist physical torture. 
+
+Whenever you take a wound that does more than 1 hit of damage,  you must make a Will roll to avoid crying out (possibly giving  away your presence). Barbarians, soldiers, thugs and so on will react to you at -1 if they know you have this disadvantage. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Mute</name>
+ <points>-25 points</points>
+ <description>
+You cannot speak. All your communications with others (and the  player's communication with other players!) must be in writing, or with sign language. (It is all right for the GM and the player to go into a separate room, if necessary, and talk about what the character is doing.) A mute character gets a +3 on any Gesture or Sign Language skill roll (see p. 55). However, no roll is required (or allowed!) when you try to communicate with other player characters who don't know your sign language: roleplay this on your own! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>No Sense of Smell/Taste (Anosmia)</name>
+ <points>-5 points</points>
+ <description>
+This is a rare affliction . . . you can smell and taste nothing.  Thus, you are unable to detect certain hazards that ordinary people spot quickly. However, the disability has its advantages ... an anosmic character never worries about skunks, and can always eat what is set before him. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>One Arm</name>
+ <points>-20 points</points>
+ <description>
+You have lost an arm (or you were born without it). It is  assumed that you lost the left arm if you were right-handed, or vice versa. You cannot use sword and shield simultaneously, or any two-handed weapon, or do anything requiring two arms - GM's ruling is final in case of argument. Anything requiring only one hand can be done without penalty. In borderline cases, it is best to allow the character to attempt the action at a -4 DX penalty, or to try a quick reality check if possible! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>One Eye</name>
+ <points>-15 points</points>
+ <description>
+You have only one good eye; you may wear a glass eye, or cover  the missing eye with a patch. You suffer a -1 DX penalty on combat, and on anything involving hand-eye coordination, and a -3 on anything involving missile weapons, thrown objects, or driving any vehicle faster than a horse and buggy. You will also suffer a -1 on any reaction roll except with utterly alien creatures. Exception: If you have Charisma, or are Handsome or Very Handsome, the patch just looks romantic, and does not affect reaction rolls. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>One Hand</name>
+ <points></points>
+ <description>
+You have lost a hand: it may be replaced by an appropriate prosthetic (hook, mechanical grabber or bionic hand). A fully bionic replacement (TL8 or higher) is just as good as the original, and is therefore worth no bonus points. An obviously mechanical replacement will cost you -1 on all reaction rolls, and -2 DX (for a mechanical grabber) or -4 DX (for a claw). However, a hook or claw counts as an undroppable large knife in combat (use Knife skill). This can be very intimidating if waved at the foe. 
+</description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Overweight</name>
+ <points>-5 points</points>
+ <description>
+You are not truly fat - just somewhat heavy for your race.  Determine weight normally for ST. and then increase it by 30%:  this adds to encumbrance as for Fat (p. 28). Overweight characters get a +2 bonus to their Swimming roll. 
+
+Being overweight carries a reaction penalty of -1 among health- conscious societies - like that of the 1980s yuppies - and in areas where food is in especially short supply - such as among the dregs of Autoduel America. 
+
+There are no other bonuses or penalties: you can easily get clothes, and blend into a crowd, because many people are overweight. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Skinny</name>
+ <points>-5 points</points>
+ <description>
+You are notably underweight. After figuring your height, take  "average" weight for that height (see p. 15) and cut it by 1/3. You may not take Handsome or Very Handsome appearance, and your HT may not be more than 14. 
+
+Normal clothes and armor will not fit you. You will also be at -2 to your ST when you make (or resist) any Slam attack, and -2 to Disguise, or to Shadowing if you are trying to follow someone in a crowd. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Stuttering</name>
+ <points>-10 points</points>
+ <description>
+ You suffer from a stammer or other speech impediment, which the GM may require the player to act out. -2 on all reaction rolls where conversation is required, and certain occupations and skills (e.g.. Diplomacy. Fast-Talk. Public Speaking, interpreting, newscasting) are impossible.
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Youth</name>
+ <points>-2 to -6 points</points>
+ <description>
+You are underage by your culture's standards: 1 to 3 full years  underage, at -2 points per year. You suffer a -2 reaction roll whenever you try to deal with others as an adult: they may like you. but they do not fully respect you. You may also be barred from night clubs, vehicle operation, war parties, guild membership, etc.. depending on the culture and game world. You must keep track of time, and "buy off" this disability when you reach "legal age" (usually 18) for your time and place. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Absent-Mindedness</name>
+ <points>-15 points </points>
+ <description>
+The classic disadvantage for eccentric geniuses. You have difficulty paying attention to anything not of immediate interest. An absent minded person suffers a -5 penalty on any IQ roll except those for a task he is currently interested in and concentrating upon. If no engaging task or topic presents itself, his attention will drift to more interesting matters in five minutes; he will ignore his immediate surroundings until something catches his attention and brings him back. Once adrift in his own thoughts, an absent-minded character must roll against IQ-5 in order to notice any event short of personal physical injury. 
+
+The absent-minded person may attempt to rivet his attention on a boring topic through sheer strength of will. To do so, he must make a Will-5 roll once every five minutes. "Boring topics" include guard duty, small talk or other forms of meaningless conversation, repetitive manual tasks, driving on an empty highway . . . 
+
+Absent-minded individuals also tend to forget trivial tasks (like paying the bills) and items (like car keys and checkbooks). Whenever it becomes important that an absent-minded character have performed such a task or brought such an item, the GM should call for a roll against IQ-2. On a failed roll, this detail slipped his attention. For example, an absent-minded detective is in a shootout. He has been involved in gunplay earlier today, in which he fired four rounds, so the GM calls for an IQ-2 roll. The detective fails the roll, discovering too late that he forgot to reload his weapon, so his revolver only has two bullets left! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Addiction</name>
+ <points>Variable</points>
+ <description>
+You are addicted to a drug, which you must use daily or suffer the penalties of withdrawal (see below). The bonus for this disadvantage depends on the nature of the drug addiction, as follows: 
+ 
+If each daily dose costs $20 or less: -5 points. 
+
+If each daily dose costs $21-$ 100: -10 points. 
+
+If each daily dose costs over $100: -20 points. 
+
+If the drug is incapacitating or hallucinogenic: -10 points. 
+
+If the drug is highly addictive (-5 on withdrawal roll): -  points. 
+
+If the drug is totally addictive (-10 on withdrawal roll): -10 points. If the drug is legal in your original game world: plus 5 points! 
+ 
+Examples: Tobacco is cheap, highly addictive, and legal; a chain smoker has a -5-point addiction. Heroin is very expensive incapacitating, illegal and totally addictive; a heroin addict has a -40-point disadvantage. 
+ 
+Effects of Drugs. An incapacitating drug will render its user  unconscious (or blissfully, uselessly drowsy) for about two Hours (four hours for characters with ST below 10, one hour for those with ST over 15). A stimulating drug will affect its user for the same period of time: the user thinks he is smarter, but in fact is temporarily at IQ-1. 
+
+However, he does have a +1 bonus to Speed. A hallucinogenic drug renders its users useless for work or combat, though they may be active and talkative. Some drugs (e.g., tobacco) have none of these effects, and some drugs have unique effects. Side effects are also possible; GMs are free to look up (or invent) side effects for real or imaginary drugs! 
+  
+Withdrawal. Sometimes, voluntarily or otherwise, a drug user  must try to give up his addiction. This may happen if he is imprisoned, if he travels to a place where his drug is not available, or just because he can't afford it. Withdrawal is a painful process requiring two weeks (14 days) of successful HT rolls (the GM may vary this time as he thinks appropriate for a particular drug). 
+
+Each day, the addict rolls against HT, plus or minus Will. A successful roll puts him one day closer to shaking off the addiction. A failed roll means the addict must (if his drug is available) give in to the craving and take a dose of the drug. He must then start withdrawal all over again if he still wants to try. If the drug is not available, the addict takes 1 hit of damage and may continue to try to withdraw . . . but that day doesn't count toward the 14 successful rolls needed to withdraw. HT losses caused by withdrawal cannot be cured (by any "normal" means, that is) until the withdrawal has succeeded or been abandoned. 
+
+Remember that you must "buy off the disadvantage of addiction  before you voluntarily withdraw, or immediately after forced  withdrawal; see p. 82. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Alcoholism</name>
+ <points>-15 or -20 points</points>
+ <description>
+You are an alcohol addict. Alcoholism is treated as an addiction  (see above); it is inexpensive, incapacitating, and (usually) legal, so it would normally be a -10-point addiction. But alcohol is insidious, because it is different from most addictions. Therefore, it is worth 15 points, or 20 if it is illegal. 
+
+An alcoholic may, under normal circumstances, confine his  drinking to the evenings, and therefore be able to function (for  game purposes) normally. However, any time an alcoholic is in the presence of alcohol, he must roll vs. Will to avoid partaking. A failed roll means he goes on a "binge" lasting 2d hours, followed by a hangover twice as long, during which all stats are at -3. Alcoholics on a binge are characterized by sudden swings of mood - from extreme friendliness to extreme hostility - and may attack their friends, talk too freely, or make other mistakes. 
+
+The other drawback of alcoholism is that it is hard to get rid of. Should an alcoholic character successfully "withdraw," he no 
+longer needs to drink daily . . . but he must still make a Will roll, at +4, whenever in the presence of alcohol. A failed roll does not reinstate the addiction, but does set off a binge. (Three binges in a week will reinstate the addiction.) Thus, there is no normal way that this disadvantage can ever be "bought off." 
+
+An alcoholic must roll yearly against (HT+2), until he withdraws. A failed roll means the alcoholic must lose one point from one of his four basic attributes - roll randomly to determine which. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Bad Temper</name>
+ <points>-10 points</points>
+ <description>
+You are not in full control of your emotions. In any stressful situation, you must make a Will roll. A failed roll means you lose your temper, and must insult, attack or otherwise act against the cause of the stress. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Berserk</name>
+ <points>-15 points</points>
+ <description>
+Like Bad Temper, but worse. You tend to lose control of yourself  under stress, making frenzied attacks against whoever or whatever you see as the cause of the trouble. (You cannot take both Bad Temper and Berserk.) 
+ 
+Any time you take more than 3 hits in one turn, you must roll vs. Will. A failed roll means you go berserk. Other conditions of extreme stress (GM's option) may also require a Will roll to avoid berserking. A berserker may deliberately go berserk by taking the "Concentrate" maneuver and making a successful Will roll. 
+ 
+While berserk, you must make an All-Out Attack each turn a foe is in range, and Move as close as possible to a foe if none is in range. Or, if the enemy is more than 20 yards away, a berserker may attack with ranged weapons - but he may not take time to aim. 
+ 
+High-tech berserk: If an experienced gunman goes berserk, he will fire as many shots as he can every turn, until his gun is empty. He will not reload unless he has a Fast-Draw skill for reloading, letting him reload "without thought." When his gun is empty, he will attack with his hands or another weapon. He may never aim. 
+
+While berserk, you cannot be stunned, and injuries cause no  penalty to your Move score or attack rolls. All rolls to remain conscious or alive are made at a +4 bonus to HT; if you don't fail any rolls, you remain alive and madly attacking until your HT reaches (-5xHT). Then you fall dead! 
+ 
+When a berserker downs his foe, he may (at the player's discretion) roll vs. Will to snap out of the berserk state. If he fails the roll (or does not roll), he continues berserk and attacks the next foe. Any friend attempting to restrain the berserker will be treated as a foe! The berserker gets one Will roll each time he downs a foe, and one extra roll when the last foe is downed. If he is still berserk, he will start attacking his friends . . . 
+ 
+If you snap out of the berserk state, all your wounds immediately affect you; roll at normal HT, to see whether you remain conscious and alive. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Bloodlust</name>
+ <points>-10 points</points>
+ <description>
+You want to see your foes dead. You will go for killing blows in a battle, put in an extra shot to make sure of a downed foe, attack guards you could have avoided, and so on. A Will roll is necessary to accept a surrender, or even to take a prisoner under orders. Even in a non-combat situation, you will never forget that a foe is a foe. 
+ 
+This may seem a truly evil trait, but many fictional heroes suffer from it. The character is not a fiend or sadist; his animosity is limited to "legitimate" enemies, whether they are criminals, enemy soldiers, feuding clansmen, or tavern scum. Often he has a very good reason for feeling as he does. And, in an ordinary tavern brawl, he would use his fists like anyone else. 
+ 
+On the other hand, a gladiator or duellist with this disadvantage would be very unpopular, and a policeman would soon be up on charges.
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Bully</name>
+ <points>-10 points</points>
+ <description>
+You like to push people around whenever you can get away with it. Depending on your personality and position, this may take the form of physical attacks, intellectual harassment or social "cutting." Make a Will roll to avoid gross bullying when you know you shouldn't - but to roleplay your character properly, you should bully anybody you can. Since nobody likes a bully, others react to you at a -2. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Code of Honor</name>
+ <points>-5 to -15 points</points>
+ <description>
+You take pride in a set of principles which you follow at all  times. Codes of honor differ, but all require (by their own standards) "brave," "manly," and "honorable" behavior. A Code of  Honor may also be called "pride," "machismo," or "face." Under  any name, it is the willingness to risk death rather than be thought dishonorable . . . whatever that means. 
+
+In any culture, there are those who pretend to have honor but  have none, and those who truly try to follow the code but often fail to live up to it. But only one who truly follows the code may get points for it as a disadvantage. 
+
+A Code of Honor is a disadvantage because it will often require  dangerous (if not reckless) behavior. Furthermore, an honorable  person can often be forced into unfair situations, because his foes know he is honorable. 
+
+This is not the same as a Duty or Sense of Duty. A samurai or  British grenadier will march into battle against fearful odds out of duty, not for his personal honor (though of course he would lose honor by fleeing). The risks a person takes for his honor are solely on his own account. 
+
+The point value of a specific Code varies, depending on just how much trouble it gets its followers into, and how arbitrary and irrational its requirements are. Some examples: Pirate's Code of Honor: Always avenge an insult, regardless of the danger; your buddy's foe is your own; never attack a fellow- crewman or buddy except in a fair, open duel. Anything else goes. This code of honor is also suitable for brigands, motorcycle gangs, and so on. -5 points. 
+
+Gentleman's Code of Honor: Never break your word. Never ignore an insult to yourself, to a lady, or to your flag; insults may only be wiped out by apology or a duel (not necessarily to the death!). Never take advantage of an opponent in any way; weapons and circumstances must be equal (except, of course, in open war). This code of honor is especially appropriate for the swashbuckling period, whether British, European or Colonial. Note that it only applies between gentlemen; a discourtesy from anyone of Social Status 0 or less calls for a whipping, not a duel! - 10 points. 
+
+Chivalric Code of Honor: As above, except that flags haven't been invented; you must resent any insult to your liege-lord or to your faith. In addition, you must protect any lady and anyone weaker than yourself. You must accept any challenge to arms from any one of greater or equal rank. Even in open war, sides and weapons must be equal if the foe is also noble and Chivalric. -15 points. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Combat Paralysis</name>
+ <points>-15 points</points>
+ <description>
+This is the opposite of Combat Reflexes; you tend to "freeze up" in a combat situation. It is not Cowardice; you don't have to roleplay fear. You may be brave, but your body betrays you. 
+ 
+In any situation in which personal harm seems imminent, roll against HT (not IQ). Any roll over 13 is a failure, even if you have high HT. You do not roll until the instant when you need to fight, run, pull the trigger and so on. 
+ 
+A successful roll means you can act normally. A failed roll means you are mentally Stunned (see p. 122). You must roll every  turn, at +1 to your effective HT each turn, to break the freeze. A quick slap from a friend will give +1 to your cumulative roll.  Once you unfreeze, you will not freeze again until the immediate  danger is over. Then, in the next dangerous situation, you may freeze once again. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Compulsive Behavior</name>
+ <points> -5 to -15 points</points>
+ <description>
+You have a habit (usually, but not always, a vice) which you feel compelled to indulge on a daily basis. You waste a good deal of your time indulging your habit. 
+ 
+Examples of compulsive behavior include gambling, attraction to another person, arguing (or even fighting). In general, a Will roll is required if the player wants his character to avoid the compulsion in a specific instance (or for a specific day). Note that it is very bad roleplaying to attempt to avoid the compulsion often! 
+ 
+The specific point value of the disadvantage depends on what the behavior is, how much it costs, and how much trouble it is likely to get the PC into. The GM is the final judge. Compulsive Lying, below, is one example; see GURPS Compendium I for more examples. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Compulsive Lying</name>
+ <points>-15 points</points>
+ <description>
+You lie constantly, for no reason other than the joy of telling the tale. A compulsive liar delights in inventing stories about  his deeds, lineage, wealth - whatever might impress his audience. 
+ 
+Even when exposed as a liar, he will cling tenaciously to his stories, calling his accuser a liar and a scoundrel. In order to tell the pure, unvarnished truth, a compulsive liar must roll against Will-4. A charitable GM might allow a liar to tell a slightly-fractured version of the truth if he narrowly fails this roll. 
+
+When a PC liar makes a roll to tell the truth to his fellow party members, he should roll out of sight of the other players. Thus, they can never be sure that they are getting accurate information from their comrade. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Cowardice</name>
+ <points>-10 points</points>
+ <description>
+You are extremely careful about your physical well-being. Anytime you are called on to risk physical danger, you must roll against Will. If there is a risk of death, the roll is at a -5. If you fail the roll, you must refuse to endanger yourself unless you are threatened with greater danger! Soldiers, police, etc., will react to you at -2 once they know you are a coward. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Delusions</name>
+ <points>-1, -5, -10 or -15 points</points>
+ <description>
+You believe something (or several things) that are simply not true. This may cause others to consider you insane. They may be right. If you suffer from a delusion, you must roleplay your delusionary belief at all times. The point value of the delusion depends on its nature; you may not get more than 40 points from delusions, regardless of how insane you really are. 
+
+Quirk. -1 point. Any or all of your five Quirks may be a trivial delusion that does not affect your everyday behavior, and is not likely to be noticed by a casual acquaintance. Examples: "The Earth is flat." "The Pentagon controls the Boy Scouts and the health food stores." "Socks cause disease of the feet." 
+ 
+Minor delusion. -5 points. This delusion affects your behavior, and is likely to be noticed quickly by anyone around you, but it does not keep you from functioning more or less normally.  Examples: "Squirrels are messengers from God." "The Illuminati  are watching me constantly - but only to protect me." "I am therightful Duke of Fnordia, stolen at birth by gypsies and doomed to live among commoners." Strangers who notice your delusion react at -1. 
+ 
+Major delusion. -10 points. This delusion affects your behavior strongly, but does not keep you from living a fairly normal life. Examples: "The government has all phones tapped." "I have Eidetic Memory and Absolute Direction." Others will react to you at -2. 
+ 
+Severe delusion. -15 points. This delusion affects your behavior so much that it may keep you from functioning in the everyday world. Examples: "I am Napoleon." "I am immortal." "Ice cream makes machines work better, especially computers. Spoon it right in." Others will react to you at -3, though they are more likely to fear or pity you than to attack. GMs should limit this sort of delusion carefully, or the character may not be able to participate meaningfully in the campaign. 
+ 
+Note that the character's behavior is the important thing. Depending on behavior, the same delusion could be any level from quirk to severe. Suppose you believe that "Everything colored purple is alive." If you pat purple things a nd say hello, that's a quirk. If you won't discuss serious matters with purple things in the room, it's a minor delusion. If you picket the Capitol demanding Civil Rights For Purple Things, that's major. If you attack purple things on sight, that's severe! 
+ 
+A GM who wants to shake up his players can make a delusion be true. Not all delusions are suitable for this. Of those listed above, for instance, the ones about squirrels, ice cream and Napoleon seem unlikely. The one about socks isn't too interesting. But the Earth might really be flat in your gameworld, or the Illuminati might really exist, or the gypsies might really have stolen the heir to the throne of Fnordia . . . Have fun. 
+ 
+If a delusion turns out to be true, it does not have to be "bought off unti l the other players realize that it's true. (And remember: the player should not be told that his character is not really crazy. Somebody can be right and still be crazy . . .) 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Dyslexia</name>
+ <points>-5 or -15 points</points>
+ <description>
+You have a severe reading disability. (Minor forms of dyslexia are common, not crippling, and not significant in game terms, except possibly as a quirk.) You can never learn to read or write; even simple maps and road signs are beyond you. You can learn any skill at normal speed if you have a teacher. If you try to learn a mental skill without a teacher, you will learn at only 1/4 speed, and only if it can be self-taught without books (GMs may vary this for special circumstances). You also cannot learn magic (you cannot handle the symbolism required) though you can still use magical items. 
+ 
+The value of this disadvantage depends upon the type of culture the character is originally from, as follows: 
+
+Primitive or medieval (Tech Level 4 and below): -5 points. Most people around you can't read, either. 
+ 
+Post-printing -press (Tech Level 5 and above): -15 points. This handicap will cause you problems every day. You are automatically illiterate, but you get no extra points for it. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Fanaticism</name>
+ <points>-15 points</points>
+ <description>
+You believe very strongly in one country, religion, et cetera. It is more important to you than anything. You might not die for it (depending on your degree of personal bravery), but you will put it ahead of everything else. If your cuntry/religion/whatever requires obedience to a certain code of behavior, you will follow that code rigidly. If it requires obedience to a leader, you will follow that leader with total loyalty. You must roleplay your fanaticism. 
+ 
+Note that fanatics do not have to be either mindless or evil. A glaring priest of Set, brandishing his bloody dagger, is a fanatic. So is a kamikaze pilot, exchanging himself for an aircraft carrier. So is a patriot who says, "Give me liberty or give me death!" Fanaticism is a state of mind; it is what you are fanatic about that makes the difference. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Gluttony</name>
+ <points>-5 points</points>
+ <description>
+You are overfond of good food and drink. Given the chance, you must always burden yourself with extra provisions. You should never willingly miss a meal. Presented with a tempting morsel or good wine which, for some reason, you should resist, you must make a successful Will roll to do so. Gluttony is not a terribleweakness, but by its nature it will soon be obvious to everyone who meets you. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Greed</name>
+ <points>-15 points</points>
+ <description>
+You lust for wealth. Any time riches are offered - as payment for fair work, gains from adventure, spoils of crime, or just bait you must make a Will roll to avoid temptation. The GM may modify this roll if the money involved is small relative to your own wealth. 
+
+Small amounts of money will not tempt a rich character (much), but a poor character will have to roll at -5 or even more if a rich prize is in the offing. Honest characters (see below) roll at +5 to resist a shady deal and +10 to resist outright crime. However, almost any greedy character will eventually do something illegal. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Gullibility</name>
+ <points>-10 points</points>
+ <description>
+There's one born every minute, and you're it. A gullible person naturally believes everything he hears; he'll swallow even the most ridiculous story, if it's told with conviction. 
+
+In order to not believe a lie - or an improbable truth, for that matter - you must roll against IQ, modified by the plausibility of the story. A lie well-told, or involving something the character has no familiarity with - "My father is the chief of police in this town, and he won't stand for this!" - calls for a -6 penalty to IQ. A lie concerning a topic the gullible character is familiar with - "Didn't you know they bred ducks in your village, Torg?" - calls for a -3 to the roll; and even a totally outlandish tale - "Of course the Eskimos are descended from Spanish conquistadors; everyone knows that!" - will be believed if the victim fails a roll against unmodified IQ. 
+
+Furthermore, a gullible character suffers a -3 penalty on any Merchant skill roll, or in any situation in which his credulity might be exploited. A gullible person can never learn the Detect Lies skill. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Honesty</name>
+ <points>-10 points</points>
+ <description>
+You MUST obey the law, and do your best to get others to do so as well. You are compulsive about it; this is essentially another type of Code of Honor (see above). 
+ 
+In an area with little or no law, you will not "go wild" - you will act as though the laws of your own home were in force. This is a disadvantage, because it will often limit your options! Faced with unreasonable laws, you must roll against IQ to see the "need" to break them, and against Will to avoid turning yourself in afterward! If you ever behave dishonestly, the GM may penalize you for bad roleplaying. 
+ 
+You may fight (or even start a fight, if you do it in a legal way). You may even kill in a legal duel, or in self-defense - but you may never murder. You may steal if there is great need, but only as a last resort, and you must attempt to pay your victims back later. If you are jailed for a crime you did not commit, but treated fairly and assured of a trial, you will not try to escape. 
+
+You will always keep your word. (In a war, you may act "dishonestly" against the enemy, but you will not be happy about it!) You will also assume others are honest unless you know otherwise (make an IQ roll to realize someone may be dishonest if you haven't seen proof). 
+ 
+Honesty has its rewards, of course. If you stay alive and in one place long enough for your honesty to become known, GMs should  allow you a +1 on any non-combat reaction roll, or a +3 if a question of trust or honor is actually involved. This is essentially a free "reputation" reaction bonus. 
+ 
+You are allowed to lie if it does not involve breaking the law.  Truthfulness (p. 37) is a separate disadvantage. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Illiteracy</name>
+ <points>0 or -10 points</points>
+ <description>
+This is the normal condition in a low-tech culture, and gives no bonus in such cases. In a TL5 or later culture, where the printing press is common, it is a disadvantage. See p. 17. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Impulsiveness</name>
+ <points>-10 points</points>
+ <description>
+You hate talk and debate. You prefer action! When you are alone, you will act first and think later. In a group, when your friends want to stop and discuss something, you should put in your two cents' worth quickly - if at all - and then do something. Roleplay it! If it is absolutely necessary to wait and ponder, you must make a Will roll to do so. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Intolerance</name>
+ <points>-5/-10 points</points>
+ <description>
+You dislike and distrust some (or all) people who are different from you. A thoroughly intolerant character ( -10 points) has a -3 reaction against anyone not of his own race and/or class. On a "good" reaction, he will tolerate the person and be as civil as possible (but will be stiff and cold toward him); on a "neutral" reaction he will still tolerate him, but make it plain in words and deeds he doesn't care to be around him and considers him inferior and/or offensive; on a worse reaction, he may attack or refuse to associate with the victim at all. 
+
+Intolerance directed at only one specific race or class is worth from -5 for a commonly-encountered victim, to -1 (just a nasty quirk) for a rare victim. 
+
+Members of a disliked group will sense intolerance, and will normally react to the intolerant person at -1 to -5. 
+
+Intolerance may manifest itself in other ways as well. Religious  intolerance may take the form of a -3 reaction against those of a particular faith ( -5 points) or to anyone not of your own faith ( -10 points). On a "neutral" reaction or better, an intolerant person will attempt to convert unbelievers to his own faith. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Jealousy</name>
+ <points>-10 points</points>
+ <description>
+You have an automatic bad reaction toward anyone who seems smarter, more attractive, or better-off than you! You will resist any plan proposed by a "rival," and will hate it if someone else is in the limelight. (This disadvantage goes well with Megalomania.) If an NPC is Jealous, the GM will subtract 2 to 4 points from his reaction to the victim(s) of his jealousy. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Kleptomania</name>
+ <points>-15 points</points>
+ <description>
+You are compelled to steal - not necessarily things of value, but anything you can get away with. Whenever you are presented with a chance to steal, you must make a Wi ll roll, at up to -3 if the item is especially interesting to you (not necessarily valuable unless you are poor or Greedy, just "interesting"). If you fail the roll, you must try to steal it. Stolen items may be kept or sold, but not returned or discarded. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Laziness</name>
+ <points>-10 points</points>
+ <description>
+You are violently averse to physical labor. Your chances of getting a raise or promotion in any job are halved. If you are self-employed, your weekly income is halved. You must avoid work  especially hard work - at all costs. Roleplay it! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Lecherousness</name>
+ <points>-15 points</points>
+ <description>
+You suffer from an unusually strong desire for romance.  Whenever in more than the briefest contact with an attractive member of the opposite sex, you must roll vs. Will (at a -5 if the other person is Beautiful, or a -10 if Very Beautiful). A failed roll means you must make a "pass," using whatever wiles or skills you can bring to bear. You must then suffer the consequences of your actions, successful or not. . . physical retribution, jail, communicable disease, or (possibly) an adoring new friend. 
+ 
+Unless the object of your affection is Very Handsome or Beautiful, you need not roll more than once a day to avoid making a pass. If a specific character turns you down very firmly (e.g., a black eye, or an arrest for sexual harassment) the GM may allow you a bonus on further rolls . . . 
+ 
+Note also that a Lecherous person may change his or her standards of attractiveness if no truly attractive members of the opposite sex are available! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Megalomania</name>
+ <points> -10 points</points>
+ <description>
+You believe that you are a superman, or that you have been chosen for some great task, or that you are destined to conquer. You must start by taking the Fanatic disadvantage - but you are fanatic for yourself! You must choose some great goal - usually either conquest or the completion of some fantastic task. You may let nothing stand between you and this goal. You may attract followers who are also Fanatics; nobody else will enjoy hearing you talk about your brilliance and your great plans. Young or naive characters, and Fanatics looking for a new cause, will react to you at +2. Others will have a -2. This is a better disadvantage for NPCs than it is for player characters. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Miserliness</name>
+ <points>-10 point</points>
+ <description>
+Like Greed (p. 33), except that you are more concerned with  holding on to what you already have. You may be both greedy and  miserly! You must make a Will roll any time you are called on to  spend money, and you must always hunt for the best deal possible. If the expenditure is large, the Will roll may be at a -5 (or even greater) penalty. A failed roll means you will refuse to spend the money or, if the money absolutely must be spent, you should haggle and complain interminably. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Overconfidence</name>
+ <points>-10 points</points>
+ <description>
+You feel yourself to be far more powerful, intelligent and/or  competent than you really are, and you should behave that way.  Any time (in the GM's opinion) you show an unreasonable degree of caution, you must roll against your IQ. A failed roll means you may not be cautious, but must go ahead as though you were able to handle the situation. An overconfident character will receive +2 on all reaction rolls from young or naive individuals (they believe he is as good as he says he is), but -2 on reactions from experienced NPCs. 
+ 
+This is like Megalomania (above) but on a smaller scale. Robin  Hood was overconfident - he challenged strangers to quarterstaff duels. Hitler was a megalomaniac - he invaded Russia! Heroes are rarely megalomaniacal but often overconfident. 
+ 
+This characteristic requires roleplaying. An overconfident character may be proud and boastful, or just quietly determined  - but play it up! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Pacifism</name>
+ <points>-15 or -30 points</points>
+ <description>
+You are opposed to violence. This opposition can take three  forms, each with its own point value.
+
+Total nonviolence is just that: you will not lift a hand againstanother intelligent creature, for any reason. You must do your non-violent best to discourage violent behavior in others, too. You are free to defend yourself against attacks by animals, mosquitoes, etc. -30 points. 
+
+Self-defense only means that you will only fight to defend yourself or those in your care, using only as much force as may be necessary (no pre-emptive strikes allowed!). You must do your best to discourage others from starting fights. -15 points. 
+
+Cannot kill means that you may fight freely, and even start a  fight, but you may never do anything that seems likely to kill another. This includes abandoning a wounded foe to die "on his own"! You must do your best to keep your companions from  killing, too. If you do kill someone (or feel yourself responsible for a death), you immediately suffer a nervous breakdown. Roll 3 dice and be totally morose and useless (roleplay it!) for that many days. During this time, you must make a Will roll to offer any sort of violence toward anyone, for any reason. -15 points. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Paranoia</name>
+ <points>-10 points</points>
+ <description>
+You are out of touch with reality. Specifically, you think that  everyone is plotting against you. You will never trust anyone  except old friends . . . and you keep an eye on them, too, just in case. Other characters, understandably, react to paranoids at -2. A paranoid NPC has an automatic -4 reaction against any stranger, and any "legitimate" reaction penalty (e.g., unfriendly race or nationality) is doubled. This goes very well with Delusions, which of course have their own disadvantage value! 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Phobias</name>
+ <points>Variable</points>
+ <description>
+A "phobia" is a fear of a specific item, creature, or  circumstance. Many fears are reasonable, but a phobia is an unreasonable, unreasoning, morbid fear. 
+ 
+The more common an object or situation, the greater the point value of a phobia against it. Fear of darkness is far more trouble- some than fear of left-handed plumbers. Phobias may be mild or severe; the severe version is worth twice as much. 
+ 
+If you have a mild phobia, you may master it by a successful Will roll. This is also called a "Fright Check" - see p. 93. For example, if you have acrophobia (fear of heights), you may still go onto the roof of a tall building if you can first make your Will roll. However, the fear persists. If you successfully master a mild phobia, you will be at -2 IQ and -2 DX while the cause of your fear persists, and you must roll again every ten minutes to see if the fear overcomes you. If it does (that is, if you fail your Fright Check) you will react badly, rolling on the table on p. 94.  
+
+If you suffer from a severe phobia (worth double points), you  are deathly afraid. Under normal circumstances, you must simply refuse contact with the feared situation. If forced into contact with the object of your fear, roll a Fright Check ... at -4 to Will! You will be at -3 IQ and -3 DX while the cause of your fear persists, rolling again every 10 minutes. 
+ 
+If a phobia victim is threatened with the feared object, he must immediately make a Fright Check at +4 to Will (whether the phobia is mild or severe). If enemies actually inflict the feared object on him, he must make the normal Fright Check (as above). If the roll is failed, the victim breaks down, but does not necessarily talk - see the Interrogation skill. Some people can panic and fall apart but will still refuse to talk, just as some people will not talk under torture. 
+ 
+A phobic situation is, by definition, stressful. Anyone who is prone to personality shifts, berserking, etc., is likely to have these reactions when he encount ers something he fears and fails his Fright Check. 
+
+Some common phobias: 
+ 
+Crowds (demophobia): Any group of over a dozen people sets off this fear unless they are all well -known to you. Roll at -1 for over 25 people, -2 for a crowd of 100 or more, -3 for 1,000, -4 for 10,000, and so on. -15/-30 points. 
+ 
+Darkness (scotophobia): A common fear, but crippling. You  should avoid being underground if possible; if something happens to your flashlight or torch, you may well lose your mind before you can relight it. -15/-30 points. 
+ 
+Death and the dead (necrophobia): You are terrified by the idea of death. A Will roll is required in the presence of any dead body (animals, etc., don't count, but portions of bodies do). This roll is at -4 if the body is that of someone you know, or -6 if the body is unnaturally animated in some way. A ghost (or apparent ghost) will also require a roll at -6. -10/-20 points. 
+ 
+Dirt (rupophobia): You are deathly afraid of infection, or just of dirt and filth. You must make a Will roll before you can do anything that might get you dirty; you must roll at -5 to eat any unaccustomed food. You should act as "finicky" as possible. -10/-20 points. 
+ 
+Enclosed spaces (claustrophobia): Another common, crippling fear. You are uncomfortable any time you can't see the sky - or at least a very high ceiling. In a small room or vehicle, you feel the walls closing in on you . . . You need air! A dangerous fear for someone who plans to go underground. -15/-30 points. 
+ 
+Heights (acrophobia): You may not voluntarily go more than 15 feet above ground, unless you are inside a building and away from windows. If there is some chance of an actual fall, all Will rolls are at an extra -5. -10/-20 points. 
+ 
+Insects (entomophobia): You are afraid of all "bugs." Large or poisonous ones subtract 3 from the self -control roll. Very large ones, or large numbers, subtract 6. Avoid hills of giant ants. -10/-20 points. 
+ 
+Loud noises (brontophobia): You will avoid any situation where  loud noises are likely. A sudden loud noise will require a Will roll immediately, or panic will ensue. Thunderstorms are traumatic experiences. -10/-20 points. 
+ 
+Machinery (technophobia): You can never learn to repair any  sort of machine, and you will refuse to learn to use anything more complicated than a crossbow or bicycle. Any highly technological environment will call for a control roll; dealings with robots or computers will require a roll at -3, and hostility from intelligent machines will require a roll at -6. -15/-30 points in a culture of TL5 or better; -5/-10 below TL5. 
+ 
+Magic (manaphobia): You can never learn to use magic, and you  react badly to any user of magic. You must make a self-control roll whenever you are in the presence of magic. This roll is at -3 if you are to be the target, of friendly magic, and -6 if you are the target of hostile magic. (The magic does not have to be real, if YOU believe it!) -15/-30 points in a culture where magic is common, -10/-20 if it is known but uncommon, -5/-10 if "real" magic is essentially unknown. 
+ 
+Monsters (teratophobia): Any "unnatural" creature will set off  this fear - at a -1 to -4 penalty if the monster seems very large or dangerous, or if there are a lot of them. Note that the definition of "monster" depends on experience. An American Indian would consider an elephant monstrous, while an African pygmy would not! - 15/-30 points.
+ 
+Number 13 (triskadekaphobia): You must make a self-control  roll in order to do anything with a 13 in it - visit the 13th floor, buy something for $13.00, et cetera. This roll is at -5 if Friday the 13th is involved! -5/-10points. 
+
+Oceans (thalassophobia): You are afraid of any large body of  water. Ocean travel, or air travel over the ocean, will be  basically impossible, and encounters with aquatic monsters will also be upsetting. -10/-20 points. 
+
+Open spaces (agoraphobia): You are uncomfortable whenever  you are outside, and become actually frightened when there are no walls within 50 feet. -10/-20 points. 
+
+Reptiles (ophiophobia): You come unglued at the thought of  reptiles, amphibians and similar scaly-slimies. A very large reptile, or a poisonous one, would require a roll at -2; a horde of reptiles (such as a snake pit) would require a roll at -4. -10/-20 points. 
+
+Sharp things (aichmophobia): You are afraid of anything pointed. Swords, spears, knives and hypodermic needles all give you fits. Trying to use a sharp weapon, or being threatened with one, would require a Will roll at -2. -15/-30 points at TL5 and below; -10/-20 points above TL5. 
+ 
+Squeamishness (no technical name): You are afraid of "yucky stuff." You are upset by little bugs and crawly things, blood and dead bodies, slime and the like. But this is not just a combination of the standard fears of insects, reptiles, dirt and the dead. Huge bugs or reptiles don't bother you unduly; neither does ordinary "clean" dirt; neither do ghosts. But nasty creepy things, filth, and bits of grue will get to you. Mild squeamishness, as a "dislike," is a common quirk that is fun to roleplay. -10/-20 points. 
+ 
+Strange and unknown things (xenophobia): You are upset by any sort of strange circumstances, and particularly by strange people. You must make a Will roll when surrounded by people of another race or nationality; this roll will be at -3 if the people are not human. A xenophobe who loses control may very well attack strangers, simply out of fear. -15/-30 points. 
+ 
+Weapons (hoplophobia): Any sort of weaponry upsets you; the presence of weaponry is stressful, and using any weapon, or being threatened with one, would require a Will roll at -2. -20/-40 points. 
+ 
+Dislikes 
+ 
+To give your character depth, you may take any of the above phobias, in a very mild form, as "dislikes." These are quirks, worth -1 point each, and have no specific penalties; they are merely an opportunity for roleplaying. Or, if you suffer from a real phobia, you may try to pass it off as a mere dislike - until the crunch comes and you fail a Will roll! The GM may be requested to make your rolls in secret, to help conceal your phobia as long as possible. See Quirks, p. 41. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Pyromania</name>
+ <points>-5 points</points>
+ <description>
+You like fires! You like setting fires, too. For good roleplaying, you must never miss a chance to set a fire, or to appreciate one you encounter. When absolutely necessary, make a Will roll to override your love of flame. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Sadism</name>
+ <points>-15 points</points>
+ <description>
+You delight in cruelty . . . mental, physical, or both. (This is a particularly "evil" trait, more appropriate to NPC villains than to heroic characters.) The GM may completely prohibit this disadvantage (or any other advantage or disadvantage) if he does not want anyone roleplaying it in his campaign. 
+ 
+People react to a known sadist at -3, unless they are from cultures holding life in little esteem. When a sadistic character has an opportunity to indulge his desires, but knows he shouldn't (e.g., because the prisoner is one that should be released unharmed), he must make a successful Will roll to restrain himself. Note that it is possible, though despicable, to be both a bully and a sadist. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Shyness</name>
+ <points>-5,-10,-15 points</points>
+ <description>
+You are uncomfortable around strangers. This disadvantage  comes in three grades: Mild, Severe and Crippling. You must roleplay  your shyness! This disadvantage can be "bought off one level at a time. 
+
+Mild Shyness: Somewhat uncomfortable around strangers, especially assertive or attractive ones. -1 on any skill that requires you to deal with the public - in particular, Acting, Bard, Carousing, Diplomacy, Fast-Talk, Leadership, Merchant, Politics, Savoir-Faire, Sex Appeal, Streetwise and Teaching. -5 points. 
+
+Severe Shyness: Very uncomfortable around strangers, and tends to be quiet even among friends. -2 on any skill that requires you to deal with the public. -10 points. 
+
+Crippling Shyness: Avoids strangers whenever possible. Incapable of public speaking. May not learn any skill that involves dealing with the public; -4 on default rolls on such skills. -75 points. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Split Personality</name>
+ <points>-10 or -15 points</points>
+ <description>
+You have two or more distinct personalities, each of which may  have its own set of mental problems or behavior patterns. This  allows you to have mental disadvantages that would otherwise be incompatible (e.g., Pacifism and Berserk, or Paranoia and  Lecherousness). 
+
+Each personality should have his or her own character sheet.  There should be at least 50 points' worth of differences. Even their basic stats may vary somewhat (ST, DX, and HT being artificially lowered for personalities that "think" they're weak, clumsy or sickly). IQ and skills may be different, and personality traits can be totally different. The personalities' character point values should average to 100 when you start, but they need not be the same! Distribution of earned character points between the personalities is up to the GM. In any stress situation, the GM rolls against your IQ; a failed roll means a switch to another personality. No more than one roll per  hour (game time) is required. 
+
+Any NPC who is aware of this problem will feel (possibly with  justification) that you are a dange rous nutcase, and will react at -3 to you. 
+
+If your personalities are facets of a single "individual," this is a -10-point disadvantage. If the personalities are largely unaware of each other, interpret their memories differently, and have different names, it is a -15-point disadvantage. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Stubbornness</name>
+ <points>-5 points</points>
+ <description>
+You always want your own way. Make yourself generally hard to get along with - roleplay it! Your friends may have to make a lot of Fast-Talk rolls to get you to go along with perfectly reasonable plans. Others react to you at -1. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Truthfulness</name>
+ <points>-5 points</points>
+ <description>
+You hate to tell a lie - or you are just very bad at it. In order to keep silent about an uncomfortable truth (lying by omission), you must make your Will roll. To actually tell a falsehood, you must make your Will roll at a -5 penalty! A failed roll means you blurt out the truth, or stumble so much that your lie is obvious. (If someone is using Detect Lies on you, you are also at a -5 penalty.) 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Unluckiness</name>
+ <points>-10 points</points>
+ <description>
+You just have bad luck. Things go wrong for you - and usually at the worst possible time. Once per play session, the GM will arbitrarily and maliciously make something go wrong for you. You will miss a vital die roll, or the enemy will (against all odds) show up at the worst possible time. If the plot of the adventure calls for something bad to happen to someone, you're the one. 
+ 
+The GM may not kill a character outright with "bad luck," but  anything less than that is fine. 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Vow</name>
+ <points>-1 to -15 points</points>
+ <description>
+You have sworn an oath to do (or not to do) something. This disadvantage is especially appropriate for knights, holy men and fanatics. Note that, whatever the oath, you take it seriously. If you didn't, it would not be a disadvantage. The precise value of a vow is up to the GM, but should be directly related to the inconvenience it causes the character. Some examples: 
+ 
+Trivial vow: -1 point (a quirk). Always wear red; never drink alcohol; treat all ladies with courtesy; pay 10% of your income to your church.
+ 
+Minor vow: -5 points. Vow of silence during d aylight hours; vegetarianism; chastity. (Yes, for game purposes, this is minor). 
+ 
+Major vow: -10 points. Use no edged weapons; keep silence at all times; never sleep indoors; own no more than your horse can carry. 
+
+Great vow: -15 points. Never refuse any request for aid; always fight with the wrong hand; hunt a given foe until you destroy him; challenge every knight you meet to combat. 
+ 
+If you make a "vow of poverty," you may not also take points for being dead broke. Neither may you make a vow not to kill and then take points for Cannot Kill pacifism ... and so on. 
+ 
+Most vows end after a specified period of time. You must buy off a vow's point value when it ends. Vows for a period of less than a year are frivolous! If a character wants to end a vow before its stated time, the GM may exact a penalty; in a medieval world, for instance, a quest or other penance would be appropriate. (A quest can itself be a vow, too.) 
+ </description>
+ </disadvantage>
+ 
+ <disadvantage>
+ <name>Weak Will</name>
+ <points>-8 points/level</points>
+ <description>
+You are easily persuaded, frightened, bullied, coerced, tempted  and so on. For every level taken, your IQ is effectively reduced by 1 whenever you make a Will roll, including attempts to resist Diplomacy, Fast-Talk, Sex Appeal, Interrogation, Hypnotism, or magical or psionic attempts to take over, read, or affect your mind. 
+
+Weak Will also affects all attempts to master phobias, to resist hostile magic, to make Fright Checks (see p. 93), and to avoid giving in to Addictions, Berserk behavior, and the like. A character cannot have both Strong and Weak Will. 
+ </description>
+ </disadvantage>
+ 
+</disadvantages>

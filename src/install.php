@@ -10,16 +10,16 @@
 
         <?php
         if (isset($_POST['createAdmin'])) {
-            echo <<<EOF
-    <form method='post' action='{$_SERVER['PHP_SELF']}' name='adminCreation'>
-            <table>
-                <tr><td>Username</td><td><input type='text' name='adminUser'></td></tr>
-                <tr><td>Password</td><td><input type='password' name='adminPass'></td></tr>
-                <tr><td>Re-type password</td><td><input type='password' name='adminPassConfirm'></td></tr>
-                <tr><td><input type='button' value='Submit' name='adminSend' onClick='checkPasswords()'></td></tr>
-            </table>
-    </form>
-EOF;
+            ?>
+            <form method='post' action='<?php $_SERVER['PHP_SELF'] ?>' name='adminCreation'>
+                <table>
+                    <tr><td>Username</td><td><input type='text' name='adminUser'></td></tr>
+                    <tr><td>Password</td><td><input type='password' name='adminPass'></td></tr>
+                    <tr><td>Re-type password</td><td><input type='password' name='adminPassConfirm'></td></tr>
+                    <tr><td><input type='button' value='Submit' name='adminSend' onClick='checkPasswords()'></td></tr>
+                </table>
+            </form>
+            <?php
             die();
         }
 
@@ -58,26 +58,25 @@ EOF;
         }
 
         function getLogin() {
+            ?>
+            <form method='post' action="<?php $_SERVER['PHP_SELF'] ?>">
 
-            echo <<<EOF
-    <form method='post' action='{$_SERVER['PHP_SELF']}'>
-    
-    <table>
-    <tr><td>Name of the database:</td><td><Input type='text' name='dbName' size='15'></td></tr>
-    <tr><td>Username:</td><td><Input type='text' name='user' size='15'></td></tr>
-    <tr><td>Password:</td><td><Input type='password' name='pass' size='15'></td></tr>
-    <tr><td><input type='submit' name='submitCreds'></td></tr>
-    </table>
- 
-</form>
-EOF;
+                <table>
+                    <tr><td>Name of the database:</td><td><Input type='text' name='dbName' size='15'></td></tr>
+                    <tr><td>Username:</td><td><Input type='text' name='user' size='15'></td></tr>
+                    <tr><td>Password:</td><td><Input type='password' name='pass' size='15'></td></tr>
+                    <tr><td><input type='submit' name='submitCreds'></td></tr>
+                </table>
+
+            </form>
+            <?php
         }
 
         function createDB() {
             echo "Creating tables...";
             createTables();
             echo "done<br>";
-            echo "Reading advantages...";
+            echo "Reading advantages and disadvantages...";
             insertAdvantages();
             echo "done<br>";
             echo "Database successfully created! Please create yourself an admin account now.";
@@ -119,8 +118,8 @@ EOF;
     IQ INTEGER NOT NULL DEFAULT '10',
     HT INTEGER NOT NULL DEFAULT '10',
     ActiveDefense VARCHAR(10) DEFAULT '0|0',
-    PassiveDefensePD VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
-    PassiveDefenseDR VARCHAR(20) DEFAULT '0|0|0|0|0|0|0',
+    PassiveDefensePD VARCHAR(20) DEFAULT '0|0|0|0|0|0',
+    PassiveDefenseDR VARCHAR(20) DEFAULT '0|0|0|0|0|0',
     Quirks TEXT,
     CharNotes TEXT,
     UnusedPoints INTEGER DEFAULT '100',
@@ -133,7 +132,7 @@ EOF;
     SkillName VARCHAR(50) NOT NULL,
     SkillType VARCHAR(1) NOT NULL, 
     SkillDiff VARCHAR(10) NOT NULL,
-    SkillDefault VARCHAR(15) NOT NULL,
+    SkillDefault VARCHAR(50) NOT NULL,
     SkillDesc TEXT,
     PRIMARY KEY (SkillName)
     ) ENGINE=InnoDB;
@@ -180,8 +179,7 @@ EOF;
     Attr_name VARCHAR(50) NOT NULL,
     Attr_points INTEGER NOT NULL,
     PRIMARY KEY (CharAttr_id, Attr_name),
-    FOREIGN KEY (CharAttr_id) references Characters(Char_id),
-    FOREIGN KEY (Attr_name) references Attributes(AttrName)
+    FOREIGN KEY (CharAttr_id) references Characters(Char_id)
     ) ENGINE=InnoDB";
 
             $query = $db->prepare($myquery);
@@ -191,33 +189,40 @@ EOF;
         function insertAdvantages() {
 
             include ('connect.php');
+            for ($i = 0; $i < 2; $i++) {
 
-            $advantages = simplexml_load_file("xml/advantages.xml");
-
-            try {
-                $db->beginTransaction();
-
-
-                foreach ($advantages as $advantage) {
-                    $parsedName = addslashes($advantage->name);
-                    $parsedDesc = addslashes($advantage->description);
-                    $parsedPoints = addslashes($advantage->points);
-                    $myquery = "INSERT INTO  `$database`.`attributes` (
-                `AttrName` ,
-                `AttrType` ,
-                `AttrPoints` ,
-                `AttrDesc`) VALUES (
-                '$parsedName',  'A',  '$parsedPoints',  '$parsedDesc'
-           );";
-
-                    $query = $db->prepare($myquery);
-                    $query->execute();
+                if ($i == 0) {
+                    $attributes = simplexml_load_file("xml/advantages.xml");
+                    $type = 'A';
+                } else
+                if ($i == 1) {
+                    $attributes = simplexml_load_file("xml/disadvantages.xml");
+                    $type = 'D';
                 }
 
-                $db->commit(); // muutosten hyväksyntä
-            } catch (PDOException $e) {
-                $db->rollBack(); // muutosten peruutus
-                die("VIRHE: " . $e->getMessage());
+                try {
+                    $db->beginTransaction();
+
+                    foreach ($attributes as $attr) {
+                        $parsedName = addslashes($attr->name);
+                        $parsedDesc = addslashes($attr->description);
+                        $parsedPoints = addslashes($attr->points);
+                        $myquery = "INSERT INTO  `$database`.`attributes` (
+                        `AttrName` ,
+                        `AttrType` ,
+                        `AttrPoints` ,
+                        `AttrDesc`) VALUES (
+                        '$parsedName', '$type',  '$parsedPoints',  '$parsedDesc');";
+
+                        $query = $db->prepare($myquery);
+                        $query->execute();
+                    }
+
+                    $db->commit(); // muutosten hyväksyntä
+                } catch (PDOException $e) {
+                    $db->rollBack(); // muutosten peruutus
+                    die("VIRHE: " . $e->getMessage());
+                }
             }
         }
         ?>
@@ -225,24 +230,24 @@ EOF;
 
 
         <h1>Gsheet - installation</h1>
-        <?php
-        if (file_exists("credentials")) {
-            include ('connect.php');
-            try {
-                $testquery = "SELECT * FROM Users";
-                $query = $db->prepare($testquery);
-                $query->execute();
-                echo "Database connection successful!";
-            } catch (PDOException $e) {
-                echo "No database detected! Trying to create a new database...<br>";
-                createDB();
-            }
-        } else {
-            if (!isset($_POST['submitCreds'])) {
-                getLogin();
-            }
-        }
-        ?>
+<?php
+if (file_exists("credentials")) {
+    include ('connect.php');
+    try {
+        $testquery = "SELECT * FROM Users";
+        $query = $db->prepare($testquery);
+        $query->execute();
+        echo "Database connection successful!";
+    } catch (PDOException $e) {
+        echo "No database detected! Trying to create a new database...<br>";
+        createDB();
+    }
+} else {
+    if (!isset($_POST['submitCreds'])) {
+        getLogin();
+    }
+}
+?>
     </body>
 </html>
 
