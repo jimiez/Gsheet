@@ -30,7 +30,7 @@ if ($result->n < 1) {
     } else {
         $sheet = new Sheet(false);
     }
-    
+
     $activeDef = $character->getDef('active');
     $passiveDefPD = $character->getDef('passivePD');
     $passiveDefDR = $character->getDef('passiveDR');
@@ -48,7 +48,7 @@ if ($result->n < 1) {
     </head>
 
     <body onLoad="updateAll()">
-
+        <a href="index.php">Return to main</a>
         <form name="baseform" onClick="updateAll()" method="post" action="save.php">
             <table cellpadding="3" cellspacing="0" border="1">
 
@@ -70,7 +70,7 @@ if ($result->n < 1) {
                                 <td>Campaign</td>
                                 <td>
                                     <select name="campaignField" <?php $sheet->disabledSelect() ?> style="width: 250px">
-                                        
+
                                         <?php
                                         $myquery = $db->prepare('SELECT Campaign_id, CampName FROM Campaigns');
                                         $myquery->execute();
@@ -191,17 +191,36 @@ if ($result->n < 1) {
                         <table>
                             <th>Item</th>
                             <th>Value</th>
-                            <th>Weigth</th>
+                            <th>Weight</th>
+                            <th>Type</th>
 
                             <?php
+                            $items = $character->getItems();
+
                             for ($i = 0; $i < 21; $i++) {
-                                ?>
-                                <tr>
-                                    <td><input type='text' size=30 class='underscore' name="itemName[]"></td>
-                                    <td><input type='text' size=1 class='underscore' name="itemValue[]"></td>
-                                    <td><input type='text' size=1 class='underscore' name="itemWeight[]"></td>
-                                </tr>
-                                <?php
+                                if ($i < sizeof($items)) {
+                                    $item = $items[$i];
+                                    ?>
+                                    <tr>
+                                        <td><input type="hidden" value="<?php echo $item->getId() ?>" name="itemId[]">
+                                            <input type='text' value="<?php echo $item->getName() ?>" size=30 class='underscore' <?php $sheet->readOnly() ?> name="itemName[]"></td>
+                                        <td><input type='text' value="<?php echo $item->getValue() ?>" size=1 class='underscore' <?php $sheet->readOnly() ?> name="itemValue[]"></td>
+                                        <td><input type='text' value="<?php echo $item->getWeight() ?>" size=1 class='underscore' <?php $sheet->readOnly() ?> name="itemWeight[]"></td>
+                                        <td><input type='text' value="<?php echo $item->getType() ?>" size=4 class='underscore' <?php $sheet->readOnly() ?> name="itemType[]"></td>
+                                    </tr>
+
+                                    <?php
+                                } else {
+                                    ?>
+                                    <tr>
+                                        <td><input type="hidden" name="itemId[]">
+                                            <input type='text' size=30 class='underscore' <?php $sheet->readOnly() ?> name="itemName[]"></td>
+                                        <td><input type='text' size=1 class='underscore' <?php $sheet->readOnly() ?> name="itemValue[]"></td>
+                                        <td><input type='text' size=1 class='underscore' <?php $sheet->readOnly() ?> name="itemWeight[]"></td>
+                                        <td><input type='text' size=4 class='underscore' <?php $sheet->readOnly() ?> name="itemType[]"></td>
+                                    </tr>
+                                    <?php
+                                }
                             }
                             ?>
                             <tr>
@@ -429,15 +448,34 @@ if ($result->n < 1) {
                                 <td>Weapon notes</td>
                             </tr>            
                             <?php
+                            $equippedWeapons = $character->getEquippedWeapons();
                             for ($i = 0; $i < 3; $i++) {
-                                ?>
-                                <tr>
-                                    <td><input type="text" size="20" name="eqWpnName[]" <?php $sheet->readOnly() ?> class="underscore"></td>
-                                    <td><input type="text" size="4" name="eqWpnDmgType[]" <?php $sheet->readOnly() ?> class="underscore"></td>
-                                    <td><input type="text" size="2" name="eqWpnDmg[]" <?php $sheet->readOnly() ?> class="underscore"></td>
-                                    <td><input type="text" size="30" name="eqWpnNotes[]" <?php $sheet->readOnly() ?> class="underscore"></td>
-                                </tr>
-                                <?php
+                                if ($i < sizeof($equippedWeapons)) {
+                                    $eqWpn = $equippedWeapons[$i];
+                                    
+                                    ?>
+                                    <tr>
+
+                                        <td><input type="hidden" name="eqWpnId[]" value="<?php echo $eqWpn->getId() ?>">
+                                            <input type="text" value="<?php echo $eqWpn->getName() ?>" size="20" name="eqWpnName[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" value="<?php echo $eqWpn->getDamageType() ?>" size="4" name="eqWpnDmgType[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" value="<?php echo $eqWpn->getDamageAmount() ?>" size="2" name="eqWpnDmg[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" value="<?php echo $eqWpn->getNotes() ?>" size="30" name="eqWpnNotes[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+
+                                    </tr>
+
+                                    <?php
+                                } else {
+                                    ?>
+                                    <tr>
+                                        <td><input type="hidden" name="eqWpnId[]">
+                                            <input type="text" size="20" name="eqWpnName[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" size="4" name="eqWpnDmgType[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" size="2" name="eqWpnDmg[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                        <td><input type="text" size="30" name="eqWpnNotes[]" <?php $sheet->readOnly() ?> class="underscore"></td>
+                                    </tr>
+                                    <?php
+                                }
                             }
                             ?>
                         </table>
@@ -462,24 +500,19 @@ if ($result->n < 1) {
                                     $adv = $advantages[$i];
                                     ?>
                                     <tr><td>
-                                            <input type='text' <?php echo "value='" . $adv->getName() . "'";
-                            $sheet->readOnly()
-                            ?> size='25' class='underscore' name='attributeName[]' <?php $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'advantage')\"") ?>>
+                                            <input type="hidden" value="<?php echo $adv->getId() ?>" name="advantageId[]">
+                                            <input type='text' <?php echo "value='" . $adv->getName() . "'" ?> readonly="readonly" size='25' class='underscore' name='advantageName[]' <?php $sheet->writeIfOwner("onClick=\"return openSelector(this, 'advantage')\"") ?>>
                                         </td><td>
-                                            <input type='text' <?php
-                            echo "value='" . $adv->getPoints() . "'";
-                            $sheet->readOnly()
-                            ?> size='2' class='underscore' name='attributePoints[]'>
+                                            <input type='text' <?php echo "value='" . $adv->getPoints() . "'"; $sheet->readOnly()
+                                    ?> size='2' class='underscore' name='advantagePoints[]'>
                                         </td></tr>
                                     <?php
                                 } else {
-                                    ?>
-                                    <tr>
-                                        <td><input type='text' size='25' class='underscore' name='attributeName[]' <?php
-                                    $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'advantage')\"");
-                                    $sheet->readOnly()
+                                    ?> 
+                                    <tr><td><input type="hidden" name="advantageId[]">
+                                            <input type='text' size='25' class='underscore' readonly="readonly" name='advantageName[]' <?php $sheet->writeIfOwner("onClick=\"return openSelector(this, 'advantage')\"")
                                     ?>></td>
-                                        <td><input type='text' size='2' class='underscore' name='attributePoints[]' <?php $sheet->readOnly() ?>></td>   
+                                        <td><input type='text' size='2' class='underscore' name='advantagePoints[]' <?php $sheet->readOnly() ?>></td>   
                                     </tr>
                                     <?php
                                 }
@@ -503,25 +536,20 @@ if ($result->n < 1) {
                                     $dadv = $disadvantages[$i];
                                     ?>
                                     <tr><td>
-                                            <input type='text' <?php
-                                    echo "value='" . $dadv->getName() . "'";
-                                    $sheet->readOnly()
-                                    ?> size='25' class='underscore' name='attributeName[]' <?php $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'disadvantage')\"") ?>>
+                                            <input type="hidden" value="<?php echo $dadv->getId() ?>" name="disadvantageId[]">
+                                            <input type='text' <?php echo "value='" . $dadv->getName() . "'" ?> size='25' readonly="readonly" class='underscore' name='disadvantageName[]' <?php $sheet->writeIfOwner("onclick=\"return openSelector(this, 'disadvantage')\"") ?>>
                                         </td><td>
                                             <input type='text' <?php
-                                    echo "value='" . $dadv->getPoints() . "'";
-                                    $sheet->readOnly()
-                                    ?> size='2' class='underscore' name='attributePoints[]'>
+                            echo "value='" . $dadv->getPoints() . "'";
+                            $sheet->readOnly()
+                                    ?> size='2' class='underscore' name='disadvantagePoints[]'>
                                         </td></tr>
                                     <?php
                                 } else {
                                     ?>
                                     <tr>
-                                        <td><input type='text' size='25' class='underscore' name='attributeName[]' <?php
-                                    $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'disadvantage')\"");
-                                    $sheet->readOnly()
-                                    ?>></td>
-                                        <td><input type='text' size='2' class='underscore' name='attributePoints[]' <?php $sheet->readOnly() ?>></td>   
+                                        <td><input type="hidden" name="disadvantageId[]"><input type='text' size='25' readonly="readonly" class='underscore' name='disadvantageName[]' <?php $sheet->writeIfOwner("onClick=\"return openSelector(this, 'disadvantage')\"") ?>></td>
+                                        <td><input type='text' size='2' class='underscore' name='disadvantagePoints[]' <?php $sheet->readOnly() ?>></td>   
                                     </tr>
                                     <?php
                                 }
@@ -537,7 +565,6 @@ if ($result->n < 1) {
                         <table>
                             <th>Quirks</th>
                             <?php
-                            
                             for ($i = 0; $i < 5; $i++) {
                                 ?>
                                 <tr><td><input type="text" size="30" name="quirks[]>" value="<?php echo $quirks[$i] ?>" class="underscore"></td></tr>
@@ -556,7 +583,7 @@ if ($result->n < 1) {
                         <table>
                             <th>Notes</th>
                             <tr>
-                                <td><textarea cols="60" rows="25" name="notesField" <?php $sheet->readOnly() ?> ><?php echo $character->getStat('CharNotes')?></textarea></td>
+                                <td><textarea cols="60" rows="25" name="notesField" <?php $sheet->readOnly() ?> ><?php echo $character->getStat('CharNotes') ?></textarea></td>
                             </tr>
                         </table>
 
@@ -577,7 +604,7 @@ if ($result->n < 1) {
                                 <tr>
                                     <td><input type=text size=20 readonly='readonly' class='underscore' name='skillName[]' <?php $sheet->writeIfOwner("onclick=\"return openSelector(this, 'skill')\"") ?>></td>
                                     <td><input type=text size=1 readonly='readonly' class='underscore' name='skillType[]'></td>
-                                    <td><input type=text size=5 readonly='readonly' class='underscore' name='skillDff[]'></td>
+                                    <td><input type=text size=5 readonly='readonly' class='underscore' name='skillDiff[]'></td>
                                     <td><input type=text size=1 class='underscore' name='skillPts[]' <?php $sheet->readOnly() ?>></td>
                                     <td><input type=text size=1 readonly='readonly' class='underscore' name='skillCheck[]'></td>
                                 </tr>

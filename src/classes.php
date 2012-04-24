@@ -5,10 +5,12 @@ class Character {
     private $charStats;
     private $charAdvantages;
     private $charDisadvantages;
+    private $items;
     private $quirks;
     private $ActiveDef;
     private $PassiveDefPD;
     private $PassiveDefDR;
+    private $equippedWeapons;
 
     public function __construct($id) {
         include("connect.php");
@@ -23,11 +25,10 @@ class Character {
         $this->ActiveDef = explode("|", $this->charStats->ActiveDefense);
         $this->PassiveDefPD = explode("|", $this->charStats->PassiveDefensePD);
         $this->PassiveDefDR = explode("|", $this->charStats->PassiveDefenseDR);
-        
 
-        // Read advantages from the DB
-        
         $this->readAttributes();
+        $this->readItems();
+        $this->readEquippedWeapons();
     }
 
     public function getStat($stat) {
@@ -51,20 +52,51 @@ class Character {
     public function readAttributes() {
         include('connect.php');
 
-        $query = "SELECT al.Attr_name, al.Attr_points, a.AttrType 
-            FROM attributelist AS al, attributes AS a 
-            WHERE al.Attr_Name = a.AttrName 
-            AND al.CharAttr_id = ?";
+        $query = "SELECT * 
+                FROM attributelist 
+                WHERE CharAttr_id = ?";
         $myquery = $db->prepare($query);
         $myquery->bindValue(1, $this->charStats->Char_id);
         $myquery->execute();
         while ($result = $myquery->fetchObject()) {
-            if ($result->AttrType == 'A') {
-                $this->charAdvantages[] = new Attribute($result->Attr_name, true, $result->Attr_points);
+            if ($result->Attr_type == 'A') {
+                $this->charAdvantages[] = new Attribute($result->Attribute_id, $result->Attr_name, true, $result->Attr_points);
             } else {
-                $this->charDisadvantages[] = new Attribute($result->Attr_name, false, $result->Attr_points);
+                $this->charDisadvantages[] = new Attribute($result->Attribute_id, $result->Attr_name, false, $result->Attr_points);
             }
         }
+    }
+
+    public function readItems() {
+        include('connect.php');
+
+        $query = "SELECT *
+            FROM Items
+            WHERE CharItem_id = ?";
+        $myquery = $db->prepare($query);
+        $myquery->bindValue(1, $this->charStats->Char_id);
+        $myquery->execute();
+        while ($result = $myquery->fetchObject()) {
+            $this->items[] = new Item($result->Item_id, $result->ItemName, $result->ItemWeight, $result->ItemValue, $result->ItemType);
+        }
+    }
+
+    public function readEquippedWeapons() {
+        include('connect.php');
+
+        $query = "SELECT *
+            FROM EquippedWeapons
+            WHERE CharWeapon_id = ?";
+        $myquery = $db->prepare($query);
+        $myquery->bindValue(1, $this->charStats->Char_id);
+        $myquery->execute();
+        while ($result = $myquery->fetchObject()) {
+            $this->equippedWeapons[] = new EquippedWeapon($result->EquippedWeapon_id, $result->WeaponName, $result->DamageType, $result->DamageAmount, $result->WeaponNotes);
+        }
+    }
+
+    public function readSkills() {
+        
     }
 
     public function getAttributes($type) {
@@ -73,6 +105,14 @@ class Character {
         } else {
             return $this->charDisadvantages;
         }
+    }
+
+    public function getItems() {
+        return $this->items;
+    }
+
+    public function getEquippedWeapons() {
+        return $this->equippedWeapons;
     }
 
 }
@@ -106,35 +146,24 @@ class Sheet {
         }
     }
 
-    function drawSkillButtons($skill) {
-        $skillfield = $skill . "Field";
-        $skillButton = $skill . "Button";
-        if ($this->editable) {
-            echo "<input type=\"button\" name=\"$skillButton\" value=\"+\" size=12 class=minibutton onClick=\"increaseSkill('$skillfield')\">";
-            echo "<input type=\"button\" name=\"$skillButton\" value=\"-\" size=12 class=minibutton onClick=\"decreaseSkill('$skillfield')\">";
-        }
-    }
-
     function writeIfOwner($string) {
         if ($this->editable) {
             echo $string;
-        } 
+        }
     }
-    
-    
-    
-    
 
 }
 
 class Attribute {
 
+    private $id;
     private $name;
     private $points;
     private $isAdvantage;
 
-    public function __construct($name, $isAdvantage, $points) {
-        // luetaan kannasta konstruktoinnin yhteydessä vai sheet - luokan metodissa?
+    public function __construct($id, $name, $isAdvantage, $points) {
+
+        $this->id = $id;
         $this->name = $name;
         $this->isAdvantage = $isAdvantage;
         $this->points = $points;
@@ -152,17 +181,23 @@ class Attribute {
         return $this->isAdvantage;
     }
 
+    public function getId() {
+        return $this->id;
+    }
+
 }
 
 class Skill {
 
+    private $id;
     private $name;
     private $type;
     private $difficulty;
     private $points;
 
-    public function __construct($name, $type, $difficulty, $points) {
+    public function __construct($id, $name, $type, $difficulty, $points) {
 
+        $this->id = $id;
         $this->name = $name;
         $this->type = $type;
         $this->difficulty = $difficulty;
@@ -182,25 +217,30 @@ class Skill {
     }
 
     public function getPoints() {
-        if ($this->points < 0) {
-            return "0";
-        } else {
-            return $this->points;
-        }
+        return $this->points;
+    }
+
+    public function getId() {
+        return $this->id;
     }
 
 }
 
 class Item {
 
+    private $id;
     private $name;
     private $weigth;
     private $value;
+    private $type;
 
-    public function __construct($name, $weight, $value) {
+    public function __construct($id, $name, $weight, $value, $type) {
+
+        $this->id = $id;
         $this->name = $name;
         $this->weigth = $weight;
         $this->value = $value;
+        $this->type = $type;
     }
 
     public function getName() {
@@ -217,6 +257,48 @@ class Item {
 
     public function getValue() {
         return $this->value;
+    }
+
+    public function getId() {
+        return $this->id;
+    }
+
+}
+
+class EquippedWeapon {
+
+    private $id;
+    private $name;
+    private $damageType;
+    private $damageAmount;
+    private $notes;
+
+    public function __construct($id, $name, $damageType, $damageAmount, $notes) {
+        $this->id = $id;
+        $this->name = $name;
+        $this->damageType = $damageType;
+        $this->damageAmount = $damageAmount;
+        $this->notes = $notes;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getDamageType() {
+        return $this->damageType;
+    }
+
+    public function getDamageAmount() {
+        return $this->damageAmount;
+    }
+
+    public function getNotes() {
+        return $this->notes;
+    }
+
+    public function getId() {
+        return $this->id;
     }
 
 }

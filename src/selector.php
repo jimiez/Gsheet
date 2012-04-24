@@ -1,21 +1,28 @@
 <?php
-include('connect.php');
+include('connect.php')
 ?>
 
 <html>
     <head>
         <title><?php echo $_GET['type'] ?> selector</title>
         <link rel="stylesheet" type="text/css" href="style/style.css">
-        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/selector.js" type="text/javascript" charset="utf-8"></script>
     </head>
-
     <body>
         <div id="wrap">
             <div id="leftFloat">
                 <form name="selector">
-                    <select id="selected" name="selected" size="20">
-                        <?php
+
+                    <?php
+                    if ($_GET['type'] == 'skill') {
+                        echo "<select id='selected' name='selected' size='20' onChange=\"showDetails(this.value, 'S')\">";
+                        $myquery = $db->prepare("SELECT SkillName FROM Skills");
+                        $myquery->execute();
+                        while ($result = $myquery->fetchObject()) {
+                            echo "<option id='$result->SkillName'>$result->SkillName</option>";
+                        }
+                    } else {
+                        echo "<select id='selected' name='selected' size='20' onChange=\"showDetails(this.value, 'A')\">";
                         if ($_GET['type'] == 'advantage') {
                             $type = 'A';
                         } else {
@@ -26,18 +33,13 @@ include('connect.php');
                         while ($result = $myquery->fetchObject()) {
                             echo "<option id='$result->AttrName'>$result->AttrName</option>";
                         }
-                        ?>
+                    }
+                    ?>
+
                     </select>
             </div>
             <div id="leftFloat">
-                <b><div id="name"></div></b><br>
-                <div id="points"></div><br>
-                <textarea id="desc" cols="40" rows="15" readonly="readonly"></textarea>
-                <br>
-                <br>
-
-                <input type="button" onClick="setValue(document.selector.selected.value)" value="Select" class="nicebutton">
-
+                <div id="details"></div>
             </div>
         </div>
     </body>

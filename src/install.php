@@ -79,6 +79,9 @@
             echo "Reading advantages and disadvantages...";
             insertAdvantages();
             echo "done<br>";
+            echo "Reading skills...";
+            insertSkils();
+            echo "done<br>";
             echo "Database successfully created! Please create yourself an admin account now.";
             echo "<form method='post'><input type='submit' name='createAdmin' value='Create admin account'></form>";
         }
@@ -101,8 +104,10 @@
     CampOwner VARCHAR(20) NOT NULL,
     CampName VARCHAR(50) NOT NULL,
     CampDesc TEXT,
+    CampPoints INTEGER,
     PRIMARY KEY (Campaign_id),
     FOREIGN KEY (CampOwner) references Users(Username)
+    ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
         
     CREATE TABLE Characters (
@@ -120,11 +125,12 @@
     ActiveDefense VARCHAR(10) DEFAULT '0|0',
     PassiveDefensePD VARCHAR(20) DEFAULT '0|0|0|0|0|0',
     PassiveDefenseDR VARCHAR(20) DEFAULT '0|0|0|0|0|0',
-    Quirks TEXT,
+    Quirks VARCHAR(500) DEFAULT '||||',
     CharNotes TEXT,
     UnusedPoints INTEGER DEFAULT '100',
     PRIMARY KEY (Char_id),
-    FOREIGN KEY (CharOwner) references Users(Username),
+    FOREIGN KEY (CharOwner) references Users(Username)
+    ON DELETE CASCADE ON UPDATE RESTRICT,
     FOREIGN KEY (Campaign) references Campaigns(Campaign_id)
     ) ENGINE=InnoDB;
     
@@ -146,40 +152,50 @@
     ) ENGINE=InnoDB;
     
     CREATE TABLE Items (
+    Item_id INTEGER NOT NULL AUTO_INCREMENT,
     CharItem_id INTEGER NOT NULL,
-    ItemName VARCHAR(50) NOT NULL,
+    ItemName VARCHAR(50),
     ItemType VARCHAR(20),
-    ItemWeight INTEGER,
-    ItemValue INTEGER,
-    PRIMARY KEY (CharItem_id, ItemName),
+    ItemWeight VARCHAR(5),
+    ItemValue VARCHAR(20),
+    PRIMARY KEY (Item_id),
     FOREIGN KEY (CharItem_id) references Characters(Char_id)
+    ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
     
     CREATE TABLE SkillList (
-    CharSkill_id INTEGER NOT NULL,
-    Skill_name VARCHAR(50) NOT NULL,
-    SkillPoints INTEGER NOT NULL,
-    PRIMARY KEY (CharSkill_id, Skill_name),
-    FOREIGN KEY (CharSkill_id) references Characters(Char_id),
+    Skill_id INTEGER NOT NULL AUTO_INCREMENT,
+    CharSkill_id INTEGER,
+    Skill_name VARCHAR(50),
+    SkillPoints VARCHAR(10),
+    PRIMARY KEY (Skill_id),
+    FOREIGN KEY (CharSkill_id) references Characters(Char_id)
+    ON DELETE CASCADE ON UPDATE RESTRICT,
     FOREIGN KEY (Skill_name) references Skills (SkillName)
+    ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
     
     CREATE TABLE EquippedWeapons (
+    EquippedWeapon_id INTEGER NOT NULL AUTO_INCREMENT,
     CharWeapon_id INTEGER NOT NULL,
-    WeaponName VARCHAR(30) NOT NULL,
-    DamageType VARCHAR(5),
+    WeaponName VARCHAR(30),
+    DamageType VARCHAR(15),
     DamageAmount VARCHAR(5),
     WeaponNotes VARCHAR(50),
-    PRIMARY KEY (CharWeapon_id, WeaponName),
+    PRIMARY KEY (EquippedWeapon_id),
     FOREIGN KEY (CharWeapon_id) references Characters(Char_id)
+    ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
     
     CREATE TABLE AttributeList (
+    Attribute_id INTEGER NOT NULL AUTO_INCREMENT,
     CharAttr_id INTEGER NOT NULL,
-    Attr_name VARCHAR(50) NOT NULL,
-    Attr_points INTEGER NOT NULL,
-    PRIMARY KEY (CharAttr_id, Attr_name),
+    Attr_name VARCHAR(50),
+    Attr_points VARCHAR(10),
+    Attr_type VARCHAR(1),
+    PRIMARY KEY (Attribute_id),
     FOREIGN KEY (CharAttr_id) references Characters(Char_id)
+    ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB";
 
             $query = $db->prepare($myquery);
@@ -221,33 +237,62 @@
                     $db->commit(); // muutosten hyväksyntä
                 } catch (PDOException $e) {
                     $db->rollBack(); // muutosten peruutus
-                    die("VIRHE: " . $e->getMessage());
+                    die("ERROR: " . $e->getMessage());
                 }
+            }
+        }
+
+        function insertSkils() {
+            include ('connect.php');
+
+            $skills = simplexml_load_file("xml/skills.xml");
+
+            try {
+                $db->beginTransaction();
+
+                foreach ($skills as $skill) {
+                    $parsedName = addslashes($skill->name);
+                    $parsedType = addslashes($skill->type);
+                    $parsedDifficulty = addslashes($skill->difficulty);
+                    $parsedDefault = addslashes($skill->default);
+                    $parsedDesc = addslashes($skill->description);
+
+                    $myquery = $db->prepare("INSERT INTO skills VALUES ('$parsedName', '$parsedType', '$parsedDifficulty', '$parsedDefault', '$parsedDesc')");
+
+                    $myquery->execute();
+                }
+
+                $db->commit(); // muutosten hyväksyntä
+            } catch (PDOException $e) {
+                $db->rollBack(); // muutosten peruutus
+                die("ERROR: " . $e->getMessage());
             }
         }
         ?>
 
 
 
+
+
         <h1>Gsheet - installation</h1>
-<?php
-if (file_exists("credentials")) {
-    include ('connect.php');
-    try {
-        $testquery = "SELECT * FROM Users";
-        $query = $db->prepare($testquery);
-        $query->execute();
-        echo "Database connection successful!";
-    } catch (PDOException $e) {
-        echo "No database detected! Trying to create a new database...<br>";
-        createDB();
-    }
-} else {
-    if (!isset($_POST['submitCreds'])) {
-        getLogin();
-    }
-}
-?>
+        <?php
+        if (file_exists("credentials")) {
+            include ('connect.php');
+            try {
+                $testquery = "SELECT * FROM Users";
+                $query = $db->prepare($testquery);
+                $query->execute();
+                echo "Database connection successful!";
+            } catch (PDOException $e) {
+                echo "No database detected! Trying to create a new database...<br>";
+                createDB();
+            }
+        } else {
+            if (!isset($_POST['submitCreds'])) {
+                getLogin();
+            }
+        }
+        ?>
     </body>
 </html>
 

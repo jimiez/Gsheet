@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+     <skill>
+        <name>Sculpting</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or IQ-5</default>
+        <description>
+This is the ability to fashion a reasonable likeness of a person or object, using clay, wood, stone, ivory or whatever comes to hand. A metalsmithing skill is also required to produce a metal sculpture. 
+
+Time required is up to the GM. Sculpting is primarily of use in earning a living, but can have useful applications for an adventurer. Modifiers: -5 if the appropriate tools are not available; -5 if the medium is unfamiliar; -5 if the medium is difficult (e.g., marble). 
+        </description>
+    </skill>
+ 
+     <skill>
+        <name>Breath Control</name>
+        <type>M</type>
+        <difficulty>Very hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the ability to breathe at maximum efficiency. On a successful skill roll, the user can triple the time the breath is held for any reason (e.g., underwater). A successful skill roll will also allow a point of fatigue to be regained in only two minutes (this cannot be combined with magic spells which restore fatigue). This skill is not normally known outside Oriental cultures; the GM might make it available in a futuristic scenario. 
+        </description>
+    </skill>
+ 
+      <skill>
+        <name>Thrown Weapon</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+The ability to throw any one type of "throwable" weapon. This skill is different for each type of weapon. Examples are Knife Throwing, Axe Throwing, Spear Throwing. See also Throwing, p. 49.
+</description>
+    </skill>
+ 
+      <skill>
+        <name>Hypnotism</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the skill of affecting another mind through verbal and mechanical means. Once hypnotized, an individual will be extremely suggestible. Roll a contest of Hypnotism skill vs. the victim's Will-1 for each command that is given. Any command that threatens the victim's life or loved ones will be resisted at +4 to his Will. The effects of hypnotism last 1d hours unless terminated sooner by the person doing the hypnosis. 
+
+Post-hypnotic suggestions may also be given, instructing the victim to do something long afterward. Normally these are at +1 to the victim's Will for each full week of delay. Hypnotism can be made more effective by use of telepathy (+2 to Hypnotism roll if Telepathy is successful - one attempt only). A successful Hypnotism roll will cause the subject's mind shields to be lowered automatically. 
+
+The first attempt at hypnotism takes 5 seconds. If this fails but the subject is cooperative, a second attempt may be made at -5, taking 5 minutes. If that one fails, the subject is resistant and may not be hypno-tized that day. Of course, a subject who is not familiar with Hypnotism will not know exactly what has been attempted, but he may suspect witchcraft. Should the victim resist hypnotism deliberately, a Contest of Skills is made: Hypnotism skill vs. the patient's (Will+3). 
+
+A successful Hypnotism roll gives +2 to any use of Surgery skill, being a quick and safe anesthetic. Successful hypnotism also puts a subject to sleep, and can thus be used as an attack, though only against one person at a time. A successful Hypnotism roll can also help the subject remember something he had forgotten. 
+        </description>
+    </skill> 
+ 
+</skills>

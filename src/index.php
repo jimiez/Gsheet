@@ -7,6 +7,8 @@ if (isset($_POST['submitChar'])) {
     $myquery->bindValue(1, $_POST['charName']);
     $myquery->bindValue(2, $_SESSION['loggedUser']);
     $myquery->execute();
+    
+    
 }
 
 if (isset($_POST['hiddenDelete'])) {

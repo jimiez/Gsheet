@@ -2,6 +2,7 @@ function updateAll() {
     updateSpeed();
     updateDamage();
     updateDodge();
+    calculateSkills();
 }
 
 function increaseValue(field) {
@@ -86,9 +87,21 @@ function updateDamage() {
 
 function calculateSkills() {
     
-    
+    countAdvantages();
     
 }
+
+function countAdvantages() {
+    var sum;
+    var a = document.baseform.elements["advantagePoints[]"];
+    for (i = 0; i < a.length; i++) {
+        var b = parseFloat(document.baseform.elements["advantagePoints[]"][i].value);
+        
+        sum = sum + b;
+    }
+    document.baseform.advantagePointsField.value = sum;
+}
+    
 
 function openSelector(targetField, type){
     var w = window.open("selector.php?type=" + type , "Selector", "scrollbars=auto,toolbar=no,menubar=no,status=no, width=640, height=400");
@@ -97,9 +110,119 @@ function openSelector(targetField, type){
     return false;
 }
           
-function setTargetField(targetField, value){
+function setAttrField(targetField, value1, value2, type){
+    var a;
+    if (type == 'A') {
+        a = findIndex(targetField, "adv");
+    } else {
+        a = findIndex(targetField, "disadv");
+    }
+    
     if (targetField){
-        targetField.value = value;
+        targetField.value = value1;
+        if (type == 'A'){
+            document.baseform.elements["advantagePoints[]"][a].value = value2;
+        } else {
+            document.baseform.elements["disadvantagePoints[]"][a].value = value2;    
+        }
     }
     window.focus();
+}
+
+function setSkillField(targetField, value1, value2, value3){
+    var a = findIndex(targetField, "skill");
+    if (targetField){
+        targetField.value = value1;
+        document.baseform.elements["skillType[]"][a].value = value2;
+        document.baseform.elements["skillDiff[]"][a].value = value3;
+    }
+    window.focus();
+}
+
+function findIndex(field, element) {
+    var a;
+    if (element == 'skill') {
+        a = document.baseform.elements["skillName[]"];
+    } else if (element == 'adv') {
+        a = document.baseform.elements["advantageName[]"];
+    } else {
+        a = document.baseform.elements["disadvantageName[]"];
+    }
+     
+    for (i = 0; i < a.length; i++) {
+        if (a[i] == field) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function calculateSkills() {
+                
+    var skillPts = document.baseform.elements["skillPts[]"];
+                            
+    for (i = 0; i < skillPts.length; i++) {
+        pts = parseFloat(document.baseform.elements["skillPts[]"][i].value);
+        diff = document.baseform.elements["skillDiff[]"][i].value;
+        if (document.baseform.elements["skillType[]"][i].value == "P") {
+            result = calculatePhysicalSkill(diff, pts);
+            dx = parseInt(document.baseform.dxField.value);
+            document.baseform.elements["skillCheck[]"][i].value = result + dx;
+        } else if (document.baseform.elements["skillType[]"][i].value == "M"){
+            result = calculateMentalSkill(diff, pts);
+            iq = parseInt(document.baseform.iqField.value);
+            document.baseform.elements["skillCheck[]"][i].value = result + iq;
+        }
+    }
+}
+
+function calculatePhysicalSkill(difficulty, points) {
+  
+    if (difficulty == 'Easy') {
+        base = -1;
+    } else if (difficulty == 'Average') {
+        base = -2;
+    } else {
+        base = -3;
+    }
+    
+    if (points < 1) {
+        return base;
+    } else if (points < 2) { 
+        return base + 1;
+    } else if (points < 4) {
+        return base + 2;
+    } else if (points < 8) {
+        return base + 3;
+    } else {
+        return Math.floor(points / 8) + 3 + base;
+    }
+}
+
+function calculateMentalSkill(difficulty, points) {
+  
+    if (difficulty == 'Easy') {
+        base = -1;
+    } else if (difficulty == 'Average') {
+        base = -2;
+    } else if (difficulty == 'Hard') {
+        base = -3;
+    } else {
+        base = -4;
+    }
+    
+    if (points < 1) {
+        return base;
+    } else if (points < 2) { 
+        return base + 1;
+    } else if (points < 4) {
+        return base + 2;
+    
+    } else {
+        if (difficulty == 'Very hard') {
+            return Math.floor(points / 4) - 2;  
+        } else {
+            return Math.floor(points / 2) + 1 + base;
+        }
+    }
 }
