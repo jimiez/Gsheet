@@ -5,6 +5,7 @@ class Character {
     private $charStats;
     private $charAdvantages;
     private $charDisadvantages;
+    private $charSkills;
     private $items;
     private $quirks;
     private $ActiveDef;
@@ -29,6 +30,7 @@ class Character {
         $this->readAttributes();
         $this->readItems();
         $this->readEquippedWeapons();
+        $this->readSkills();
     }
 
     public function getStat($stat) {
@@ -96,6 +98,17 @@ class Character {
     }
 
     public function readSkills() {
+        include('connect.php');
+        
+        $query = "SELECT sl.Skill_id, sl.Skill_name, s.SkillName, 
+            FROM SkillList
+            WHERE CharWeapon_id = ?";
+        $myquery = $db->prepare($query);
+        $myquery->bindValue(1, $this->charStats->Char_id);
+        $myquery->execute();
+        while ($result = $myquery->fetchObject()) {
+            $this->charSkills[] = new Skill($result->Skill_id, $result->SkillName, $result->SkillType, $result->SkillDiff, $points);
+        }
         
     }
 

@@ -2,6 +2,7 @@ function updateAll() {
     updateSpeed();
     updateDamage();
     updateDodge();
+    updateTotals();
     calculateSkills();
 }
 
@@ -10,14 +11,6 @@ function increaseValue(field) {
 }
 
 function decreaseValue(field) {
-    document.baseform[field].value--;
-}
-
-function increaseSkill(field) {
-    document.baseform[field].value++;
-}
-
-function decreaseSkill(field) {
     document.baseform[field].value--;
 }
 
@@ -85,24 +78,52 @@ function updateDamage() {
     document.baseform.dmgSlashField.value = slash[ind];
 }
 
-function calculateSkills() {
-    
-    countAdvantages();
-    
+function updateTotals() {
+    document.baseform.advantageTotalField.value = countAdvantages('advantagePoints[]');
+    document.baseform.disadvantageTotalField.value = countAdvantages('disadvantagePoints[]');
+    document.baseform.skillTotalField.value = countAdvantages('skillPts[]');
 }
 
-function countAdvantages() {
-    var sum;
-    var a = document.baseform.elements["advantagePoints[]"];
+function calculateBasic(attribute) {
+   
+    var attributeValue = Array(20);
+
+    attributeValue[1] = -80;
+    attributeValue[2] = -70;
+    attributeValue[3] = -60;
+    attributeValue[4] = -50;
+    attributeValue[5] = -40;
+    attributeValue[6] = -30;
+    attributeValue[7] = -20;
+    attributeValue[8] = -15;
+    attributeValue[9] = -10;
+    attributeValue[10] = 0;
+    attributeValue[11] = 10;
+    attributeValue[12] = 20;
+    attributeValue[13] = 30;
+    attributeValue[14] = 45;
+    attributeValue[15] = 60;
+    attributeValue[16] = 80;
+    attributeValue[17] = 100;
+    attributeValue[18] = 125;
+    attributeValue[19] = 150;
+    attributeValue[20] = 175;   
+    
+    return attributeValue(attribute);
+
+}
+
+function countAdvantages(array) {
+    var sum = 0;
+    var a = document.baseform.elements[array]; 
     for (i = 0; i < a.length; i++) {
-        var b = parseFloat(document.baseform.elements["advantagePoints[]"][i].value);
-        
-        sum = sum + b;
+        if (parseInt(a[i].value)) {                    
+            sum += parseInt(a[i].value);
+        }
     }
-    document.baseform.advantagePointsField.value = sum;
+    return sum;
 }
-    
-
+            
 function openSelector(targetField, type){
     var w = window.open("selector.php?type=" + type , "Selector", "scrollbars=auto,toolbar=no,menubar=no,status=no, width=640, height=400");
     w.targetField = targetField;
