@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_SESSION['loggedUser'])) {
     if (!$_SESSION['userIsAdmin']) {
         echo "You don't have the necesary privlidges to view this page.";

@@ -35,3 +35,23 @@ function fetchForm(str) {
 
     xmlhttp.send();
 }     
+
+function checkAttrInput() {
+    if (document.newAttribute.attrName.value == "") {
+        alert('Attribute must have a name!');
+    } else if (document.newAttribute.attrPoints.value == "") {
+        alert('Attribute must have a point value!');
+    } else {
+        document.newAttribute.submit();
+    }
+}
+
+function checkSkillInput() {
+    if (document.newSkill.skillName.value == "") {
+        alert('Skill must have a name!');
+    } else if (document.newSkill.skillDefault.value == "") {
+        alert('Skill must have a default!');
+    } else {
+        document.newSkill.submit();
+    }
+}

@@ -77,30 +77,79 @@ if (isset($_GET['editSkill'])) {
     $skillDiff = $result->SkillDiff;
     $skillDefault = $result->SkillDefault;
     $skillDesc = $result->SkillDesc;
-    
     ?>
     <form name="ChangeAttribute" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
         Name: <input type='text' name='skillName' value='<?php echo $skillName ?>'><br>
         Type: <select name="skillType">
-            <option value="P" <?php if ($skillType == "P") echo "selected='yes'"?>>Physical</option>
-            <option value="M" <?php if ($skillType == "M") echo "selected='yes'"?>>Mental</option>
+            <option value="P" <?php if ($skillType == "P") echo "selected='yes'" ?>>Physical</option>
+            <option value="M" <?php if ($skillType == "M") echo "selected='yes'" ?>>Mental</option>
         </select><br>
         Difficulty: <select name="skillDiff">
-            <option value="Easy" <?php if ($skillDiff == "Easy") echo "selected='yes'"?>>Easy</option>
-            <option value="Average" <?php if ($skillDiff == "Average") echo "selected='yes'"?>>Average</option>
-            <option value="Hard" <?php if ($skillDiff == "Hard") echo "selected='yes'"?>>Hard</option>
-            <option value="Very Hard" <?php if ($skillDiff == "Very Hard") echo "selected='yes'"?>>Very Hard</option>
+            <option value="Easy" <?php if ($skillDiff == "Easy") echo "selected='yes'" ?>>Easy</option>
+            <option value="Average" <?php if ($skillDiff == "Average") echo "selected='yes'" ?>>Average</option>
+            <option value="Hard" <?php if ($skillDiff == "Hard") echo "selected='yes'" ?>>Hard</option>
+            <option value="Very Hard" <?php if ($skillDiff == "Very Hard") echo "selected='yes'" ?>>Very Hard</option>
         </select><br>
-         Defaults to: <input type='text' name='skillDefault' size="30" value='<?php echo $skillDefault ?>'><br><br>
+        Defaults to: <input type='text' name='skillDefault' size="30" value='<?php echo $skillDefault ?>'><br><br>
         <textarea cols='40' rows='12' name='skillDesc'><?php echo $skillDesc ?></textarea><br><br>
-       
+
         <input type='hidden' name='originalSkillName' value='<?php echo $skillName ?>'>
         <input type='submit' name='saveSkill' value='Save changes' class='nicebutton'>
     </form>
     <?php
 }
 
+// Lomakkeen tulostukseen
 
+if (isset($_GET['form'])) {
+
+    if ($_GET['form'] == 'attribute') {
+        ?>
+
+        <form name="newAttribute" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
+            <table>
+                <tr><td>Name</td><td><input type="text" name="attrName" size="30"></td></tr>
+                <tr><td>Type</td><td>
+                        <select name="attrType">
+                            <option value="A">Advantage</option>
+                            <option value="D">Disadvantage</option>
+                        </select></td></tr>
+                <tr><td>Points:</td><td><input type="text" name="attrPoints" size="2"></td></tr>
+                <tr><td colspan="2"><textarea name="attrDesc" rows="12" cols="30">Description</textarea></td></tr>
+                <tr><td><input type="button" name="saveAttr" value="Save" onClick="checkAttrInput()"></td></tr>
+            </table>
+
+        </form>
+
+        <?php
+    } else if ($_GET['form'] == 'skill') {
+        ?>
+
+        <form name="newSkill" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
+            <table>
+                <tr><td>Name</td><td><input type="text" name="skillName" size="30"></td></tr>
+                <tr><td>Type</td><td>
+                        <select name="skillType">
+                            <option value="P">Physical</option>
+                            <option value="M">Mental</option>
+                        </select></td></tr>
+                <tr><td>Difficulty</td><td>
+                        <select name="skillDiff">
+                            <option value="Easy">Easy</option>
+                            <option value="Average">Average</option>
+                            <option value="Hard">Hard</option>
+                            <option value="Very Hard">Very Hard</option>
+                        </select></td></tr>
+                <tr><td>Defaults to:</td><td><input type="text" name="skillDefault" size="30"></td></tr>
+                <tr><td colspan="2"><textarea name="skillDesc" rows="12" cols="35">Description</textarea></td></tr>
+                <tr><td><input type="button" name="saveSkill" value="Save" onClick="checkSkillInput()"></td></tr>
+            </table>
+        </form>
+        <?php
+    } else {
+        
+    }
+}
 ?>
 
 

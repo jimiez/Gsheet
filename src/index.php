@@ -11,7 +11,7 @@ if (!isset($_GET['open'])) {
 
 <html>
     <head>
-        <title>Gsheet - Characaters</title>
+        <title>Gsheet - <?php echo $open ?></title>
         <script src="js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="style/style.css">
     </head>
