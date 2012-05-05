@@ -9,7 +9,7 @@ CREATE TABLE Users (
     Campaign_id INTEGER NOT NULL AUTO_INCREMENT,
     CampOwner VARCHAR(20) NOT NULL,
     CampName VARCHAR(50) NOT NULL,
-    CampDesc TEXT,
+    CampNotes TEXT,
     CampPoints INTEGER,
     PRIMARY KEY (Campaign_id),
     FOREIGN KEY (CampOwner) references Users(Username)
@@ -38,13 +38,14 @@ CREATE TABLE Users (
     FOREIGN KEY (CharOwner) references Users(Username)
     ON DELETE CASCADE ON UPDATE RESTRICT,
     FOREIGN KEY (Campaign) references Campaigns(Campaign_id)
+    ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
     
     CREATE TABLE Skills (
     SkillName VARCHAR(50) NOT NULL,
     SkillType VARCHAR(1) NOT NULL, 
     SkillDiff VARCHAR(10) NOT NULL,
-    SkillDefault VARCHAR(50) NOT NULL,
+    SkillDefault VARCHAR(100) NOT NULL,
     SkillDesc TEXT,
     PRIMARY KEY (SkillName)
     ) ENGINE=InnoDB;
@@ -76,8 +77,6 @@ CREATE TABLE Users (
     SkillPoints VARCHAR(10),
     PRIMARY KEY (Skill_id),
     FOREIGN KEY (CharSkill_id) references Characters(Char_id)
-    ON DELETE CASCADE ON UPDATE RESTRICT,
-    FOREIGN KEY (Skill_name) references Skills (SkillName)
     ON DELETE CASCADE ON UPDATE RESTRICT
     ) ENGINE=InnoDB;
     
@@ -102,4 +101,4 @@ CREATE TABLE Users (
     PRIMARY KEY (Attribute_id),
     FOREIGN KEY (CharAttr_id) references Characters(Char_id)
     ON DELETE CASCADE ON UPDATE RESTRICT
-    ) ENGINE=InnoDB";
+    ) ENGINE=InnoDB

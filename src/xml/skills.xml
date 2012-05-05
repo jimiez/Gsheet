@@ -1,6 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skills>
      <skill>
+        <name>Animal Handling</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the ability to train and work with all types of animals. To train  an animal, the Animal Handler must make his success roll once per day of training. A failed roll means the animal learned nothing; a badly-failed roll means the Handler was attacked. The time it takes to train an animal depends on the animal's intelligence and tractability - see Animals, p. 140. 
+
+When working with a trained animal, the animal handler rolls against his skill for each task he sets the animal. Modifiers: -5 if the animal  is not familiar with the handler,  -5 if the circumstances are stressful to the animal, -3 or more if the task is a complex one. This talent can also (sometimes) be used to quiet a wild, dangerous or untrained animal. Modifiers:  -5 if the creature is wild  or very frightened, -10 if it is a man-eater or man-killer. 
+
+Finally, this talent gives an advantage in combat against animals. If you have this skill at level 15 or better, any animal's attack and defense rolls are at  -1 against you, because you can predict its behavior. If you are an expert (skill 20 or better), the animal's rolls are at -2. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Falconry</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the skill of "hawking"  - hunting small game with a trained hawk. A good falconer will know hunting and training techniques, as well as how to care for a falcon (see sidebar, p. 142). 
+
+Finding a wild falcon's nest in spring requires a week of search and a successful Falconry roll; a nest will have ld-3 chicks. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Packing</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Animal Handling-6 or IQ-6, Prerequisite: Animal Handling</default>
+        <description>
+This is the ability to efficiently and speedily get loads on and off of pack animals. It includes the skill of getting the best performance from the beasts, judging them before purchase, and selecting the best routes for pack trains. 
+
+A skilled packer will be in demand in any commercial area before TL6, and will earn as much as a sergeant of mercenaries. A caravan must have at least one master packer (skill 15+), or its speed is reduced by 20%. The U.S. Army used thousands of pack animals in WWII, and would have used many more, but couldn't find enough skilled packers  - and four years of war was not enough time to train them! 
+
+At higher tech levels, this is replaced by the professional skill of Freight Handling  - which is less  complex (Mental/Average) because it requires no knowledge of beasts. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Riding (any type)</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>Animal Handling-3 or DX-5</default>
+        <description>
+This ability is different for each animal type (in other words, you must pick an animal to "specialize" in). If  you encounter an unfamiliar riding animal, default to the closest Riding skill you have. For instance, if you know how to ride a horse, you would be  at -3 for a camel, -6 for a dolphin, and no penalty for a mule. 
+
+You must make your Riding roll when you first try to mount a riding animal, and again each time something happens to frighten or challenge the creature (e.g., a jump). Modifiers: +5 if the animal knows and likes you; -10 if the animal is not an "ordinary" riding creature and/or has not been trained for riding. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Teamster</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>Animal Handling-4 or Riding-2, Prerequisite: Animal Handling</default>
+        <description>
+This is the skill of driving teams of animals, such as wagon or gun teams. It includes the skills of harnessing the animals, caring for them and judging them for quality before purchase. Driving more than four animals, or driving a team of unfamiliar animals, is -2 to skill. Each  species  of animal requires a different skill; these default to each other at  -3. Horses and mules are covered by the same skill.  
+
+When a wagon or other load (such as a gun) is moved at a gallop (over 20 mph, or 10 hexes per turn), the driver must roll  against his Teamster skill every ten seconds, at a penalty of up to -5 for bad terrain. A failed roll spills the wagon. This is equivalent to a  5-yard fall  (5d-10 damage) for each man and animal involved. Animal Handling rolls will be required to calm the beasts. Also, roll 2 dice for each horse; on a 12, a leg is broken! Time required to reload the cargo depends on the load, the terrain, and the weather. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Veterinary/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>any appropriate Medical skill-5, or Animal Handling-5</default>
+        <description>
+This is the ability to care for a sick or wounded animal. It is a Medical skill (see p. 56). Modifiers: +5 if the animal knows and trusts you;  -2 or worse if the animal is of an unfamiliar type. An optional specialization (p. 43) is allowed. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Artist</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the ability to draw and paint with both accuracy and beauty. A successful roll against this skill would let you (for instance) draw a recognizable picture of someone to help identify him; draw a map that would be easy to follow; or even paint a picture good enough to trade for a meal. (Note that, for the last case,  the GM should not allow a default roll. Intelligence can let you  draw an accurate picture but not a beautiful one.) 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Bard</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Performance-2</default>
+        <description>
+This is the ability to tell stories and to speak extemporaneously. Successful use of this talent would (for instance) let you give a good political speech; entertain a group around a campfire; incite (or calm) a riot; or put on a successful "court jester" act. Modifiers: +2 if you have the Voice advantage; any Charisma bonus. 
+
+If you try to perform in a language other than your native tongue, subtract 1 from your skill for every point below 12 in your skill with that language  - e.g., i f you are performing in French, and your skill with French is only 8, you have a  -4 penalty on your Bard skill.  
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Calligraphy</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default> Artist-2 or DX-5, Prerequisite: Literacy</default>
+        <description>
+This is the art of beautiful and decorative handwriting. It is of use primarily to earn a living. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Dancing</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5</default>
+        <description>
+This is the ability to perform dances appropriate to your own  culture, and to learn new dances quickly. Modifiers: -5 if the dance is unfamiliar. Once you have successfully performed a dance three  times, it is familiar. Note that certain physical handicaps make this skill effectively impossible! 
+</description>
+    </skill>
+
+
+     <skill>
+        <name>Musical Instrument</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>any similar instrument-3</default>
+        <description>
+Each musical instrument is a separate talent. A successful use of the talent will allow you to perform competently on the instrument in question. Roll again for each new performance. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Photography/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to use a camera competently, use a darkroom, et cetera, and to produce recognizable and attractive photos. A default roll is allowed to use a camera, but not to develop film or prints in a darkroom. Modifiers: -3 for an unfamiliar camera; -3 for a motion-picture camera. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Poetry</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Language-5</default>
+        <description>
+This is the ability to compose "good" poetry of any type native to your culture, in any language you speak. A successful Poetry roll lets you write one good poem, in an appropriate amount of time (GM's decision). A failed roll means you couldn't come up with good rhymes, or (for whatever reason) your audience just didn't care for your work. Modifiers:  -3 (or worse) if you are under unreasonable time pressure: +3 (or better) if you have a lot of time; foreign language penalties as for Bard (above). 
+        </description>
+    </skill>
+
+
+     <skill>
         <name>Sculpting</name>
         <type>P</type>
         <difficulty>Average</difficulty>
@@ -8,44 +165,2007 @@
         <description>
 This is the ability to fashion a reasonable likeness of a person or object, using clay, wood, stone, ivory or whatever comes to hand. A metalsmithing skill is also required to produce a metal sculpture. 
 
-Time required is up to the GM. Sculpting is primarily of use in earning a living, but can have useful applications for an adventurer. Modifiers: -5 if the appropriate tools are not available; -5 if the medium is unfamiliar; -5 if the medium is difficult (e.g., marble). 
+Time required is up to the GM. Sculpting is primarily of use in earning a living, but can have useful applications for an adventurer. Modifiers:  -5 if the appropriate tools are not available;  -5 if the medium is unfamiliar; -5 if the medium is difficult (e.g., marble). 
         </description>
     </skill>
- 
+
+
+     <skill>
+        <name>Singing</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default></default>
+        <description>
+Study of this skill is based on HT, not DX. This is the ability to sing in a pleasing fashion. A successful roll means the audience liked your song. Modifiers: -2 if the audience does not understand the language; +2 if you have the Voice advantage. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Writing</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default> IQ-5 or Language-5</default>
+        <description>
+This is the ability to write in a clear and/or entertaining manner. A successful roll means  the work is  readable and accurate. Modifiers: -3 if you were rushed; +3 if you had a generous amount of time; -5 if you are writing about an unfamiliar subject. This ability is of most use to earn a living and/or write for  GURPS,  but can sometimes be of use on adventures ...   or after them. The report of a spy, military man or private investigator will be far more useful if  it is well-written! 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Acrobatics</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to perform acrobatic and gymnastic stunts, roll, take falls and so on. A separate skill roll is required for each trick. This can be handy on an adventure; tightrope walking, human pyramids and trapeze swinging all have useful applications. 
+
+An Acrobatics roll may be substituted for a DX roll in any attempt to jump, roll, avoid Knockback and so on. 
+
+A character trying to Dodge a blow may attempt an Acrobatic Dodge (see p. 108), a jump or roll which avoids the attack in a flashy way. A successful Acrobatics roll will also reduce the effective distance of any fall by five yards (see p. 131). 
+
+The GM may apply penalties as he sees fit for an especially difficult trick.  
+        </description>
+    </skill>
+
      <skill>
         <name>Breath Control</name>
         <type>M</type>
         <difficulty>Very hard</difficulty>
         <default>No default</default>
         <description>
-This is the ability to breathe at maximum efficiency. On a successful skill roll, the user can triple the time the breath is held for any reason (e.g., underwater). A successful skill roll will also allow a point of fatigue to be regained in only two minutes (this cannot be combined with magic spells which restore fatigue). This skill is not normally known outside Oriental cultures; the GM might make it available in a futuristic scenario. 
+This is the ability to breathe at maximum efficiency. On a successful skill roll, the user can triple the time the breath is held for any reason (e.g., underwater). A successful skill roll will also allow a point of fatigue to be regained in only two minutes (this cannot be combined with magic spells which restore fatigue).  
+
+This skill is not normally known outside Oriental cultures; the GM might make it available in a futuristic scenario. 
         </description>
     </skill>
- 
-      <skill>
+
+     <skill>
+        <name>Free Fall/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or HT-5</default>
+        <description>
+This is the ability to handle yourself in a free-fall (zero-gravity) environment. One roll is necessary when you first go into free fall; a failed roll means you become spacesick, and a further roll against HT is required to avoid choking! Treat this as drowning (see Swimming, p. 91). A further roll would be  required each time you try to perform some complex action in free-fall. Failure does not make you spacesick - your attempted action just fails.
+</description>
+    </skill>
+
+     <skill>
+        <name>Jumping</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>No default, See Jumping, p. 88 </default>
+        <description>
+This is the trained ability to use your strength to its best advantage when you jump. When you attempt a difficult jump, you may substitute your Jumping skill for your ST or DX.  
+
+        </description>
+    </skill>
+
+     <skill>
+        <name>Parachuting</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4 or IQ-6</default>
+        <description>
+This is the ability to survive a parachute jump. A failed roll could mean anything from a slight drift off course to panic that makes you drop your gear  - GM's option. A critical failure means the chute did not open, or was fatally fouled (see  Falling, p. 130). For a jump under bad conditions, a roll on landing may be required as well.. .   for instance, to survive an "ankle-breaker" landing without injury, or to dodge trees on the way down. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Running</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This skill is based on HT, not DX. It represents training in sprints and long-distance running. If you have  studied  this skill, divide your skill level by 8 (don't round down) and add the result to your Speed for the purpose of calculating your Move score for the purposes of using the Move manuever on land (it does not affect Dodge!). For instance, if you have a Running skill of 18, your Speed is increased by 2.25 before calculating your Move. See Running, p. 88.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Scuba</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Swimming-5</default>
+        <description>
+This is the ability to use an underwater breathing apparatus. One roll is required when you first go in the water, and one every further 30 minutes, to avoid inhaling water, with a loss of 1 ST and a risk of drowning (see  Swimming,  p. 91). A successful roll (no defaults allowed) will also let you spot problems with the equipment if you check before putting it on.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Skiing</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to ski. A roll is required when you start down any but an easy slope, and another every 30 minutes (or every hazardous situation). A failed roll means you fall. On a critical failure, take ld-1 damage to a randomly chosen limb, and suffer through the appropriate Crippling damage until you heal. If you roll 5 points of damage, the limb was actually broken. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Sports (many types)</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>Varies </default>
+        <description>
+Every sport is a different skill. Most default to DX-5. Those putting a premium on strength (e.g., football, rugby) default to ST-5 as well. These skills are mostly useful in building a good character background and/or earning a living, but a clever player or GM can make a sports background useful on an adventure. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Swimming</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>ST -5 or DX-4</default>
+        <description>
+This skill is used both for swimming (on purpose, or to keep afloat in emergencies) and for saving a drowning victim. See Swimming, p. 91, for full rules on swimming, drowning, and lifesaving. 
+         </description>
+    </skill>
+
+     <skill>
+        <name>Throwing</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the general ability to throw whatever you. can pick up. It helps both accuracy (roll against your Throwing skill to throw anything you can lift) and  distance (add 1/6 of Throwing skill to ST when determining distance). See  Throwing Things, p.  90. There is little point to learning a Thrown Weapon  skill in addition to Throwing. Learn the weapon skill instead if you want to specialize without spending too much time in practice. 
+
+If you do not have this skill, you roll against DX-3 when throwing something at a target, or DX to lob it into a general area. If you're throwing something for which there's a specific skill, use that skill.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Axe/Mace</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5</default>
+        <description>
+Ability to use any short or middle-sized unbalanced weapon, such as an axe, hatchet, mace, pick, etc. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Axe Throwing</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+Ability to throw any sort of balanced throwing axe  - but not an unbalanced battleaxe! 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Battlesuit/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, DX-5, Exoskeleton-2, or Vacc Suit-3</default>
+        <description>
+This is the ability to use a suit of powered armor, including its integral weaponry. Designed for use under great stress, most battlesuits are very user-friendly. A battlesuit in good shape can actually be operated by a novice, if the novice is smart and lucky. A damaged battlesuit is another matter; the details are up to the GM.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Beam Weapons/TL</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default> DX-4 or (other Beam Weapons skill) -4</default>
+        <description>
+This is the ability to use beam-type weapons, including blaster, laser, stunner, etc. It requires specialization  - see p. 43. It covers both handguns and long -arms, since beam weapons are essentially recoilless. Add 1 to your skill for an IQ of 10 or 11, a nd 2 for an IQ of 12 or better. Modifiers are as per Guns, p. 51. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Blackjack</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+Ability to use a blackjack or sap. This weapon is good only in close combat, and is most often used for surprise attacks. It does very little basic damage, which is why it is used against the head.  Special note:  If it is desired  not to seriously injure the victim, the attacker may "pull the blow" (p. 122), attacking with less than his full ST. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Black Powder Weapons</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+This is the ability to use any black-powder weapon, including musket, pistol and rifle. Add 1 to your skill for an IQ of 10 or 11, and 2 for an IQ of 12 or better. Modifiers are as per Guns, p. 51. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Blowpipe</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to use a blowpipe to shoot small (usually poisoned) darts. Such a dart cannot pierce normal clothing except on a critical success, and never penetrates cloth or better armor. If a dart hits exposed flesh or light clothing, the poison can take effect. Modifiers: -2 and up for wind, if outdoors. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Bolas</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>No default</default>
+        <description>
+This is the ability to throw the  bolas  -  a length of leather cord with two or more weights attached  - to entangle a victim. It is primarily used to stop herd animals and to hunt small game and birds. It can also be used in combat; it can be dodged or blocked, but an attempt to parry makes it hit and entangle the parrying arm automatically. Exception: a successful parry with an edged weapon will cut the cords, ruining the bolas! 
+
+A bolas may be aimed at a body part, or the hit location table may be used for a randomly-cast one. If the bolas hits, it automatically wraps around its target, as well as doing its damage. If the arm, hand, or weapon is hit, roll a Quick Contest of Bolas skill vs. target's ST. If the target loses, he drops the weapon (does not affect shields strapped onto the forearm). 
+
+If the leg is hit,  two legs  are entangled. A running target must make a DX roll or fall  - taking ld-2 damage. Once entangled, a victim requires three successful DX rolls (and one free hand) to escape; during this time, no other actions can be taken. Animals roll to escape at DX-3 if they have paws, or DX-6 if they have hooves.
+</description>
+    </skill>
+
+     <skill>
+        <name>Bow</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to use the longbow, shortbow and all similar bows. It also covers the compound bow, though a person who had never seen a compound bow would need to make an IQ roll to figure it out before he could use it properly.  
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Brawling</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>No default</default>
+        <description>
+This is the skill of unscientific roaring -and-punching close combat. When you attack with bare hands or feet, roll vs. Brawling skill to hit. Add 1/10 of your Brawling skill level (round down) to the  damage you do. When you defend with bare hands, you may parry  twice perturn (once with each hand) and your Parry is 2/3 your  Brawling skill. See p. 101 for rules on parrying bare-handed. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Broadsword</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5, Shortsword-2 or Force Sword-3</default>
+        <description>
+Ability to use any 2 - to  4-foot, balanced, one-handed weapon including broadswords, one-handed bastard swords, baseball bats and anything similar. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Buckler</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4 or Shield-2</default>
+        <description>
+This is the ability to use a medieval -style buckler  - a small shield held in the hand or strapped to the arm. This skill is used exactly like the  Shield  skill, p. 52, and can be used to calculate a  Block defense if you have a buckler instead of a shield. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Crossbow</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+Ability to use all crossbows, including a "prodd" or stonebow. If you have this skill, you understand the use of crossbow-type siege engines, but have no special skill in firing them. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Fast-Draw</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>No default</default>
+        <description>
+This is a separate skill for each type of weapon. Fast-Draw is available for the following weapons: Knife, Blackjack, Sword (onehanded), Two-Handed Sword, Arrow (including crossbow bolts), Pistol, Rifle  (including submachine  guns,  etc.), Magazine, Speedloader. The GM may add a new Fast-Draw skill for any weapon if it can reasonably be drawn quickly, but is significantly different from all the above weapons. This skill is used when you wish to ready a weapon from its holster, scabbard, etc. A successful roll means you ready the item instantly (this does not count as a maneuver). You may attack with the weapon (or load the bow) on the same turn. A failed roll means you ready the item normally, but may do nothing else that turn (if it's an arrow, you drop it). A critical miss means you drop the weapon  - or, for arrows, the whole quiver! 
+
+Combat Reflexes advantage gives a +1 on Fast-Draw skill. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Fencing</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5</default>
+        <description>
+This is the  ability to use the  fencer's weapons  - rapier, smallsword and saber. The rapier is a long (2-hex reach), light, thrusting weapon. The smallsword is a shorter (1-hex reach), light thrusting weapon, somewhat like a modern fencing foil with a point. The saber is a light cut-and-thrust weapon.
+
+If you have one of these weapons, no larger than a small shield, and no greater than light encumbrance, your parrying ability is 2/3 your Fencing skill (round down). Furthermore, you can parry  twice per turn, instead of just once. If you are on All-Out Defense, you may parry any number  of attacks each turn. Many fencers carry a dagger as a second weapon.  It may also parry (making three parries per turn!) - but only at the fencer's regular Knife Parry skill level. 
+
+The only disadvantage of the fencing Parry is that the fencer's weapons are very light and may break when used to parry - see pp. 99, 110. GURPS Martial Arts  treats fencing in much more detail.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Flail</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6 </default>
+        <description>
+Ability to use unbalanced weapons with the head attached to the handle by chain or rope, such as the flail, morningstar or nunchuku. Flails are hard to use, but also hard to defend against. Any attempt  to block a flail weapon is at -2. Any attempt to parry it is at -4. Knives and fencing weapons cannot parry flail weapons at all! Martial-arts defenses can parry flails, but at -4. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Force Shield</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+Ability to use the force shield, an ultra-tech device which is worn on the wrist and projects a circle of force. It gives a Block defense, just like a regular shield. Also see Shield, p. 52. 
+
+Anyone who has the Shield skill may use a force shield after only 1 hour of practice (or use a force shield at -2 with no practice). But anyone skilled with a force shield will default at -2 to a regular shield, which is heavy, clumsy, and  opaque.  50 hours of drill reduce this penalty to  -1. Another 100 hours eliminate it entirely, giving Shield skill equal to Force Shield  skill; thereafter, any increase in one skill increases the other. A character who starts with both skills at the same level is assumed to have gained this familiarity already, at no extra point cost. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Force Sword</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5, or any Sword skill-3 </default>
+        <description>
+Ability to use all force swords (TL 11 and above). A typical force sword looks like a flashlight and weighs 2 lbs.; at TL11 it costs about $3,000. It takes one turn to activate it, one further turn for the blade to form and stabilize. It runs for 5 minutes on a $100 C power cell (p. 119). A force sword has a reach of 1, and does 8 dice cutting damage or 4 dice if used to impale. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Gunner/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or (other Gunner skill) -4</default>
+        <description>
+This is the ability to operate a heavy weapon, including a vehicle-mounted weapon. Make your Gunner roll each time you fire that weapon. Modifiers: See  Familiarity,  p. 43.  -2 for an unfamiliar vehicle, aiming system, etc.; -2 for a n unfamiliar weapon of a known type (e.g., .30-cal when you are used to .50s);  -4 or more for a weapon in bad repair;  -4 or more for a weapon of unfamiliar type (e.g., a laser when you are used to firing recoilless rifles). All normal modifiers for missile-weapon fire also apply. Add 1 to your  skill for an IQ of 10 or 11, and 2 for an IQ of 12 or better. 
+
+A Gunner can also serve as a substitute Mechanic for  his weapon. Roll at  -4 to find each problem, and  -8 to fix it. See Mechanic, p. 54. 
+
+If you want to l earn Gunner skill for two or more types of weapons, start learning the second one at a reasonable default from the first - usually -4 (check this with the GM). A weapon of a different TL is considered a different "type." Some weapon types include: 
+
+-Arbalest Machine gun
+-Rocket launcher
+-Catapult
+-Laser
+-Recoilless rifle 
+-Naval cannon 
+-Tank cannon 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Guns/TL</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default> DX-4 or (other Gun skill) -4</default>
+        <description>
+This is the ability to use any type of 20th-century cartridge-type gunpowder weapon. Add 1 to your skill for an IQ of 10 or 11, and 2 for an IQ of 12 or better. Modifiers: See  Familiarity, p. 43.  -2 for an unfamiliar weapon of a known type (e.g., .22-cal when you are used to .38s);  -4 or more for a weapon in bad repair;  -4 or more  for a weapon of unfamiliar type (e.g., a rifle when you are used to firing pistols). All normal modifiers for missile-weapon fire also apply.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Judo</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This represents the general skill of unarmed throws and grapples, rather than any specific school of unarmed combat. You may not use judo if you have anything in your hands, or if your encumbrance is greater than Light. Using judo, you may parry with either hand as though it were a weapon, using 2/3 your Judo skill as your Parry defense. You are also less likely to be injured when you parry a weapon bare-handed - see p. 101. 
+
+If you successfully parry, you may try to throw that foe on your next turn if he is in an adjacent hex; this is an attack. Make your Judo skill roll. Your foe may use any active defense  - he  can parry your hand with a sword!  - but PD of his armor doesn't count. If he fails to defend, he is thrown. An attack roll of 17 or 18 means  you are the one who falls. Note that in an All-Out Attack, you cannot attempt two throws, but you can make one attempt at +4. You may also use your skill to throw a foe if you are Grappling him  (Close Combat, p. 111); -5 if you are lying down! 
+
+When you throw a foe, he falls where you please: in any two hexes near you. One of these hexes must be  his starting hex, your hex, or any hex adjacent to one of these hexes. He must roll against HT; a failed roll means he is stunned! If you throw him into someone else,  that person  must roll either ST+3 or DX+3 (whichever is better) to avoid being knocked down. 
+
+You may also use your Judo skill, instead of your DX, in any DX roll made in Close Combat except to draw a weapon or drop a shield.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Karate</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This represents the general skill of trained punching and kicking, rather than any specific school of unarmed combat. There is no penalty for using the left hand. The hand(s) you use must be empty, and your encumbrance must be Light or less. 
+
+You may parry with either hand as though it were a weapon, using 2/3 your Karate skill as your parry defense. 
+
+Used offensively, Karate increases the amount of damage you do when you strike without weapons. Roll against your Karate skill to hit. (If you kick, roll against Karate-2. If you miss your kick, you must roll against DX to avoid falling.) 1/5 of your Karate skill,  rounded down, is added to the basic damage you do with hands or  feet. Barehanded parries can still cause you injury if they fail - see p. 101. 
+
+Note: Although you can break bricks to show off, you cannot punch through armor unscathed. Any time you hit a target with a  DR of 3 or better, roll against your HT. A failed roll means you take ld-2 damage to the hand or foot. Your foe's Toughness does not  count as DR for this. Your  own toughness (or boots, etc.) will protect you, though. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Knife</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+The ability to use, but not to throw, any type of knife, dagger or stiletto. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Knife Throwing</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4</default>
+        <description>
+The ability to throw any sort of knife. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Lance</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>Spear-3 for those who have Riding at 12+; DX-6 for others, Prerequisite: Riding</default>
+        <description>
+The ability to use the lance  - a spear-like weapon 12 or more feet long, used from horseback. The parry is not normally used in lance combat; a lance-wielder must Block or Dodge enemy attacks. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Lasso</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>No default</default>
+        <description>
+This is the skill of throwing the lasso or lariat. It is used primarily to snare animals. A body part may be targeted, or the Parts of the Body table (p. 211) used for a random result. If an arm or the  body  are lassoed, make a Quick Contest of ST; if the lassoer wins the  victim is immobilized, but if he loses, he loses the rope. If the head  is lassoed, the target is at ST-5 for the Contest of ST. If the foot is  lassoed, then the target must make a DX roll to remain standing  (DX-4 if the target was running at the time lassoed); no Contest of ST is used. If the DX roll fails, the target takes ld-4 falling damage; ld-2 if target is running. 
+
+To keep the target immobilized requires the lasso to be taut at all times; this can be done by hand, but while doing so you cannot take any other actions. If a horse is trained to keep the lasso tight (p. 143), its ST is substituted for the thrower's in the Contest of ST. 
+
+A lasso thrown around the neck ( -5 to hit on a human,  -2 on most herd animals) will cut off the victim's breathing as long as it is kept taut. Treat this as suffocation (see p. 122). One cannot escape from a taut lasso without cutting the rope. Escaping from a limp lasso is done as for a bolas, p. 49. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Net</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+The ability to fight with the net as a weapon. A thrown net can be dodged, but not blocked or parried. On a successful throw, the victim is enfolded and is unable to move or attack until the net is removed. Three successful rolls at DX-4, not necessarily consecutive, are required to remove a net, using both hands (DX-6 for animals or humans with only one hand available). If three consecutive rolls are failed, the victim has become so entangled that the net will have to be cut free. An animal net weighs 20 lbs., and can be  thrown (ST/2) yards plus 1/5 Net skill (round down). 
+
+A small net may also be used as a melee weapon, with a reach of 1 or 2 hexes. Treat as a lasso (above), but the victim can attempt to free himself as from a bolas (p. 49). A melee net weighs 5 lbs.; it can be hrown (ST) yards plus 1/5 Net skill (round down). All rolls to escape from a melee net are at +3. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Polearm</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5</default>
+        <description>
+Ability to use any very long, unbalanced pole weapon, including  poleaxe, glaive, halberd, guisarme and the hundreds of variations on the type. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Shield</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4 or Buckler-2</default>
+        <description>
+This is the ability to use a medieval-type shield or a police riot shield. This skill is necessary to attack with a shield. However, the passive defense from a shield (1-4 points) protects the carrier, even  if he doesn't know how to use it. The active defense from a shield -your Block score - is 1/2 of your Shield skill. Thus, you can block  much better if you have studied Shield than if you are using default skill. The average person's DX is 10, so his default Shield skill is 6, and his Block score is only 3!  
+See also Force Shield, p. 50.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Shortsword</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5, Broadsword-2, or Force Sword-3 </default>
+        <description>
+This is the ability to use any balanced weapon, 1 -2 feet long - including  the shortsword, gladius, baton or billy club. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Sling</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to use the sling or staff sling. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Spear</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or Staff-2</default>
+        <description>
+
+        </description>
+    </skill>
+
+     <skill>
+        <name>Spear Thrower</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-4 or Spear Throwing-4 </default>
+        <description>
+This device, and the skill to use it, are distinct from the Spear Throwing skill, but each defaults to the other at  -4. A spear thrower is a long, flat stick with a notch and loop on one end. It increases  the force with which a javelin or similar weapon is thrown. It takes 1 turn to place a spear into the thrower after both are in hand and ready. Modifiers:  -5 in tight quarters (needs at least a 6 -foot clearance overhead for effective use). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Spear Throwing</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4 or Spear Thrower  -4</default>
+        <description>
+Ability to throw any sort of spear, javelin, etc.
+        </description>
+    </skill>
+
+     <skill>
+        <name>Speed-Load</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>No default</default>
+        <description>
+This is the skill of quickly getting ammunition into a firearm. It is not the same as Fast-Draw. But you could, with the right skills,  reload very quickly by Fast-Drawing a speedloader or magazine from your pocket or belt, and then Speed-Loading. A different Speed-Load skill is needed for each firearm, and affects loading time as follows:  
+
+-Black powder weapons: -10% (round down) from normal loading time. 
+-Simultaneously-ejecting revolvers: Without a speedloader, -1/3 sec. per round (round down). With a speedloader, -3 sec. 
+-Single-ejecting revolvers or integral-magazine weapons:  -1/3 sec. per round (round down). 
+-Removable-magazine, clip-loading, or ultra-tech power -cell weapons: -1 second. 
+-Belt-fed weapons: -2 seconds.  
+
+A failure on a Speed-Load attempt adds to normal loading time the amount that would have been saved had the attempt succeeded. A critical failure drops or damages the ammunition; the whole loading procedure must be started over or the ammunition recovered  (2d seconds or GM's decision). 
+
+Some weapons of peculiar design may have different Speed-Load effects, at the GM's discretion. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Staff</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-5 or Spear-2</default>
+        <description>
+Ability to use a quarterstaff, or to use any improvised pole like a quarterstaff. This is a two-handed skill. Your Parry is 2/3 your skill.  
+        </description>
+    </skill>
+
+     <skill>
         <name>Thrown Weapon</name>
         <type>P</type>
         <difficulty>Easy</difficulty>
         <default>DX-4</default>
         <description>
-The ability to throw any one type of "throwable" weapon. This skill is different for each type of weapon. Examples are Knife Throwing, Axe Throwing, Spear Throwing. See also Throwing, p. 49.
+The ability to throw any one type of "throwable" weapon. This skill is different for each type of weapon. Examples are Knife Throwing, Axe Throwing, Spear Throwing. See also Throwing, p. 49. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Two-Handed Axe/Mace</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 </default>
+        <description>
+Ability to use any long, heavy, unbalanced weapon, such as the battleaxe or maul.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Two-Handed Sword</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or Force Sword-3</default>
+        <description>
+Ability to use a long (4- to 5-foot) bladed weapon, in two hands. Note that a "bastard sword" is used with this skill when held in two hands, but with Broadsword skill when held in one. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Whip</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>No default</default>
+        <description>
+This is the skill of using a whip as a weapon. Whips come in different lengths; for game purposes, a "1-yard" whip has a reach of 1 yard.  Such a whip would actually be about 4 feet long. Time to re-ready a whip depends on its length: 0 turns for a 1-yard whip, 1 turn for a 2-yard whip, 2 turns for a 3 -yard or larger whip. Whips may be up to 7  yards long; a whip 2 yards long cannot strike at 1 yard or closer.  
+
+A whip is a very poor parrying weapon; your parrying skill with a whip is 1/3 your combat skill, rounded down. 
+
+A whip can be made to "crack" - the sound is caused by the tip breaking the sound barrier! If the user makes the whip crack just as it hits its target, it does +2 damage, but this is -4 to skill. 
+
+Whip blows are very painful. A character who takes more than 1 point of arm or hand damage from a whip must make a Will roll, at a penalty equal to the damage taken. A failed roll means anything  in that hand is dropped. 
+
+A whip-user can also strike directly at a foe's weapon (at normal penalty for weapon size). If he hits, immediately roll a Contest of ST; at +1 for the whip-user due to leverage. If the whip-user wins, he yanks the weapon away. A critical success on the original strike produces the same result.
+
+A whip may be used (at -4 to skill)  in an attempt to entangle the target, exactly like a lasso. This does no damage, but (if successful) follows lasso rules.         
 </description>
     </skill>
+
+     <skill>
+        <name>Armoury/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, (weapon skill) -6, or Blacksmith-3 (for weapons at TL4 or below)</default>
+        <description>
+This is the ability to build and repair weapons and armor at the appropriate tech level. A successful roll is required to find the problem with a weapon (unless it is obvious). A second roll lets you  repair it. The GM should determine a reasonable time for e ach  repair attempt. Modifiers: -4 if the weapon is unfamiliar:  -4 to try to  repair without proper tools (-5 at TL9+). 
+
+An armourer at TL5 or below may specialize (see p. 43) in one  or two of the following fields:  
+-Black powder hand weapons             
+-Armor 
+-Hand weapons (knives, swords, maces, etc.)   
+-Siege engines
+-Bows and arrows 
+-Guns (e.g.. black powder cannon) 
+
+An armourer above TL5  must specialize (see p. 431 in one or more of the above fields, and/or any of the following fields that exist at his tech level: 
+
+Rifles and handguns 
+Beam handguns 
+Vehicular weaponry (tanks, autoduelling. etc.) 
+Spaceship weaponry   
+Artillery (includes naval guns) 
+Body armor 
+Needle handguns 
+Airplane weaponry 
+Psi weaponry 
+Spaceship armor 
+Any other special!) 
+Note that above TL5. there is no default between Armoury specializing in armor, and Armour, specializing in any weapon type. They are totally different. The exception would be a specialization  in Armoury (Battlesuit),  which would cover all systems of the battlesuit and its own armor. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Blacksmith/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Jeweler-4</default>
+        <description>
+This is the ability to work iron and other non-precious metals by hand. A forge is necessary for this work, but a smith can build one. given suitable materials, in about 30 days. Modifier:  -1 for every point of ST below 13.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Carpentry</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4 or DX-4</default>
+        <description>
+This is the ability to build things out of wood. A successful roll lets you do one hour's worth of competent carpentry. A failed roll means the work was bad. Modifiers: +5 if you are being supervised or assisted by someone with skill 15 or better:  -5 if you do not have good tools.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Cooking</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the ability to prepare a pleasing meal from raw materials (not just heat water and open boxes). In any "outdoor" society, it includes the ability to dress out game  - that is, to prepare a fresh-killed animal for cooking. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Jeweler/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Blacksmith-4 </default>
+        <description>
+This is the ability to work with precious metals of all kinds, make jewelry, decorate weapons and so on. A forge is necessary (see Blacksmith, above) to work metal. A Jeweler can identify any  precious metal, or determine the value of any precious bauble, by making his skill roll. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Leatherworking</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4 or DX-5 </default>
+        <description>
+This is the ability to work with leather to make belts, saddles, armor, et cetera. A leatherworker can make new goods and repair old goods. By making his skill roll, he can also determine the value of goods made of leather. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Mechanic/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to diagnose and fix ordinary mechanical problems - usually, but not always, on a vehicle engine. Specialization  is required; types include: 
+
+Wagon 
+Clockwork and small gadgets     
+Gasoline engine                          
+Jet plane engine                          
+Fuel cell/electric motor               
+Spaceship drive                           
+Robotics 
+Steam engine 
+Small electric motor 
+Propellor plane engine
+Hovercraft engine 
+Ocean-going vessel 
+Starship drive 
+
+A successful skill roll can find one problem; a second successful roll can repair it. Modifiers: -5 if proper equipment is not available; -2 for an unfamiliar vehicle, engine, e tc. (e.g., a diesel when you are used to gasoline engines); -4 or more for a machine of unfamiliar type (e.g., a plane when you are used to fixing automobiles). All  normal modifiers for tech-level differences also apply (see p. 185). 
+
+If you want to learn Mechanic skill for two or more types of machine, start learning the second one at a reasonable default from the first - usually -4 (check this with the GM). 
+
+* Special default: If you have the skill to operate a particular vehicle (car, cycle, battlesuit, e tc.) or the Gunner skill for a particular large weapon, you can default to this skill for Mechanic rolls when you work on that particular machine. To  diagnose  a problem, default to your appropriate Driver or Gunner skill-4. To  fix  it, default to your appropriate Driver or Gunner skill -8. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Pottery</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to work with various sorts of ceramics. A potter can make new pots and other items out of clay. By making his skill roll, he can identify proper building clay (for bricks, etc., as well as for tableware); determine the origin or value of pottery; etc. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Shipbuilding/TL </name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the ability to design and build ships, boats, etc. A successful roll on this skill will let you determine whether a ship is seaworthy and approximately what it is worth.  
+
+At TL8+, shipbuilding and  starshipbuilding  are two different skills, both easier because they're computer-assisted; see  GURPS Space, p. 36.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Woodworking</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or Carpentry-3 </default>
+        <description>
+This is the ability to do "fine" work with wood; cabinet -making, decorative carving, etc. By making his skill roll, a woodworker can also determine the origin and fair value of a woodcarving, or identify a type, of wood.
+        </description>
+    </skill>
+
+     <skill>
+        <name>Gesture</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4 or Sign Language</default>
+        <description>
+This is the ability to communicate through simple, improvised hand signals. Deaf and/or mute individuals have a +3 to use this skill. A successful Gesture roll will let you communicate one simple idea to another, or understand one simple idea communicated by another. For lengthy "conversations," use the communication  rules under Language. Simple gesture is not suited for complex communication! Different cultures develop different gesture vocabularies; for Westerners dealing with Japanese, for instance, effective Gesture skills are at  -4. For humans dealing with aliens of inhuman type, Gesture communication might be nearly impossible - but let the players try!  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Sign Language</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>No default</default>
+        <description>
+This is any of the many true languages of gesture. 
+
+One of the  better-known is American Sign Language (Ameslan). Other examples might be the language of a speechless alien race, a sign code used by spies or revolutionaries, etc. A sign language is complex, stylized and can communicate almost any concept. Knowing one  form of sign language does not let you understand others - but you  can recognize that some form of language is being used by making  an IQ roll. Deaf and/or mute individuals have a +3 on any Sign Language roll. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Telegraphy</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>No default </default>
+        <description>
+This is the ability to send and receive Morse code, to do simple troubleshooting on a telegraph system, and to recognize other individual operators by their "fist"  - that is, the characteristic way they send. This skill is normally found at Tech Levels 5 through 7; at TL8+, humans rarely send code themselves. They use a computer instead.  
+
+At TL5, a telegrapher can send or receive 2 words per minute (wpm) for each point of his skil l. At TL6+, with a semi -automatic key,  this  becomes 3 wpm per point of skill. However,  skill improves slowly even for the intelligent; your  effective rate of sending or receiving, in wpm, may not exceed the number of  weeks since you first acquired the skill. 
+
+An operator may attempt to send or receive messages at a speed greater than his skill would normally allow, at -2 to skill for each additional 2 wpm (TL5) or 3 wpm (TL6+) attempted. Maximum rate at TL5 is 25 wpm; at TL6+, maximum is 75. 
+
+Sending or receiving messages in code, rather than plain English (or another known language) is at -4 to skill. Sending or receiving in a non-native language is at -1 for every point by which the operator's skill in that language is less than 10, to a maximum penalty of -4.
+</description>
+    </skill>
+
+     <skill>
+        <name>Diagnosis/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6, First Aid-8, Veterinary-5 or Physician-4</default>
+        <description>
+This is the ability to tell what is wrong with a sick or injured person, or what killed a dead person. A successful roll will give some  information about the patient's problem  -  limited to realistic knowledge for the character's tech level  (see pp. 181 and 185). It may not determine the  exact problem (if the GM feels the cause is totally beyond the doctor's experience, for instance), but it  will always give hints, rule out impossibilities, et cetera. Modifiers:  -5 for internal injuries; -5 or more for a rare disease; +1/2TL if diagnostic equipment of that TL is available. Note that no Diagnosis roll should be required for obvious things, like open wounds and missing limbs. 
+</description>
+    </skill>
+
+     <skill>
+        <name>First Aid/TL</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>Physician, IQ-5, Veterinary-5 or Physiology-5</default>
+        <description>
+This is the ability to patch up an injury in the field (see p. 127). A successful First Aid roll will halt bleeding, neutralize or partially neutralize poison, give artificial respiration for a drowning victim, etc. If a problem is unusual, it must first be identified through Diagnosis. Modifiers: +1 or more for a first-aid kit, crash kit or other facilities. 
+        </description>
+    </skill>
+
  
-      <skill>
+     <skill>
         <name>Hypnotism</name>
         <type>M</type>
         <difficulty>Hard</difficulty>
         <default>No default</default>
         <description>
-This is the skill of affecting another mind through verbal and mechanical means. Once hypnotized, an individual will be extremely suggestible. Roll a contest of Hypnotism skill vs. the victim's Will-1 for each command that is given. Any command that threatens the victim's life or loved ones will be resisted at +4 to his Will. The effects of hypnotism last 1d hours unless terminated sooner by the person doing the hypnosis. 
+This is the skill of affecting another mind through verbal and mechanical means. Once hypnotized, an individual will be extremely suggestible. Roll a contest of Hypnotism skill vs. the victim's Will-1 for each command that is given. Any command that threat ens the victim's life or loved ones will be resisted at +4 to his Will.  The effects of hypnotism last 1d hours unless terminated sooner by  the person doing the hypnosis. 
 
-Post-hypnotic suggestions may also be given, instructing the victim to do something long afterward. Normally these are at +1 to the victim's Will for each full week of delay. Hypnotism can be made more effective by use of telepathy (+2 to Hypnotism roll if Telepathy is successful - one attempt only). A successful Hypnotism roll will cause the subject's mind shields to be lowered automatically. 
+Post -hypnotic suggestions  may also be given, instructing the victim to do something long afterward. Normally these are at +1 to the victim's Will for each full week of delay.  Hypnotism can be made more effective by use of telepathy (+2 to Hypnotism roll if Telepathy is successful  - one attempt only). A successful Hypnotism roll will cause the subject's mind shields to be lowered automatically.  
 
-The first attempt at hypnotism takes 5 seconds. If this fails but the subject is cooperative, a second attempt may be made at -5, taking 5 minutes. If that one fails, the subject is resistant and may not be hypno-tized that day. Of course, a subject who is not familiar with Hypnotism will not know exactly what has been attempted, but he may suspect witchcraft. Should the victim resist hypnotism deliberately, a Contest of Skills is made: Hypnotism skill vs. the patient's (Will+3). 
+The first attempt at hypnotism takes 5 seconds. If this fails but the subject is cooperative, a second attempt may be made at -5, taking 5 minutes. If that one fails, the subject is resistant and may not be hypnotized that day. Of course, a subject who is not familiar with Hypnotism will not know exactly what has been attempted, but he may suspect witchcraft. Should the victim resist hypnotism deliberately, a Contest of Skills is made: Hypnotism skill vs. the patient's (Will+3). 
 
 A successful Hypnotism roll gives +2 to any use of Surgery skill, being a quick and safe anesthetic. Successful hypnotism also puts a subject to sleep, and can thus be used as an attack, though only against one person at a time. A successful Hypnotism roll can also help the subject remember something he had forgotten. 
         </description>
-    </skill> 
+    </skill>
+
+     <skill>
+        <name>Physician/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Veterinary-5, First Aid-11 or IQ-7</default>
+        <description>
+This is the general professional ability to aid the sick, prescribe drugs and care, etc. This is the skill to use if a GM requires a single roll to test  general medical competence or knowledge. A physician may take an optional specialization. 
+
+At Tech Level 4 and below, Physician includes the ability to find healing herbs in the wild. If you are in familiar territory, a successful roll will always turn up some sort of medicinal plants - the better the roll, the more useful they will be. Obviously, someone  with this ability will also be able to find edible plants, and identify/avoid poisonous ones! 
+
+At and above Tech Level 5, knowledge of drugs becomes largely "book learning." A high-tech Physician will know a great deal about drugs, and will be able to identify most drugs fairly easily, but will not be able to go into the wild and find useful drugs. Exception: If the Physician has Naturalist ability of 20 or better, he can function as a "primitive" Physician as well! Modifiers:  -5 to identify a drug without laboratory facilities; +3 if the Physician takes the risk of smelling/tasting the substance. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Surgery/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>Veterinary-5, Physician-5, Physiology-8 or First Aid-12, Prerequisite: Physician</default>
+        <description>
+This skill is used when someone attempts to operate on a character to cure sickness, injury, or bodily malfunction. A surgeon may take an optional specialty in a certain part of the body.  
+
+A successful roll means the operation proceeded without undue complications. A failed roll means the patient took damage  - 2 dice for simple amputations, etc., 3 dice for more complex attempts. Modifiers to skill: -2 if proper equipment  - minimum  of a doctor's black bag  - is not available;  -3 for head or chest surgery;  -5 for undiagnosed problems; -3 or worse if the area or equipment cannot be properly cleaned and sterilized. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Climbing</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>DX-5 or ST-5</default>
+        <description>
+This is the ability to climb mountains, rock walls, trees, the sides of buildings, and anything else that may get in your way. Modifiers: +3 if you have the advantage of being double-jointed; minus your encumbrance level. Climbing is fully discussed  on p. 89.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Fishing</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the ability to catch fish  - with net, hook and line, or whatever method is used in your own culture. If you have proper equipment and there are fish to be caught, a successful roll will catch them. If equipment is not available, you can improvise. Modifier: -2 or more, depending on the circumstances, for improper equipment (trying to catch sharks with a bent pin is very hard). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Naturalist   </name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is a general knowledge of animals and plants, and of nature in its various forms. It is the sort of knowledge you would expect from a good 20th-century biology teacher. A  successful roll will let  you identify a plant and its uses or tell you something about an animal and its habits. Modifiers: +3 if you are in familiar territory; up  to  -5 if you are in a very unfamiliar environment.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Navigation/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Astronomy-5 or Seamanship-5</default>
+        <description>
+This is the ability to find your position (on earth, not in space) by the stars, ocean currents, etc. A successful roll will tell you where you are, at sea  or on land. Note that if you do not have the skill and are trying a default roll, you cannot default to Seamanship unless you are actually at sea! Special note: if you have this ability, you have no penalty at any lower tech level. 
+
+Modifiers: -3 if you are on land (you have no currents to guide you); -3 if you are in a totally new part of the ocean (the currents are new to you);  -4 if you do not have the proper instruments for your TL, be they compass-and-sextant or naviscope-and-wrist-comp ; -5 (and no use of Astronomy default) if the weather is bad and the stars are hidden;  -5 on a brand-new world (the stars are different); +3 if you have Absolute Direction. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Seamanship/TL</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the ability to man a large seagoing vessel. You will need it to crew a ship (or to captain it!). Modifiers: standard tech level penalties (see p. 185).  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Survival</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, Naturalist-3, or Survival (other area type) -3 </default>
+        <description>
+This is the ability to "live off the land," find good food and water, avoid hazards, build shelter, etc. A different Survival skill is required for each type of terrain, including:        
+-Desert  
+-Plains                                      
+-Arctic                                     
+-Mountains                               
+-Radioactive (no default use)  
+-Woodlands 
+-Jungle 
+-Island/Beach 
+-Swampland 
+   
+One successful roll per day is required to live safely (if not comfortably) in a wilderness situation. One person with this ability can look after up to ten others. A failed roll means each member of the party takes 1 die of injury. Modifiers: -2 on an unfamiliar continent or planet; up to  -5 for extreme weather conditions;  -5 if you are wholly without equipment.  
+
+This skill also gives an "eye for country." It can be used to pick the best direction of travel to find flowing water, a mountain pass, or whatever other terrain feature is desired - assuming that it exists. This is also the skill used to  trap wild animals. (A city-bred thief could use his Traps ability, but he's used to different game  ...   so the roll would be at a  -5.) Make one roll for each trap set. It takes about 30 minutes to improvise a trap from ordinary materials, or 10 minutes to set and hide a commercial steel trap. Pit traps for large game, of course, take several hours to dig. 
+ </description>
+    </skill>
+
+     <skill>
+        <name>Tracking</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Naturalist-5</default>
+        <description>
+This is the ability to follow a man or animal by its tracks. Make one Tracking roll to pick up the trail, and one further roll for every 5 minutes of travel. Modifiers: -5 if the trail is more than a day old,  -10 if it is more than a week old; +5 if you are following a man, +10 if you are following a group of men. Terrain also matters  - for instance,  -3 in desert,  -5 through parched rock,  -10 along city streets! All Vision bonuses also count here. 
+
+This skill is also used if you want to  cover your tracks. (Note that your travel time is doubled if you are doing this!) A successful roll means you have hidden your tracks well enough that they will not be seen except by someone else with this skill. If you are followed by another tracker, the GM will roll a "contest of skills" between your ability and his, modified as above. One roll will be made for every mile of travel. If at any time the follower loses the contest of skills, he loses the trail. 
+
+To stalk close to game once you have tracked it, use the Stealth skill (p. 67).  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Accounting</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Q-10, Merchant-5 or Mathematics-5, Prerequisite: Literacy </default>
+        <description>
+This is the ability to keep books of account, to examine the condition of a business, etc. Mostly useful as a job skill. However, a successful Accounting roll (requiring about two hours of study) can tell you whether financial records are correct  - which can sometimes be important! Modifiers: -5 if you only have a hurried glance  at the  figures; +5 if you have  all day; +5 if you have the Mathematical Ability advantage. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Computer Operation/TL</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the ability to operate a computer, call up data, run existing programs, play video games, et cetera. This is  not  the same as programming - that is a separate and harder skill. Modifiers:  -3 or more for an unfamiliar computer or unfamiliar program. This skill is only available at TL7 and above. Characters from tech levels below 7 cannot even use it by default unless they have had time to gain some familiarity with computers!  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Electronics Operation/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or appropriate Electronics-3</default>
+        <description>
+This skill allows use of all electronics gear within a known specialty. For normal, everyday use of equipment, no skill roll is required. Rolls should be required in emergency situations, or for "abnormal" use of equipment, or for use of complex gear by the unskilled.  
+
+A successful roll will also let you perform repairs on known types of equipment. Time required for each attempt is up to the GM. Modifiers:  -2 without plans  or schematics;  -5 without proper tools;  -4 when working outside your specialty.  Note:  Electrical motors are covered by the Mechanic skill, not by Electronics. 
+
+Examples: Someone is jamming your radio transmission. Roll a Contest of Skills in Electronics Ope ration (Communications)  - radio vs. jammer  - to see whether or not you can get a clear signal out.  
+
+You're trying to pick up a speedy target on radar. Make your Electronics Operation (Sensors) roll. The GM might also assess (for instance) a penalty due to t he target's ECM gear.
+
+Characters with Electronics Operation  skill may attempt to 
+improvise new gadgets (like an engineer), at a  -4 penalty in their 
+specialty, or a -8 outside it.  
+
+A specialty must be chosen. Some samples include: 
+
+Communications.  Long-range  radios, FTL radio and satellite receivers. The Communications specialty also encompasses knowledge of any standard, current communications codes appropriate to the character's background. No skill roll is necessary for these, though attempting to understand or use unfamiliar codes does require a roll. 
+
+Computers. Aiming and fire control systems, calculators, robot brains, artificial intelligence. 
+
+Force Shields.  Personal, portable, vehicular, base and starship force shields and deflectors.  
+
+Holographies. Holographic projectors.  
+
+Matter Transmitters.  All matter transmitters, teleporters or transporters.  
+
+Medical. Cloning tanks, life support equipment and bionics. 
+
+Security Systems.  This is  the  electronic  version of  the Lockpicking skill! Useful for designing (and circumventing) high-tech traps and alarms. 
+
+Sensors. Detection gear of all types, plus ECM and ECCM gear. 
+
+Weapons. High-tech personal weapons such as lasers. This is, for game purposes, very similar to Armoury skill specializing in these weapons. 
+</description>
+    </skill>
+
+     <skill>
+        <name>Heraldry</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>Q-5 or Savoir-Faire-3 </default>
+        <description>
+This is the skill of recognizing and designing coats of arms, colors and devices, plaid setts and other emblems. On a successful roll,  a herald could recognize a knight or noble by the banner or shield being borne, and describe it in proper heraldic terms; create attractive and proper arms for a new noble (without conflicting with existing designs), and so on. Heraldry is also important in some science fiction backgrounds!  
+
+The herald's roll would be m odified based upon whether the design is well -known (up to +5), rare (-1 or more), or from a land wholly foreign to the herald's own experience (at least  -5). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Law</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+Modifiers: +4 if dealing with the law of your specific area. A successful roll lets you remember, deduce or figure out the answer to a question about the law. But remember that few legal questions have a clear-cut answer  - even an expert will hedge his advice. Many lawyers specialize in one particular field (e.g., patent and trademark; contract; criminal defense). 
+
+A successful Law roll may also be required if you (or your client) wind up in court. This depends largely on the legal system of your particular game world. In some worlds,  being a lawyer  is a serious offense ... 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Agronomy/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the science of growing things. An agronomist could answer questions or solve problems related to farming and agriculture. A skilled farmer is an agronomist, whether he knows the term or not! 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Alchemy/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the science of magical transmutations. It is covered in detail in the Magic sourcebook. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Anthropology</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the science of human evolution and culture. An anthropologist is knowledgeable in the ways of primitive (and not-so-primitive) groups of men (or the other intelligent creatures he studies). Anthropology rolls could be used to explain, or even predict, unusual rituals and folk customs a traveler might encounter. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Archaeology</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of ancient civilizations. An archaeologist is at home with excavations, old potsherds, inscriptions, etc. On a successful roll, an archaeologist can answer questions about ancient history, identify artifacts and dead languages, et cetera. Sometimes an archaeologist will have information relating to the occult  - e.g., Ancient Secrets and Things Man Was Not Meant To Know . . .         
+</description>
+    </skill>
+
+     <skill>
+        <name>Architecture/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+The ability to design buildings and to deduce the design of buildings  from  their function, and vice versa. A  successful Architecture roll will let you learn things about a strange building, find a secret room or door, etc. Modifiers:  -2 if the building is of a strange type; -5 if it is alien. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Astrogation/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>Navigation-5, Astronomy-4 or Mathematics-4</default>
+        <description>
+This skill covers navigating through interstellar and interplanetary space. There is a different Astrogation skill for each type of faster-than-light drive. Astrogation skills may default to each other at up to  -4, depending on how different the drives are. Modifiers and results of failures are up to the GM, since this skill can be defined very differently for different universes. (And, in some science-fiction backgrounds, the skill might not be Average.) 
+
+Astrogation rolls are also required to find the ship's position if it gets lost, or to determine likely routes for another ship that is being followed.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Astronomy/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of  the stars and other extraplanetary objects. An astronomer could answer questions about the Sun, the planets of the solar system, meteorites, and so on. At Tech Level 4 and below, this skill is Astrology, combining a knowledge of the stars and constellations with a great amount of mythology and fortune-telling. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Biochemistry/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>Chemistry-5, Prerequisite: Chemistry</default>
+        <description>
+This is the study of the chemistry of living beings. A biochemist  is an expert in the chemical reactions that sustain life. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Botany/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Agronomy-5 </default>
+        <description>
+This is the study of plants. A botanist would be able to identify plants, make a guess about the habitat and properties of an unfamiliar plant type, etc. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Chemistry/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of matter. A chemist would be able to identify elements and simple compounds (but not necessarily drugs, magical substances, etc.). Given proper equipment, he could conduct complex analyses and syntheses.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Computer Programming/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>No default,Prerequisite: Computer Operation</default>
+        <description>
+This is the ability to write and debug computer software. A successful roll will (among other things) let you find a program "bug"; determine a program's purpose by reading a printout; answer a question about computers or computer programming; or, given sufficient time, write a new program. The time required varies widely! Modifiers:  -5 if you are rushed (GM's decision); +5 if you have ample time;  -5 or worse if the program is written in an unfamiliar language.
+</description>
+    </skill>
+
+     <skill>
+        <name>Criminology/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the study of crime and the criminal mind. A criminologist would use his skill to find and interpret clues, guess how criminals might behave, et cetera. Though  this skill does not actually default to Streetwise, the GM may allow a Streetwise roll instead in certain situations - especially to predict or outguess a criminal. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Ecology/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Naturalist-3 </default>
+        <description>
+This is the study of the natural  relationships of living beings, or of whole environments. Below TL6, this science does not exist  use Naturalist instead. An ecologist would be able to tell (for instance) which creatures are vital to an environment and which are not; whether man could fit into a new environment; what effect a certain change might have on an environment; or what function a creature plays in its habitat.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Economics</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Merchant-6 </default>
+        <description>
+This is the study of money, exchange and banking. An economist could answer questions about investment, economic policies,  et cetera. He could also predict local effects of economic changes  the introduction of new materials or techniques, the destruction of a power plant or a merchant house, and similar situations. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Electronics/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>(other Electronics) -4, prerequisite: Mathematics </default>
+        <description>
+This is electronics  engineering - the ability to design and build electronic apparatus. A successful roll will let you (for example): identify the purpose of a strange device; diagnose a glitch; perform  a repair; design new systems; improvise a gadget to solve a problem.
+
+Modifiers: +5 to build a gadget if you (the player) can give the GM a good description of what you want to do;  -5 if you try to diagnose or repair without proper tools; -4 if you are working outside of your specialty. Tech level differences (p. 185) will be very important!  
+
+An electronics engineer  must  specialize in one of the types of electronics listed under Electronics Operation (p. 58). Note that an electronics engineer is not necessarily a skilled operator of the things he designs and fixes; Electronics Operation defaults to Electronics at -3. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Engineer/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>appropriate Mechanic specialty-6, Prerequisites vary with specialty chosen</default>
+        <description>
+This is the ability to design and build complex machinery. A successful roll will let you (for example): identify the purpose of strange machinery; diagnose a mechanical or electrical problem; perform a repair; design new machinery; improvise  a gadget to solve a problem. Time required for each attempt is up to the GM. Modifiers: as for Electronics, above. 
+
+An engineer  must  specialize (see p. 43) in one particular field. Some specialties:  
+
+Primitive machines: catapults, etc. (prerequisite: Mechanic). 
+Mining (prerequisite: Geology).  
+Vehicles (prerequisite: Mechanic). 
+Bombs and traps (prerequisite: Traps). 
+Plumbing (no prerequisite).  
+Clockwork (prerequisite: Mechanic). 
+Electrical work (no prerequisite). 
+Combat engineering (fortifications, etc.  no prerequisite).  
+Guns (no prerequisite). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Forensics/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Criminology-4 </default>
+        <description>
+This is the general science of "laboratory" criminology . . . computation of bullet paths, microscopic or chemical analysis of clues, etc. Depending on the situation, a GM may allow a default to Chemistry or another field of study appropriate to the particular investigation. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Genetics/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>Biochemistry-5 or Physiology-5</default>
+        <description>
+This is the study of heredity. A geneticist could tell how to breed for desired traits; how to identify genetic diseases; and how to keep the fruit flies from overrunning your lab. At TL9+, the optional specialty of Genetic Engineering becomes available. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Geology/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Prospecting-4 </default>
+        <description>
+This is the science of earth study. A geologist knows about oil, rocks, metal ores and minerals; about earthquakes and volcanoes; and about fossils. In the field, he can try to find water by using an "eye for country" as under Survival (p. 57). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>History</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Archaeology-6</default>
+        <description>
+This is the study of the recorded past (as opposed to archaeology, which also studies the prehistoric past). A historian would be able to answer questions about history, and might (at the GM's option) be allowed a roll to remember a useful parallel: "Ah, yes. Hannibal faced a situation like this once, and here's what he did ..." 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Linguistics</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the study of the principles on which languages are based. A linguist could identify an o bscure language from a snatch of speech or writing, if he made his skill roll. If you have this skill, add 1/10 of your skill level (round down) to your skill with any language you learn. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Literature</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of the  great writings. A student of literature would be knowledgeable in the realms of old poetry, dusty tomes, philosophy, criticism, etc. This can be useful for finding clues to hidden treasure, sunken lands, Secrets Man Was Not Meant to Know, and the like. The work in question must be available in a language you speak. Modifiers: -5 if you're illiterate (oral tradition). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Mathematics</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This represents general mathematical expertise. While there are dozens of mathematical specialties, the differences are not likely ever to affect the game. A mathematician, for game purposes, can roll to answer any sort of math-related question. If the problem is simply one of calculation or computation, the GM may allow a modifier for the computing facilities (or lack of same) available. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Metallurgy/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>Blacksmith-8, Jeweler-8, Armoury-8 or Chemistry-5</default>
+        <description>
+This is the study of metals and their properties. A metallurgist could identify metals or alloys, or solve a problem concerning metals, their use, mining or refining. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Meteorology/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the study of the weather and the ability to predict it. The GM always makes Meteorology rolls for the player; a good roll means he tells the truth, while a bad roll means he answers randomly or lies.  
+
+At low tech levels, this skill may be called Weather Sense. Anyone of TL4 or below gets a +2 for Weather Sense in his home area. 
+
+At high tech levels, this skill includes the ability to read instruments, interpret satellite maps, etc. But a high-tech meteorologist can still function without his instruments; if he can't, he's not a meteorologist, but a meter-reader. Instrumentation becomes useful at TL5 (the barometer). If instruments are available, add (TL -4) to effective skill. This works only for a trained meteorologist - not on a default roll.  
+
+A basic skill roll will predict the weather for tomorrow. 2 days:  -1, 3 days: -2, 4 days: -4, 5 days: -6. Another  -2 for each further day. Note that a separate roll is required for each day; a 3-day forecast requires 3 rolls, rolling first for tomorrow and again for each following day. If one day's roll fails, subsequent ones can't succeed. 
+
+A Meteorologist will also know, on a successful roll, what sort of general climate to expect from any area he has heard of or visits. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Nuclear Physics/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default>No default, Prerequisites: Physics-15+ and Mathematics-15+ </default>
+        <description>
+This is the study of nuclear processes. A nuclear physicist would be able to answer questions about the interior of the sun, nuclear weapons or nuclear power plants.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Occultism</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-6 </default>
+        <description>
+This is the study of the mysterious and/or supernatural. An occultist has a special knowledge  of mysticism, primitive magical beliefs, ancient rituals, hauntings, etc. Note that an occultist does not have to  believe  in the material he studies. In worlds where magic is common, "occultism" is replaced by magicians' professional knowledge! 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Physics/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the science of force and motion. A physicist could answer questions about the basics of the universe, the behavior of moving bodies, and matter and energy.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Physiology/TL</name>
+        <type>M</type>
+        <difficulty>Very Hard</difficulty>
+        <default> IQ-7, or to any medical skill-5</default>
+        <description>
+This is the study of the human body and its function. A physiologist knows how the muscles, bones and organs work, and where they are located. 
+
+*Note that this skill cannot default from Hypnotism. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Prospecting/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Geology-4</default>
+        <description>
+This is applied geology: the skill of finding valuable minerals by on-site examination. Prospecting from a distance, by instrument or map readings and extrapolation, requires Geology skill. A prospector will be at  -1 in a new area of familiar type,  -2 or more in an unfamiliar type of area, until he has been there long enough (a month of work) to gain familiarity.  
+
+A successful Prospecting roll will also tell good ore or minerals from a small sample, and judge their commercial value. In the field, a prospector can try to find water by using an "eye for country" as under Survival (p. 57). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Psychology</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of behavior. A psychologist deals with the human mind (and perhaps other types as well). A successful Psychology roll can predict, in general, the behavior of an individual or small group in a defined situation, especially a situation of stress. Modifiers: +3 if the psychologist knows the subject well; +3  if the psychologist has the Empathy advantage and meets the subject; +3 if the subject is of a known deviant personality type  - i.e., suffers from a phobia or other mental problem.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Research</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Writing-3 </default>
+        <description>
+Also defaults to  any  scient ific skill-2 if you are researching material connected with that skill. Research is the general ability to do library and file research. A successful Research roll in an appropriate place of research will let you find some useful piece of data, if that information is to be found. 
+
+Research skill requires either Literacy or Computer Operations (in a high-tech campaign world). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Theology</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the study of religion. A theologist knows about ancient and modern religious beliefs,  history of religion, etc. If your character is a priest or holy man, you should consider taking this skill, specializing in your own particular religion. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Zoology/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or any Animal skill-6 </default>
+        <description>
+This is the study of animals. A zoologist can identify animals; make a good guess about their natural diet, habits and habitat; and predict their behavior. 
+        </description>
+    </skill>
+
+
+     <skill>
+        <name>Acting</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, Bard-5 or Performance-2</default>
+        <description>
+This is the ability to counterfeit moods, emotions and voices, and to lie convincingly over a period of time. It is  not the same as Disguise or Performance. A successful Acting roll will let you pretend to think or feel something that you do not feel. The GM may require an Acting roll whenever you try to fool someone, lie to them, etc. Modifiers: +1 for every point of IQ you have over the person you are trying to fool (or the smartest one in the group), and -1 for every point of IQ if your victim is smarter than you. Impersonation  of a particular person is a special type of acting.
+
+To mimic a particular person, you must first successfully disguise yourself (see Disguise, p. 65) - unless, of course, your victims cannot see you! Modifiers for any mimicry:  -5 if you are not well-acquainted with your subject; -5 if the people you want to fool are acquaintances of the original; and -10 if they are well-acquainted.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Administration</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-6 or Merchant-3 </default>
+        <description>
+This is the skill of running a large organization. Primarily useful for earning money or  qualifying for  high   rank. A  trained Administrator (skill 15+) would also get a +2 reaction bonus when dealing with a bureaucrat, and (on a successful roll) could predict the best way to go about dealing with a bureaucracy.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Area Knowledge</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default> IQ-4* </default>
+        <description>
+*A default roll is allowed only for an Area Knowledge roll based on a place where you live or once lived. See the last paragraph.  
+
+This is the skill of familiarity with the people, politics and geography of a given area. N ormally, a character will have Area Knowledge only for the area he considers his own "home base,"whether that's a single farm or a solar system. If information about other areas is available, the GM may allow characters to study Area Knowledge for other places. Spies, for instance, will try to acquire detailed Area Knowledge of their target areas before going there. 
+
+The GM should not require an Area Knowledge roll for ordinary situations - finding the blacksmith, tavern or your own home. But he could require a roll to locate a smith to shoe your horse at 3 a.m., or to find the best ambush location along a stretch of road. "Secret"  or very obscure information will carry a penalty, or may not be available through Area Knowledge at all. For instance, Area Knowledge of Washington will give you the location of the Russian Embassy, but not the KGB's current safe-house. 
+
+The things that can be known with Area Knowledge overlap Streetwise, Navigation, Naturalist, Politics and more. The difference is that Area Knowledge works for a single area; you know the habits of  this tiger or gang boss, but this does not give you general insight into the species. 
+
+Area Knowledge can be bought for any sort of area. The larger the territory, the less "personal" and more general your knowledge becomes. Almost every character will have Area Knowledge of some type. Some examples (the GM may add more for his particular campaign):  
+
+Few Hundred Acres:  Knowledge of farmers or tribesmen, trails, streams, hiding places, ambush sites, flora and fauna. 
+
+Hamlet, Village, or Small Town:  All important citizens and businesses and most unimportant ones; all public buildings and most houses. 
+
+City: All important businesses, streets, citizens, leaders, etc. 
+
+Barony, County, Duchy, or Small Nation: General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5 and up.  
+
+Large Nation:  Location of its major cities and important sites; awareness of its major customs, races, and languages (but not necessarily expertise); names of folk of Status 6+, and a general understanding of the economic and political situation. 
+
+Planet: As for a large nation, but more general; knowledge of people of Status 7+ only.  
+
+Interplanetary State:  Location of major planets; awareness of major races (though not necessarily expertise); knowledge of people of Status 7+; general understanding of economic and political situation. 
+
+When knowledge is needed about a place distant from the "home base" area, the GM should assess a penalty. For instance, if the home base is a small town, facts about the neighboring farms might be rolled at -1. The next town (a mile away) would be at -2; the big city 50 miles away would be at  -5. The capital of a neighboring state or nation would be at -7, and a faraway country would be at -10. The long -distance modifiers in the sidebar on p. 151 can be used if specific rules are needed. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Carousing</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>HT</default>
+        <description>
+Buy this skill based on your HT, not DX. This is the skill of socializing, partying, etc. A successful Carousing roll, made under the right circumstances, will give you a +2 bonus on a request for aid or information, or just on a general reaction. A failed roll means you made a fool of yourself in some way; you get a  -2 penalty on any reaction roll made by those you caroused with. If you do your carousing in the wrong places, a failed roll can have other dangers! 
+
+Modifiers: GM's discretion, but up to a +3 for buying drinks or other entertainment for your fellow carousers. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Diplomacy</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the skill of negotiating, compromising and getting along with others. A Diplomacy roll may be substituted for any reaction roll in a non-combat situation (see  Influence R olls,  p. 93). A successful roll will also allow you to predict the possible outcome of a course of action when you are negotiating, or to choose the best approach to take. If you have the Diplomacy skill at an expert level (20 or better), you get a +2 bonus on all reaction rolls! Modifier: +2  if you have the Voice advantage. 
+
+Unlike other influence skills, Diplomacy will never give you a worse result than if you had tried an ordinary reaction roll. A failure of Fast-Talk or Sex Appeal will alienate the subject, but Diplomacy  is always safe. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Fast-Talk</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Acting-5</default>
+        <description>
+This is the skill of talking others into doing things against their better judgment. It is not taught (intentionally, that is) in school; you study it by working as a salesman, confidence man, lawyer, etc. If you have Fast-Talk at an expert level (20 or better), you get a +2 on all reaction rolls where you're allowed to talk! The GM may require the player to give details of the story he is using, rather than just letting him say "I'm using Fast-Talk." 
+
+Fast-Talk is not the same as Acting. In general, Fast-Talk is used to get someone to make a snap decision in your favor. Acting is used for long -term dissimulation. But there are many situations in which the GM could allow a roll on either skill. 
+
+In any situation where a reaction roll is called for, you may substitute a Fast-Talk roll instead; all normal reaction modifiers apply  to the Fast-Talk roll. A successful roll gives you a "Good" reaction. A failed roll gives you a "Bad" reaction. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Gambling</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Mathematics-5 </default>
+        <description>
+This is skill at playing games of chance. A successful Gambling roll can (among other things) tell you if a game is rigged; identify a fellow gambler in a group  of strangers; or "estimate the odds" in any tricky situation. When you gamble against the house, just make your own roll (with a modifier if the GM says the odds are poor). When you gamble against someone else, you both make your Gambling rolls (see  Contes ts of Skill,  p. 87) until one of you wins. Modifiers: +1 to +5 for familiarity with the game being played; -1 to -5 if the game is rigged against the players. The Sleight of Hand skill (p. 67) can be helpful if you want to cheat!  
+
+To spot a cheater, roll a  Contest of Skills; your Gambling roll (or just your Vision roll) vs. the opponent's Sleight of Hand for card or dice tricks, or IQ for other kinds of cheating. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Leadership</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>ST-5</default>
+        <description>
+This is the ability to coordinate a group in a dang erous or stressful situation. Some level of Leadership is required to hold rank in a military or paramilitary group. A successful Leadership roll is required to lead NPCs into a dangerous situation (player characters can decide for themselves if they will  follow you!). Modifiers: Charisma (if you have it);  -5 if the NPCs have never been in action with you;  -5 if you are sending them into danger but not going yourself; +5 if their loyalty to you is "Good"; +10 if their loyalty is "Very Good." If their loyalty is "Excellent," no roll is necessary! (Defaults to ST because in a random group, if nobody has leadership training, the strongest usually leads.) 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Merchant</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to act as a "trader," buying and selling merchandise. It involves salesmanship, understanding of trade practices, and psychology. On a successful skill roll, a Merchant can (among other things): judge the value,  in his own culture,  of any piece of common goods; find out where a ny commodity is bought and sold; find the local fair market value of any commodity; etc. Modifiers: If the commodity is illegal, the Merchant is at a  -3 penalty  unless  he has Streetwise at 12+ or specializes in those goods.  
+
+A merchant in an unfamiliar area will have a penalty ( -2 to  -6, GM's decision) until he has had time to become familiar with the customs and prices there. 
+
+A merchant can choose to  specialize  (see p. 43) in some single class of goods. In this case, he has a +5 when dealing with this class of goods, but a -1 with other goods. When two merchants are haggling, the GM may settle it quickly by a Contest of Skills between the two. The winner adds or subtracts 10% of fair value, depending on whether he was trying to sell or buy. 
+
+A character who has this ability at any level gets a +1 on reaction rolls when buying or selling. A character who has this skill at expert level - 20 or better - gets a +2. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Performance</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, Acting-2 or Bard-2 </default>
+        <description>
+This is the ability to act on the stage or screen. It is different from Acting in that you are trying to impress and entertain people, but not necessarily to fool them. If this skill is studied, it also includes the professional knowledge of the type of acting appropriate for the period (stage directions, actor/agent/producer relations,  types of cameras, etc.). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Politics</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Diplomacy-5 </default>
+        <description>
+This is the ability to get into office, and to get along with other politicians. It has nothing to do with administration! This skill can only be learned in office or by working for someone in  office. A successful Politics roll will give you +2 on any reaction  from a fellow politician. When running for office, roll a Contest of Politics Skills. Modifier: +2 if you have the Voice advantage.  In some  jurisdictions,  money is another important reaction modifier . . . 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Savoir-Faire</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the skill of "good manners"  - whatever they may be in this particular culture. A successful Savoir-Faire roll is required to get along in "high society" without embarrassing yourself  - roll once for each party or meeting. A successful roll can also detect someone who is pretending to high rank or good breeding. 
+
+In any "high society" situation where a reaction roll is called for, you may  substitute  a Savoir-Faire roll instead; all normal reaction modifiers apply to the Savoir-Faire roll. A successful roll gives you a "Good" reaction. A failed roll gives you a "Bad" reaction. Modifiers: +2 if you have higher rank or "class" than the NPC you are trying to impress;  -2 if your social status is lower; +2 if you seem to have important friends!;  -2 or more if the culture is very different from your own ( -6 would be appropriate for an  alien  culture). 
+
+It can also be difficult to pass yourself off as a wildly different social class than yours. The prince would have a hard a time portraying a pauper and vice versa. In general, a Savoir-Faire roll is required to impersonate anybody more than 3 social levels away from your own. If your "native" social level is negative and you are trying to pass yourself off as someone from level 1 or better, or vice versa, a Savoir-Faire roll is required at -2. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Sex Appeal</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>HT-3</default>
+        <description>
+Based on HT, not IQ. This is the ability to impress the opposite sex. It can only be studied in your "free time"  - say, a maximum of three hours a day  - unless you are a member of a harem or the equivalent. The Sex Appeal ability has as much to do with your attitude as it does with your looks. If you are not willing to "vamp" someone to get what you want, you won't have this talent or want it. Modifier: +2 if you have the Voice advantage.  Double  all normal disadvantages for appearance! 
+
+In any encounter with the  opposite sex, if a reaction roll is called for, you may substitute a Sex Appeal roll instead; all normal reaction modifiers apply to the Sex Appeal roll. See Influence Rolls, p. 93. A successful roll gives you a "Very Good" reaction. A failed roll gives you a "Bad" or worse reaction. Usually, only one attempt is allowed per "victim," though the GM might allow you another attempt after a few weeks.        
+</description>
+    </skill>
+
+     <skill>
+        <name>Strategy</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6, Tactics-6 or other Strategy type-4 </default>
+        <description>
+This is the ability to plan  military actions and to predict the actions of the enemy. It is usually taught only by the military. A successful Strategy roll will let you deduce, in advance, enemy military plans unless they are led by another person with this skill. In that case, the GM rolls a Contest of Skills between the two strategists; if the player-character loses, he guesses wrong (i.e., is given false information) about the enemy plans. The amount of information the strategist gets depends on how good his roll was, but  not  how good the foe's plans are. A howling mob uses strategy  - they  just don't know it themselves, and they are easy to out-think. 
+
+A strategist must specialize (p. 43) in a type of strategy: important types are land, naval and space. The specific units being commanded are less important; at worst, a strategist might have a  -1 or  -2 when planning for units of another nation or TL, as long as he  has accurate information about their capabilities. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Tactics</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Strategy-6</default>
+        <description>
+This is the ability to outguess the enemy when the fight is man-to-man or in small groups. It is usually taught only by the military. A successful Tactics roll during a battle will  sometimes  (GM's discretion) allow you information about immediate enemy plans. If you have studied this skill at all, you get a +1 bonus on initiative rolls. If you have Tactics at an expert level (20 or above), you get a +2 bonus on initiative rolls. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Teaching</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to instruct others. In order  to teach someone, you must know the skill being taught at a higher level than your student knows it. Anyone with a Teaching skill of 12 or better should be allowed to act as a teacher for most game purposes. A roll should only be required if it is vital to the "plot" of the adventure that some difficult point be taught to someone. If a language  barrier exists, the GM should  also  roll to see if the teacher and student are communicating properly!  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Camouflage</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4 or Survival-2</default>
+        <description>
+The ability to use natural material and/or paints to disguise yourself, your position, your equipment, and so on. A Contest of Skills (Vision vs. Camouflage) is made to determine whether camouflage is successful. Depending on the circumstances, successful camouflage may hide its subject entirely, or blur its outlines to make it harder to hit ( -1 to attacker's skill). Camouflage will not improve  your Stealth roll, but  if you are well -camouflaged, the enemy may overlook you even after you  fail a Stealth roll. Base skill is to hide yourself: The larger the item being camouflaged, the greater the penalty to skill. Use the reverse of the Size modifiers on the  Size and Speed/Range Table, p. 201.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Demolition/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, Underwater Demolition-2, or Engineer -3</default>
+        <description>
+This is the ability to blow things up. A Demolition roll is necessary whenever you use explosives; it takes 15 minutes to an hour to properly plant and fuse explosives. A successful roll means everything went all right. A failed roll indicates you made a mistake; the worse the roll, the worse the failure. A badly-failed roll in close quarters can blow  you  up. Modifiers:  -3 or more for unfamiliar equipment;  -2 if you are rushed; +2 if you have all the time in the world to prepare. 
+
+When setting an explosive trap, use this skill rather than the Traps skill. Setting a "trap" fuse like a land mine, instead of a timed fuse, is at  -2 to skill. If you  are an engineer of a type concerned with explosives (e.g., mining, ordnance, etc.), you may use your Engineer skill instead of Demolition, at no penalty. Underwater demolition (p. 68) is a separate skill.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Detect Lies</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6 or Psychology-4 </default>
+        <description>
+This is the ability to tell when someone is lying to you. It is not the same as Interrogation; the Detect Lies skill works in a casual or social situation. When you ask to use this skill, the GM rolls a Quick Contest of Skill between your Detect Lies skill and your subject's IQ (or Fast-Talk or Acting skill). If you win, the GM will tell you whether you are being lied to. If you lose, the GM may lie to you about whether you were lied to ... or just say "You can't tell." 
+
+Modifiers: +4 if you have the Empathy advantage. If the liar is of a different species, the GM may assess a penalty (usually  -2) unless the questioner is very familiar with that species!         
+</description>
+    </skill>
+
+     <skill>
+        <name>Disguise</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to make yourself look like someone else, using clothes, makeup, etc. It takes 30 minutes to an hour to put on a good disguise. Roll a Quick Contest of Skills (Disguise vs. IQ, usually) for each person (or group) that your disguise must fool.
+
+People with professional skills in law enforcement or espionage may substitute those skills for IQ when rolling to penetrate a disguise. Modifiers: +2 if you had powders and paints available (does not help on a default roll);  -1 through  -5 (GM's discretion) to disguise yourself as someone or something very different from you. If your own appearance is distinctive, this also reduces your effective skill by 1 to 5, at the GM's option. Large groups may require multiple rolls, again at the GM's option. 
+
+Note that a quick disguise (grabbing a lab coat when you enter a laboratory, for instance) requires no skill roll, but will fool only inattentive enemies! 
+
+When you are combining Acting (p. 62) with Disguise (that is, when you must change your face  and your personality), you only need to make one roll for each person or group - but it must be the harder of the two rolls.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Escape</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6</default>
+        <description>
+This is the ability to free oneself from ropes, handcuffs and similar bonds. The first attempt to escape takes one minute; each subsequent attempt takes 10 minutes. Modifiers: The more thoroughly  you are tied up, the greater a penalty the GM will apply to the roll:  modern police handcuffs, for instance, would be a  -5 to escape  from. If you have the advantage of being Double-Jointed (p.  20), you get a +3 on this skill.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Forgery/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6, DX-8 or Artist-5</default>
+        <description>
+This is the ability to make up a fake passport, banknote or similar document. It is not taught except by intelligence agencies and by  the underworld, though you can always study it alone. When you use a forged document, a successful Forgery roll is needed  each  time the document is inspected - unless you roll a critical success on your first attempt.  
+
+Actual production of a  document can take days, if not weeks. Modifiers:  -5 if you did not have access to good inks and equipment; -5 if you did not have a sample to copy; +3 if you are merely altering a genuine document rather than making up a new one. The GM may also assign modifiers based on the severity of the inspection the document must pass; a routine border check, for instance, would give a +5 bonus. Note also that coordination and eyesight are required. You must be able to see; your skill is  -1 for every point of DX below 10.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Holdout</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Sleight of Hand-3</default>
+        <description>
+This is the skill of concealing items on your person or the persons of others (usually with their cooperation). It is also the skill of finding such hidden items. 
+
+Detection 
+
+Spotting a concealed item is a Quick Contest of Skill; the detector's Vision roll (or Holdout skill +/- Vision modifiers) against the concealer's Holdout skill. GMs should modify this for circumstances. For instance, the "searcher" is at -5 if he is not specifically looking for a concealed item, and -2 if he is looking at a lot of people quickly as they walk by. Contests should be rolled secretly; it defeats the purpose to say, "You don't notice the gun under his jacket.'" 
+
+Roll separately for e ach concealed item. Searchers who find one item are likely to suspect more. 
+
+Every part of the human body can be used to conceal weapons (including the inside; that's the reason for a body-cavity search at the jail). A fairly thorough "pat-down" hands-on search of an unresisting person takes one minute. It gives a +1 bonus to find each concealed item. A thorough "skin search" of a person's hair and clothing takes three minutes and gives a +3. A complete search, including body cavities, takes five minutes and is +5 to skill. An X-ray or similar device gives an extra +5 to spot any object containing metal. If more than one person is making the search, there must be a separate contest of skills for each searcher. 
+
+The GM is free to skip unnecessary rolls; no human can get a sawed-off pump shotgun through a body search. Likewise, a knife or jewel simply  cannot  be found on a normally-dressed person without (at least) an X-ray or skin search. In general, if net bonus to the roll is +3 or better, a skin search is required. If size penalty is -2 or worse, a skin search will automatically find the hidden item. 
+
+Concealment  
+
+The size and shape of the item governs its concealability. Some 
+examples:  
+
++6: A pea-sized jewel; a postage stamp 
++5: One lockpick; a large jewel; a dime; a TL8+ computer disk; a letter 
++4: A set of lockpicks; a dagger; a silver dollar 
++3: A 20th-century floppy disk or CD, without case
++2: The smallest ordinary handguns (e.g., a Baby Browning); a small knife 
++1: A large knife; a slingshot 0: An average handgun (e.g., a Luger) 
+-1: A large handgun (e.g., Colt Government Model) 
+-2: The largest handguns; a shortsword 
+-3: A hand grenade  
+-4: A broadsword 
+-5: A Thompson submachine gun; a bastard sword 
+
+Clothing also affects effective skill. A Carmelite nun in full habit (+5 to skill) could conceal a bazooka or a battle-axe from an eyeball search. A Las Vegas showgirl in costume ( -5 to skill) would have trouble hiding even a dagger. Of course, the showgirl might escape search entirely (unless the guards were just bored) because "she obviously couldn't hide anything in  that outfit. . ." Full nudity is -7 to skill. Clothing designed specifically to hide things can give  a bonus of up to +4. 
+
+A properly designed holster helps to conceal a weapon. A custom holster costs about $200 and gives +2 to Holdout for the  weapon it contains. A good concealment holster from a commercial  maker will cost about $100; it is +1 to Holdout. A reasonably good concealment holster costs about $50 and gives no Holdout bonus. No holster, or a  non-concealment or cheap holster, is  -1 to Holdout  on gun-type weapons. 
+
+Things that move or make noise are at least -1 to Holdout skill. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Intelligence Analysis/TL</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6</default>
+        <description>
+The ability to analyze and interpret intelligence data (usually military), to determine enemy plans and capabilities. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Interrogation</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or Intimidation-3 </default>
+        <description>
+This is the ability to question a prisoner. It is not taught except by intelligence agencies, police, prisons, military units and the underworld. 
+
+To interrogate a prisoner, you must win a Contest of Skills: your Interrogation ability vs. the prisoner's IQ. The GM will roleplay the prisoner (or, if  you  are the prisoner, the GM will roleplay the interrogator) and make all die rolls in s ecret. Each question roll costs 5 minutes of time; a successful roll gets a truthful answer to one question. On a failed roll, the victim remains silent or lies. A bad failure (by 5 points or worse) means a  good, believable  lie is told! Modifiers: +2 for l engthy interrogation (more than two hours);  -5 if the prisoner's loyalty to his leader or cause is "Very Good" or "Excellent"; +3 if severe threats are used; +6 if torture is used. 
+
+Note that "torture" does not necessarily mean thumbscrews and the rack. Exposing a prisoner to the object of his phobia (see Phobias,  p. 35) is a very effective torture if the prisoner fails his Will roll to endure the fear. A believable threat against a loved one is also torture. Note also  that torturing a prisoner is usually considered vile behavior and will likely bring retribution. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Lip Reading</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>your Vision roll-IQ </default>
+        <description>
+This is the ability to  see what others are saying. You must be within 20 feet, or use magic or binoculars to bring your point of view this close. Each successful roll will let you make out one sentence of a discussion - assuming, of course, that you know the language. If your subjects suspect you can read lips, they can hide  their mouths or subvocalize to make lip reading impossible. A critical failure on a lip reading roll  - if you are where your victims could see you  - means that you stared so much you were noticed! 
+Modifiers: All Vision modifiers (see p. 92). 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Lockpicking/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the ability to open locks without the key or combination. Each attempt to open a lock requires one minute; if you make the roll and open the lock, each point by which you succeeded shaves five seconds off the required time. (A vault, safe or other challenging lock c an take more time, at the GM's discretion.) Note that if the lock has a trap or alarm attached, a separate Traps roll will be needed to circumvent it. Modifiers: -3 if you have only improvised equipment rather than real lockpicks; -5 in darkness (working by touch); up to +5 for very good equipment at high TLs. Inside information gives a bonus at GM's discretion.         
+</description>
+    </skill>
+
+     <skill>
+        <name>Pickpocket</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>DX-6 or Sleight of Hand-4 </default>
+        <description>
+This is the ability to steal a purse, knife, etc., from someone's person - or to "plant" something on him. Modifiers: +5 if the victim is distracted; +10 if he is asleep or drunk; up to  -5 for goods in  an inner pocket; and up to -10 for a ring or similar jewelry.  
+
+If your victim is aware someone may try to pick his pocket, or if he is generally wary, the GM should roll a Quick Contest of Skills  - his IQ (modified by Alertness) against your Pickpocket skill (modified by difficulty of the job). If your victim has Streetwise, he uses that skill instead of his IQ! A similar roll may be required for you to outwit a third party who is watching you and the victim. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Poisons</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>IQ-6, Chemistry-5 or Physician-3</default>
+        <description>
+Also defaults to Cooking-3 or Savoir -Faire-3 in the appropriate culture. This is the general practical knowledge of poisons. A successful skill roll will let you (among other things) recognize a poison-bearing plant in the wild; distill the poison into useful form; recognize a poison by its taste in food or drink; identify a poison by observing its effects (+3 if  you are the one poisoned); know a proper antidote; recognize or distill the antidote from its sources. Note that each of these feats requires a separate roll. Modifiers: Acute  Taste and Smell will help to recognize a poison. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Scrounging</name>
+        <type>M</type>
+        <difficulty>Easy</difficulty>
+        <default>IQ-4</default>
+        <description>
+This is the ability to find, salvage or improvise useful items that others can't locate. Each attempt takes an hour. The scrounger does  not necessarily steal his booty; he just locates it - somehow  - and  then acquires it by any means necessary. Note that if the scrounger  finds something that is "nailed down," he must decide how to try to  get it, and a roll on another skill may be necessary. Modifiers: As  the GM sees fit, for the rarity of the item sought.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Shadowing </name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-6 or Stealth-4 (on foot only)a</default>
+        <description>
+This is the ability to follow another person through a crowd without being noticed. (In the country, use Tracking and Stealth.) Roll one Contest of Skill every 10 minutes: your Shadowing vs. the subject's Vision roll. If you lose, you lost the subject; if you lose by more than 5, you were seen. Modifiers: -2 or more (GM's decision)  if your looks are distinctive; -3 if the subject knows you. 
+
+Once the subject is aware he is being shadowed, make a Contest of Skills every 5 minutes: your Shadowing skill vs. his Shadowing or Stealth skill. If he wins, he eludes you. If he loses by more than 5, he  thinks  he eluded you. If you fail critically, you lose him and follow the wrong person. 
+
+To follow someone in a car or similar vehicle, use the same rules, but the shadower is at a -2; it's harder than shadowing on foot.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Sleight of Hand</name>
+        <type>P</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the ability to "palm" small objects, do coin and card tricks, etc. Each successful roll will let you perform one piece of simple "stage magic"; a failed roll means you blew the trick. Modifiers:  -3 if the person you want to fool has Acute Vision or knows the Sleight of Hand skill himself; +3 if the light is dim; +3 if you have a confederate to distract attention; +5 if you have prepared in advance (cards up your sleeve, etc.). 
+
+This skill can also be used to cheat while gambling. A successful Sleight of Hand roll will give you a +5 on your Gambling roll in a Contest of Skills. A failed roll will cause you to be denounced as  a cheater! 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Stealth</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or DX-5</default>
+        <description>
+This is the ability to hide and to move silently. A successful roll will let you conceal yourself anywhere except a totally bare room, or move so quietly that nobody will hear  you, or follow someone without being noticed. (To follow someone through a crowd, use Shadowing skill, above.) Modifiers: minus your encumbrance level; -5 to hide in an area without "natural" hiding places; +3 or more if there are many hiding places; -5 to move silently if you are running instead of walking (walking speed with Stealth is 1 yard/second);  -5 to fool dogs instead of people. 
+
+If you are moving silently, and someone is  specifically  listening for intruders, the GM will roll a Contest of Skills between your Stealth and their Hearing roll (see p. 92). 
+
+This skill is also used to stalk game, once you have spotted it. A successful roll (and about 30 minutes) will get you to within 30 yards of most animals. Another roll, at -5, will get you to within 15 yards. After that, you will have to make a weapon skill roll to hit it.  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Streetwise</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5</default>
+        <description>
+This is the skill of getting along in rough company. A successful Streetwise roll can (among other things) let you find out where any sort of illegal "action" is; which local cops or bureaucrats can be bought, and for how much; how to contact the local underworld; etc. Note that if you belong to an organization with good connections (Assassin's Guild, Brotherhood, police, Illuminati, etc.), you  may be  able to get  this  information by asking a  contact.  "Streetwise" is a measure of your ability to make your own contacts at need. 
+
+In any underworld or "bad neighborhood" situation where a reaction roll is called for, you may substitute a Streetwise roll instead; all normal reaction modifiers apply to the Streetwise roll. A successful roll gives you a "Good" reaction. A failed roll gives you  a "Bad" reaction. Modifiers to this Influence roll only: +3 if you have a tough reputation (either "good" or "bad") in the area; -3 if you are obviously a stranger in the area. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Traps/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, DX-5or Lockpicking-3</default>
+        <description>
+This is the skill of building traps and detection devices, and of nullifying them. A successful Traps roll will (among other things) detect a trap if you are looking for it; disarm a trap once you have found it; reset it after you pass; or (given proper materials) build a new trap. Note that a "trap" can be anything from a pit trap with stakes to an elaborate security system! Time: As for Lockpicking (p. 67). Modifiers: Infinitely variable. The more sophisticated the trap, the harder it will be to see and to disarm/reset. Note that a trap may be (for instance) easy to find, but hard to disarm! This is all up  to the GM or the designer of the adventure. Vision modifiers help you to find traps, but not to disarm or reset them. Note also that, if  you don't possess this skill, a DX default should apply only to disarming or resetting a trap - NOT to detecting or building one! 
+
+Note that at TL7 and above, the Traps skill is essentially the same as Electronics (Security Systems).  
+        </description>
+    </skill>
+
+     <skill>
+        <name>Underwater Demolition/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>Demolition-2,Prerequisites: Scuba, and either Demolition OR appropriate Engineer </default>
+        <description>
+Ability to prepare and set an explosive charge underwater. Otherwise, similar to Demolition (above). If a demolitions engineer is using this skill by default, he rolls against his Demolition-2 to prepare the charge. But his demolitions training teaches him nothing about scuba; if scuba work is required to set the charge, he must roll against default Scuba skill or find someone else to place the explosives. 
+        </description>
+    </skill>
+
+     <skill>
+        <name>Ventriloquism</name>
+        <type>M</type>
+        <difficulty>Hard</difficulty>
+        <default>No default</default>
+        <description>
+This is the ability to disguise and "throw" your voice for a short distance. A successful roll will let you throw your voice well enough to fool your audience. Modifiers: +5 if you have a dummy or confederate to distract your audience (it's easier to "see" a face  talk than it is to believe the voice comes from an immobile object);  -3 if the audience has reason to be suspicious. 
+        </description>
+    </skill>
+
+        <skill>
+        <name>Bicycling</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-4 or Motorcycle </default>
+        <description>
+This is the ability to  ride a bicycle without falling off. You can also roll at  -5 to repair a damaged bicycle, assuming tools or parts are available. 
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Boating</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, DX-5 or Powerboat-3</default>
+        <description>
+This is the ability to handle canoes, rowboats, small sailboats, etc. At default, one roll is required when the boat is entered (to keep from falling in the water) and one to get the boat moving. The GM may require other  rolls whenever a hazard is encountered. Modifiers: -5 if the boat is an unfamiliar type (a day's experience,if you already have the Boating skill, will let you become familiar with a new type); foul weather will give a -3 or greater penalty.  
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Driving/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5 or DX-5</default>
+        <description>
+This is the ability to drive a speci fic type of vehicle  - a specialization (p. 43) is required. Modifiers: -2 for an unfamiliar vehicle of a known type (for instance, from automatic to stick-shift); -2 or more for a vehicle in bad repair;  -2 or more for bad driving conditions; -4 or more for a vehicle of unfamiliar type (e.g., a Model T when you are used to TL7 vehicles or a racecar when you are used  to stock cars). Note that the ability to drive a team of animals is not Driving; it is the Teamster skill (p. 47). 
+
+If you want to learn Driving skill for two or more types of vehicles, start learning the second one at a reasonable default from me first  - usually  -4 (check this with the GM). Some vehicle types include: 
+
+Stock car 
+18-wheeler 
+All-Terrain Vehicle   
+Racing vehicle 
+Construction equipment 
+Tank 
+Hovercraft (contragravity vehicles use Piloting instead). 
+
+A vehicle of a different tech level is considered a different "type." 
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Motorcycle/TL</name>
+        <type>P</type>
+        <difficulty>Easy</difficulty>
+        <default>DX-5, IQ-5 or Bicycling-5</default>
+        <description>
+This is the ability to ride a motorcycle. You must specialize in either motor-scooters/light cycles, or medium and heavy cycles. 
+
+Modifiers:  -2 for an unfamiliar cycle of a known type (e.g., a Harley when your own cycle is a Shogun);  -4 or more for a cycle in bad repair;  -2 or more for bad road conditions;  -4 or more for a cycle of unfamiliar type (e.g., a cycle of a different tech level); +3  if the cycle has a sidecar. 
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Piloting/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-6</default>
+        <description>
+This is the ability to pilot a specific type of aircraft or spacecraft. A specialization (p. 43) is required. The default is to IQ, because intelligence would be required to figure out the controls in an emergency. But when  the skill is learned normally, it is based on DX like other physical skills. 
+
+A Piloting roll is required on takeoff or landing, and another roll is required in any hazardous situation. A failure by 1 indicates a rough job; failure by more indicates damage to the craft; a critical failure is a crash. If the pilot/driver has expert skill (15 or over), any  critical failure requires an immediate second roll. Only if this second roll is a failure does a mishap really occur. Otherwise, it was a "near thing" averted by experience. 
+
+Piloting rolls can also be used when resolving air combat.  Modifiers: -2 for an unfamiliar aircraft of a known type (e.g., a Piper when your own plane is a Beech);  -4 or more for a plane in bad repair;  -2 or more for bad flying conditions;  -4 or more for a plane of unfamiliar type (e.g., a twin-engine plane when you are used to single-engine craft). Craft with very complex controls (e.g., space shuttle) or primitive craft (e.g., Wright brothers) should always have penalties, even for experienced pilots. Tech-level differences definitely count (see p. 185). 
+
+If you want to learn Piloting skill for two or more types of craft, start learning the second one at a reasonable default from the first usually -4 (check this with the GM). Types include: 
+
+Ultralight or hang-glider 
+Single-engine prop                    
+Multi-engine prop                     
+Military (fighter) jet                  
+Small helicopter                        
+Space shuttle                               
+Contragravity craft                    
+Fighter spacecraft                      
+Glider 
+Twin-engine prop 
+Multi -engine jet 
+Small private jet 
+Large helicopter 
+Hot -air balloon 
+Contragravity belt 
+Large spacecraft 
+
+In most science fiction campaigns, Free Fall and Vacc Suit skills 
+should be prerequisites for spaceship or starship piloting. 
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Powerboat/TL</name>
+        <type>P</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-5, DX-5 or Boating-3</default>
+        <description>
+This is the ability to handle small powered watercraft of all kinds. (For non-powered watercraft, see Boating, above, and Seamanship, p. 57.) Default skill users must make a Powerboat, Boating or DX roll when the boat is entered (to keep from falling in the water). Another roll is required in any potentially hazardous situation. Modifiers: -4 if the boat is an unfamiliar type; foul weather will give a -3 or greater penalty.  
+        </description>
+    </skill>
+   
+     <skill>
+        <name>Vacc Suit/TL</name>
+        <type>M</type>
+        <difficulty>Average</difficulty>
+        <default>IQ-6</default>
+        <description>
+Available at TL7+ only. This is the ability to use a "space-suit" in environments where there is no air (or no breathable air). A separate Free Fall roll is required for zero-G work. See  GURPS Space  for more detail about vacc suits. 
+        </description>
+    </skill>
  
 </skills>

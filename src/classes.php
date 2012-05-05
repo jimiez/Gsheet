@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Luokka joka pitää sisällään hahmon perusominaisuudet ja 
+ * huolehtii niiden hakemisesta kannasta.
+ */
+
 class Character {
 
     private $charStats;
@@ -16,7 +21,7 @@ class Character {
     public function __construct($id) {
         include("connect.php");
 
-        // Read basic stuff from the DB
+        // Ensin luetaan perusominaisuudet kannasta
 
         $myquery = $db->prepare('SELECT * FROM Characters WHERE Char_id=?');
         $myquery->bindValue(1, $id);
@@ -26,6 +31,8 @@ class Character {
         $this->ActiveDef = explode("|", $this->charStats->ActiveDefense);
         $this->PassiveDefPD = explode("|", $this->charStats->PassiveDefensePD);
         $this->PassiveDefDR = explode("|", $this->charStats->PassiveDefenseDR);
+
+        // Tämän jälkeen luetaan lisäominaisuudet
 
         $this->readAttributes();
         $this->readItems();
@@ -38,7 +45,7 @@ class Character {
     }
 
     public function getDef($type) {
-        if ($type == ' active') {
+        if ($type == 'active') {
             return $this->ActiveDef;
         } else if ($type == 'passivePD') {
             return $this->PassiveDefPD;
@@ -51,11 +58,16 @@ class Character {
         return $this->quirks;
     }
 
+    /*
+     * Funktio joka lukee kannasta hahmon attribuutit ja tekee niistä
+     * olioita, jotka tallennetaan taulukkoon character - luokan sisällä
+     */
+
     public function readAttributes() {
         include('connect.php');
 
         $query = "SELECT * 
-                FROM attributelist 
+                FROM AttributeList 
                 WHERE CharAttr_id = ?";
         $myquery = $db->prepare($query);
         $myquery->bindValue(1, $this->charStats->Char_id);
@@ -68,6 +80,10 @@ class Character {
             }
         }
     }
+
+    /*
+     * Lukee esineet kannasta
+     */
 
     public function readItems() {
         include('connect.php');
@@ -83,6 +99,10 @@ class Character {
         }
     }
 
+    /*
+     * Lukee aseet kannasta
+     */
+
     public function readEquippedWeapons() {
         include('connect.php');
 
@@ -97,19 +117,28 @@ class Character {
         }
     }
 
+    /*
+     * Lukee taidot kannasta.
+     */
+
     public function readSkills() {
         include('connect.php');
-        
-        $query = "SELECT sl.Skill_id, sl.Skill_name, s.SkillName, 
-            FROM SkillList
-            WHERE CharWeapon_id = ?";
+
+        $query = "SELECT * 
+                  FROM SkillList
+                  LEFT JOIN Skills ON SkillList.Skill_name = Skills.SkillName
+                  WHERE SkillList.CharSkill_id = ?";
+
         $myquery = $db->prepare($query);
         $myquery->bindValue(1, $this->charStats->Char_id);
         $myquery->execute();
         while ($result = $myquery->fetchObject()) {
-            $this->charSkills[] = new Skill($result->Skill_id, $result->SkillName, $result->SkillType, $result->SkillDiff, $points);
+            if ($result->Skill_name == "") {
+                $this->charSkills[] = new Skill($result->Skill_id, "", "", "", "");
+            } else {
+                $this->charSkills[] = new Skill($result->Skill_id, $result->Skill_name, $result->SkillType, $result->SkillDiff, $result->SkillPoints);
+            }
         }
-        
     }
 
     public function getAttributes($type) {
@@ -128,7 +157,15 @@ class Character {
         return $this->equippedWeapons;
     }
 
+    public function getSkills() {
+        return $this->charSkills;
+    }
+
 }
+
+/*
+ * Varsinaisen hahmolomakkeen pohja
+ */
 
 class Sheet {
 
@@ -166,6 +203,11 @@ class Sheet {
     }
 
 }
+
+/*
+ * Luokka attribuuttien säilömistä ja käsittelyä varten
+ *
+ */
 
 class Attribute {
 

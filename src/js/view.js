@@ -1,32 +1,67 @@
-function updateAll() {
+/*
+ * Pääfunktio jolla kutsutaan kaikkia muita päivitettäviä elementtejä
+ */
+function updateAll(status) {
     updateSpeed();
     updateDamage();
     updateDodge();
     updateTotals();
+    updateItemTotals();
     calculateSkills();
+    if (status == "load") {
+        updateSaveStatus("saved");
+    } else {
+        updateSaveStatus();
+    }
 }
 
+/*
+ * Kasvattaa valitun kentän arvoa yhdellä
+ */
 function increaseValue(field) {
     document.baseform[field].value++;
 }
 
+/*
+ * Pienentää valitun kentän arvoa yhdellä
+ */
 function decreaseValue(field) {
     document.baseform[field].value--;
 }
 
+/*
+ * Laskee ja asettaa hahmon nopeuden
+ */
 function updateSpeed() {
     var a = parseInt(document.baseform.htField.value);
     var b = parseInt(document.baseform.dxField.value);
     var c = (a+b)/4;
+    var baseMove = Math.floor(c);
     document.baseform.basicSpeedField.value = c;
-    document.baseform.moveField.value = Math.floor(c)
+     
+    
+    var movePenalty = updateEncumbrance();
+    
+    if (movePenalty == 0) {
+        document.baseform.moveField.value = c; 
+        document.baseform.moveField.style.backgroundColor = "#FFFFFF";
+    } else {
+        document.baseform.moveField.value = c - movePenalty;
+        document.baseform.moveField.style.backgroundColor = "#FF0000";
+    }
 }
 
+/*
+ * Asettaa hahmon väistön
+ */
 function updateDodge() {
     var move = parseInt(document.baseform.moveField.value);
     document.baseform.dodgeField.value = move;
 }
 
+/*
+ * Laskee hahmon voiman perusteella vahinkomääriä
+ */
 function updateDamage() {
     var thrust = Array(20);
     var slash = Array(20);
@@ -78,13 +113,59 @@ function updateDamage() {
     document.baseform.dmgSlashField.value = slash[ind];
 }
 
+/*
+ * Laskee kaikkien pisteiden summat
+ */
 function updateTotals() {
-    document.baseform.advantageTotalField.value = countAdvantages('advantagePoints[]');
-    document.baseform.disadvantageTotalField.value = countAdvantages('disadvantagePoints[]');
-    document.baseform.skillTotalField.value = countAdvantages('skillPts[]');
+    var adv = sumOfFormArray('advantagePoints[]');
+    var dadv = sumOfFormArray('disadvantagePoints[]') + calculateQuirks();
+    
+    var skills = sumOfFormArray('skillPts[]');
+    var base = calculateBasic();
+    var total = adv + dadv + skills + base;
+    document.baseform.advantageTotalField.value = adv;
+    document.baseform.disadvantageTotalField.value = dadv;
+    document.baseform.skillTotalField.value = skills;
+    document.baseform.attributeTotalField.value = base;
+    document.baseform.totalPointsField.value = total;
+    document.baseform.unusedPointsField.value = document.baseform.campTotalPointsField.value - total;
 }
 
-function calculateBasic(attribute) {
+/*
+ * Päivittää encumbrancen
+ */
+function updateEncumbrance() {
+    var totalWeight = parseInt(document.baseform.totalWeight.value = sumOfFormArray('itemWeight[]'));
+    var str = parseInt(document.baseform.stField.value);
+
+    var movement;
+    var enc;
+    if (totalWeight < str * 2) {
+        enc = "None";
+        movement = 0;
+    } else if (totalWeight < str * 4) {
+        enc = "Light";
+        movement = 1;
+    } else if (totalWeight < str * 6) {
+        enc = "Medium";
+        movement = 2;
+    } else if (totalWeight < str * 12) {
+        enc = "Heavy";
+        movement = 3;
+    } else if (totalWeight > str * 20) {
+        enc = "Xtra-Heavy";
+        movement = 4;
+    }     
+    
+    document.baseform.encumbranceField.value = enc;
+    
+    return movement;
+}
+
+/*
+ * Laskee perusominaisuuksien (ST, DX, IQ, HT) pistearvot
+ */
+function calculateBasic() {
    
     var attributeValue = Array(20);
 
@@ -109,11 +190,21 @@ function calculateBasic(attribute) {
     attributeValue[19] = 150;
     attributeValue[20] = 175;   
     
-    return attributeValue(attribute);
+    var total = 0;
+    
+    total += attributeValue[parseInt(document.baseform.stField.value)];
+    total += attributeValue[parseInt(document.baseform.dxField.value)];
+    total += attributeValue[parseInt(document.baseform.iqField.value)];
+    total += attributeValue[parseInt(document.baseform.htField.value)];
+    
+    return total;   
 
 }
 
-function countAdvantages(array) {
+/*
+ * Laskee valitun form - taulukon summan
+ */
+function sumOfFormArray(array) {
     var sum = 0;
     var a = document.baseform.elements[array]; 
     for (i = 0; i < a.length; i++) {
@@ -123,14 +214,20 @@ function countAdvantages(array) {
     }
     return sum;
 }
-            
+      
+/*
+ * Avaa jotain form - kenttää klikatessa valitsijaikkunan
+ */      
 function openSelector(targetField, type){
     var w = window.open("selector.php?type=" + type , "Selector", "scrollbars=auto,toolbar=no,menubar=no,status=no, width=640, height=400");
     w.targetField = targetField;
     w.focus();
     return false;
 }
-          
+
+/*
+ * Asettaa valitsjaikkunan paluuarvot advantage/disadvantage - kenttiin
+ */      
 function setAttrField(targetField, value1, value2, type){
     var a;
     if (type == 'A') {
@@ -150,6 +247,9 @@ function setAttrField(targetField, value1, value2, type){
     window.focus();
 }
 
+/*
+ * Asettaa valitsjaikkunan paluuarvot skills - kenttiin
+ */       
 function setSkillField(targetField, value1, value2, value3){
     var a = findIndex(targetField, "skill");
     if (targetField){
@@ -160,6 +260,9 @@ function setSkillField(targetField, value1, value2, value3){
     window.focus();
 }
 
+/*
+ * Etsii jonkun klikatun taulukkomuotoisen form - elementin järjestysnumeron
+ */      
 function findIndex(field, element) {
     var a;
     if (element == 'skill') {
@@ -178,6 +281,9 @@ function findIndex(field, element) {
     return -1;
 }
 
+/*
+ * Laskee taitoihin asetettujen pisteiden perusteella ko. taidon lopullisen heiton
+ */      
 function calculateSkills() {
                 
     var skillPts = document.baseform.elements["skillPts[]"];
@@ -197,6 +303,9 @@ function calculateSkills() {
     }
 }
 
+/*
+ * Laskee fyysisisen skillin heiton vaikeuden ja pistemäärän perusteella
+ */      
 function calculatePhysicalSkill(difficulty, points) {
   
     if (difficulty == 'Easy') {
@@ -220,6 +329,9 @@ function calculatePhysicalSkill(difficulty, points) {
     }
 }
 
+/*
+ * Laskee henkisen skillin heiton vaikeuden ja pistemäärän perusteella
+ */      
 function calculateMentalSkill(difficulty, points) {
   
     if (difficulty == 'Easy') {
@@ -240,10 +352,44 @@ function calculateMentalSkill(difficulty, points) {
         return base + 2;
     
     } else {
-        if (difficulty == 'Very hard') {
+        if (difficulty == 'Very Hard') {
             return Math.floor(points / 4) - 2;  
         } else {
             return Math.floor(points / 2) + 1 + base;
         }
     }
+}
+
+/*
+ * Laskee quirkkien pistearvon
+ */   
+function calculateQuirks() {
+
+    var a = document.baseform.elements["quirks[]"]; 
+    var total = 0;
+    for (i = 0; i < a.length; i++) {
+        if (a[i].value != "") {                    
+            total -= 1;
+        }
+    }
+    return total;
+}
+
+/*
+ * Ilmoittaa tallennustatuksen 
+ */   
+function updateSaveStatus(status) {
+    if (status == "saved") {
+        document.getElementById("saveStatus").innerHTML = "No changes";
+    } else {
+        document.getElementById("saveStatus").innerHTML = "<font color=red size=+1>Changes not saved!</font>";
+    }
+}
+
+/*
+ * Laskee repun esineiden kokonaispainon ja arvon
+ */ 
+function updateItemTotals() {
+    document.baseform.totalWeight.value = sumOfFormArray('itemWeight[]');
+    document.baseform.totalValue.value = sumOfFormArray('itemValue[]');
 }

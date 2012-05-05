@@ -1,5 +1,7 @@
 <?php
-
+/*
+ *  Tallentaa hahmolomakkeen
+ */
 include('connect.php');
 
 // Ensin tallennetaan hahmon perusominaisuudet
@@ -82,7 +84,7 @@ try {
     die("ERROR: " . $e->getMessage());
 }
 
-// Advantages
+// Advantaget
 
 try {
     $db->beginTransaction();
@@ -105,7 +107,7 @@ try {
     die("ERROR: " . $e->getMessage());
 }
 
-// Disadvantages
+// Disadvantaget
 
 
 try {
@@ -124,15 +126,13 @@ try {
         $myquery->execute();
     }
 
-
-
     $db->commit();
 } catch (PDOException $e) {
     $db->rollBack();
     die("ERROR: " . $e->getMessage());
 }
 
-// Equipped weapons
+// Aseet
 
 try {
     $db->beginTransaction();
@@ -146,6 +146,26 @@ try {
         $myquery->bindValue(4, $_POST['eqWpnDmgType'][$i]);
         $myquery->bindValue(5, $_POST['eqWpnDmg'][$i]);
         $myquery->bindValue(6, $_POST['eqWpnNotes'][$i]);
+        $myquery->execute();
+    }
+
+    $db->commit();
+} catch (PDOException $e) {
+    $db->rollBack();
+    die("ERROR: " . $e->getMessage());
+}
+
+try {
+    $db->beginTransaction();
+
+    for ($i = 0; $i < sizeof($_POST['skillName']); $i++) {
+
+        $myquery = $db->prepare("REPLACE INTO SkillList VALUES (?, ?, ?, ?)");
+        $myquery->bindValue(1, $_POST['skillId'][$i]);
+        $myquery->bindValue(2, $_POST['charID']);
+        $myquery->bindValue(3, $_POST['skillName'][$i]);
+        $myquery->bindValue(4, $_POST['skillPts'][$i]);
+
         $myquery->execute();
     }
 

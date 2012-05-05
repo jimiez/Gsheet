@@ -1,20 +1,23 @@
 function showDetails(str, type) {
           
-    xmlhttp=new XMLHttpRequest();
+    xmlhttp = new XMLHttpRequest();
             
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("details").innerHTML = xmlhttp.responseText;
         }
     }
-    if (type == 'A') {
-    xmlhttp.open("GET", "ajax.php?a=" + str, true);
+    if (type == 'attr') {
+        xmlhttp.open("GET", "ajax.php?attr=" + str, true);
+    } else if (type == 'skill') {
+        xmlhttp.open("GET", "ajax.php?skill=" + str, true);    
+    } else if (type == 'editAttr') {
+        xmlhttp.open("GET", "ajax.php?editAttr=" + str, true);
     } else {
-    xmlhttp.open("GET", "ajax.php?s=" + str, true);    
+        xmlhttp.open("GET", "ajax.php?editSkill=" + str, true);    
     }
     xmlhttp.send();
-}
-            
+}      
 function setAttrValue(value1, value2, type){
     if (opener && !opener.closed && opener.setAttrField){
         var a = parseInt(value2);

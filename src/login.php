@@ -48,10 +48,9 @@ if (isset($_POST['submitLogin'])) {
         <h1>
             Gsheet
         </h1>
-<?php
-echo "$message <br><br>";
-?>
-
+        <?php
+        echo "$message <br><br>";
+        ?>
         <form name="login" method="post" action="">
             <table>
                 <tr>
@@ -77,7 +76,5 @@ echo "$message <br><br>";
                 </tr>
             </table>
         </form>
-
-
     </body>
 </html>

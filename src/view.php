@@ -3,6 +3,8 @@ include('classes.php');
 include('connect.php');
 session_start();
 
+
+// Jos katsoja on kirjautunut
 if (isset($_SESSION['isLogged'])) {
     $loggedUser = $_SESSION['loggedUser'];
 } else {
@@ -35,6 +37,7 @@ if ($result->n < 1) {
     $passiveDefPD = $character->getDef('passivePD');
     $passiveDefDR = $character->getDef('passiveDR');
     $quirks = $character->getQuirks();
+    $campPoints = 100;
 }
 ?>
 
@@ -47,8 +50,10 @@ if ($result->n < 1) {
         <SCRIPT src="js/view.js"></SCRIPT>
     </head>
 
-    <body onLoad="updateAll()">
+    <body onLoad="updateAll('load')">
+
         <a href="index.php">Return to main</a>
+
         <form name="baseform" onClick="updateAll()" method="post" action="save.php">
             <table cellpadding="3" cellspacing="0" border="1">
                 <tr>
@@ -69,11 +74,12 @@ if ($result->n < 1) {
                                     <select name="campaignField" <?php $sheet->disabledSelect() ?> style="width: 250px">
 
                                         <?php
-                                        $myquery = $db->prepare('SELECT Campaign_id, CampName FROM Campaigns');
+                                        $myquery = $db->prepare('SELECT Campaign_id, CampName, CampPoints FROM Campaigns');
                                         $myquery->execute();
                                         while ($result = $myquery->fetchObject()) {
                                             if ($result->Campaign_id == $character->getStat('Campaign')) {
                                                 echo "<option value='$result->Campaign_id' SELECTED='Yes'>$result->CampName</option>";
+                                                $campPoints = $result->CampPoints;
                                             } else {
                                                 echo "<option value='$result->Campaign_id'>$result->CampName</option>";
                                             }
@@ -174,17 +180,35 @@ if ($result->n < 1) {
                             <th>Check</th>
 
                             <?php
-                            for ($i = 0; $i < 17; $i++) {
-                                ?>
-                                <tr>
-                                    <td><input type=text size=20 readonly='readonly' class='underscore' name='skillName[]' <?php $sheet->writeIfOwner("onclick=\"return openSelector(this, 'skill')\"") ?>></td>
-                                    <td><input type=text size=1 readonly='readonly' class='underscore' name='skillType[]'></td>
-                                    <td><input type=text size=5 readonly='readonly' class='underscore' name='skillDiff[]'></td>
-                                    <td><input type=text size=1 class='underscore' name='skillPts[]' <?php $sheet->readOnly() ?>></td>
-                                    <td><input type=text size=1 readonly='readonly' class='underscore' name='skillCheck[]'></td>
-                                </tr>
+                            $skills = $character->getSkills();
 
-                                <?php
+                            for ($i = 0; $i < 17; $i++) {
+                                if ($i < sizeof($skills)) {
+                                    $skill = $skills[$i];
+                                    ?>
+                                    <tr>
+                                        <td><input type="hidden" name="skillId[]" value="<?php echo $skill->getId() ?>">
+                                            <input type=text size=20 value="<?php echo $skill->getName() ?>" readonly='readonly' class='underscore' name='skillName[]' <?php $sheet->writeIfOwner("onclick=\"return openSelector(this, 'skill')\"") ?>></td>
+                                        <td><input type=text size=1 value="<?php echo $skill->getType() ?>" readonly='readonly' class='underscore' name='skillType[]'></td>
+                                        <td><input type=text size=5 value="<?php echo $skill->getDifficulty() ?>" readonly='readonly' class='underscore' name='skillDiff[]'></td>
+                                        <td><input type=text size=1 value="<?php echo $skill->getPoints() ?>" class='underscore' name='skillPts[]' <?php $sheet->readOnly() ?>></td>
+                                        <td><input type=text size=1 readonly='readonly' class='underscore' name='skillCheck[]'></td>
+                                    </tr>
+
+                                    <?php
+                                } else {
+                                    ?>
+                                    <tr>
+                                        <td><input type="hidden" name="skillId[]">
+                                            <input type=text size=20 readonly='readonly' class='underscore' name='skillName[]' <?php $sheet->writeIfOwner("onclick=\"return openSelector(this, 'skill')\"") ?>></td>
+                                        <td><input type=text size=1 readonly='readonly' class='underscore' name='skillType[]'></td>
+                                        <td><input type=text size=5 readonly='readonly' class='underscore' name='skillDiff[]'></td>
+                                        <td><input type=text size=1 class='underscore' name='skillPts[]' <?php $sheet->readOnly() ?>></td>
+                                        <td><input type=text size=1 readonly='readonly' class='underscore' name='skillCheck[]'></td>
+                                    </tr>
+
+                                    <?php
+                                }
                             }
                             ?>
 
@@ -238,7 +262,7 @@ if ($result->n < 1) {
                             <tr>
                                 <td>Encumbrance</td>
                                 <td>
-                                    <input type="text" name="encumbranceField" readonly="readonly" size="5">
+                                    <input type="text" name="encumbranceField" readonly="readonly" size="8">
                                 </td>
                             </tr>
                         </table>
@@ -429,7 +453,7 @@ if ($result->n < 1) {
                             <?php
                             for ($i = 0; $i < 5; $i++) {
                                 ?>
-                                <tr><td><input type="text" size="40" name="quirks[]>" value="<?php echo $quirks[$i] ?>" class="underscore"></td></tr>
+                                <tr><td><input type="text" size="40" name="quirks[]" value="<?php echo $quirks[$i] ?>" class="underscore" <?php $sheet->readOnly() ?>></td></tr>
                                 <?php
                             }
                             ?>                            
@@ -451,9 +475,13 @@ if ($result->n < 1) {
                                     ?>
                                     <tr><td>
                                             <input type="hidden" value="<?php echo $adv->getId() ?>" name="advantageId[]">
-                                            <input type='text' <?php echo "value='" . $adv->getName() . "'"; $sheet->readOnly() ?> size='25' class='underscore' name='advantageName[]' <?php $sheet->writeIfOwner("ondblClick=\"return openSelector(this, 'advantage')\"") ?>>
+                                            <input type='text' <?php echo "value='" . $adv->getName() . "'";
+                            $sheet->readOnly()
+                                    ?> size='25' class='underscore' name='advantageName[]' <?php $sheet->writeIfOwner("ondblClick=\"return openSelector(this, 'advantage')\"") ?>>
                                         </td><td>
-                                            <input type='text' <?php echo "value='" . $adv->getPoints() . "'"; $sheet->readOnly() ?> size='2' class='underscore' name='advantagePoints[]'>
+                                            <input type='text' <?php echo "value='" . $adv->getPoints() . "'";
+                                           $sheet->readOnly()
+                                           ?> size='2' class='underscore' name='advantagePoints[]'>
                                         </td></tr>
                                     <?php
                                 } else {
@@ -484,21 +512,25 @@ if ($result->n < 1) {
                                     ?>
                                     <tr><td>
                                             <input type="hidden" value="<?php echo $dadv->getId() ?>" name="disadvantageId[]">
-                                            <input type='text' <?php echo "value='" . $dadv->getName() . "'"; $sheet->readOnly() ?> size='25'  class='underscore' name='disadvantageName[]' <?php $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'disadvantage')\"") ?>>
+                                            <input type='text' <?php echo "value='" . $dadv->getName() . "'";
+                                           $sheet->readOnly()
+                                           ?> size='25'  class='underscore' name='disadvantageName[]' <?php $sheet->writeIfOwner("ondblclick=\"return openSelector(this, 'disadvantage')\"") ?>>
                                         </td><td>
-                                            <input type='text' <?php echo "value='" . $dadv->getPoints() . "'"; $sheet->readOnly() ?> size='2' class='underscore' name='disadvantagePoints[]'>
+                                            <input type='text' <?php echo "value='" . $dadv->getPoints() . "'";
+                                           $sheet->readOnly()
+                                    ?> size='2' class='underscore' name='disadvantagePoints[]'>
                                         </td></tr>
-                                    <?php
-                                } else {
-                                    ?>
+        <?php
+    } else {
+        ?>
                                     <tr>
                                         <td><input type="hidden" name="disadvantageId[]"><input type='text' size='25' <?php $sheet->readOnly() ?>class='underscore' name='disadvantageName[]' <?php $sheet->writeIfOwner("ondblClick=\"return openSelector(this, 'disadvantage')\"") ?>></td>
                                         <td><input type='text' size='2' class='underscore' name='disadvantagePoints[]' <?php $sheet->readOnly() ?>></td>   
                                     </tr>
-                                    <?php
-                                }
-                            }
-                            ?>
+        <?php
+    }
+}
+?>
 
                         </table>
                     </td>
@@ -524,9 +556,9 @@ if ($result->n < 1) {
                                         <td><input type='text' value="<?php echo $item->getType() ?>" size=4 class='underscore' <?php $sheet->readOnly() ?> name="itemType[]"></td>
                                     </tr>
 
-                                    <?php
-                                } else {
-                                    ?>
+        <?php
+    } else {
+        ?>
                                     <tr>
                                         <td><input type="hidden" name="itemId[]">
                                             <input type='text' size=30 class='underscore' <?php $sheet->readOnly() ?> name="itemName[]"></td>
@@ -534,10 +566,10 @@ if ($result->n < 1) {
                                         <td><input type='text' size=1 class='underscore' <?php $sheet->readOnly() ?> name="itemWeight[]"></td>
                                         <td><input type='text' size=4 class='underscore' <?php $sheet->readOnly() ?> name="itemType[]"></td>
                                     </tr>
-                                    <?php
-                                }
-                            }
-                            ?>
+        <?php
+    }
+}
+?>
                             <tr>
                                 <td>Total:</td>
                                 <td><input type='text' size=1 class='underscore' name="totalValue"></td>
@@ -557,8 +589,14 @@ if ($result->n < 1) {
                     </td>
                 </tr>
             </table>
-            <input type="submit" name="saveForm" value="Save">
+           
+
             <input type="hidden" name="charID" value="<?php echo $character->getStat('Char_id') ?>">
+            <input type='hidden' value='<?php echo $campPoints ?>' name='campTotalPointsField'>
+<?php 
+$sheet->writeIfOwner("<div id='saveStatus'></div>");
+$sheet->writeIfOwner("<input type='submit' name='saveForm' value='Save'>");
+?>
         </form>
     </body>
 </html>
